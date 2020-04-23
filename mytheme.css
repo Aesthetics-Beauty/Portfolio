@@ -74,7 +74,10 @@ body {
     transition: 0.3s;
 }
 
-
+.section.sidebar {
+    top: 76px;
+    background-color: rgba(3, 60, 115, 0.1);
+}
 
 
 a {
@@ -94,9 +97,7 @@ div#the-jitterplot-shows-our-song-selection-more-clearly {
     height: 700px;
 }
 
-div#row {
-    margin-right: 50%;
-}
+
 
 
 div#songs {

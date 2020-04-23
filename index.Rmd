@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup}
-# In order to use these packages, we need to install flexdashboard, plotly, and Cairo.
+# In order to use these packages, we need to install flexdashboard, plotly, and Cairo (and dlexdashboard & DiagrammeR).
 library(tidyverse)
 library(plotly)
 library(spotifyr)
@@ -21,6 +21,8 @@ library(compmus)
 library(viridis)
 library(DT)
 library(ggiraph)
+library(flexdashboard)
+library (DiagrammeR)
 source('spotify.R')
 
 ```
@@ -29,40 +31,110 @@ Intro
 ====================================
 
 
-Row
+Topic {.sidebar data-width=420}
+-------------------------------------
+### **Assessing the beauty of music**  {.no-padding}
+  Music is valued by people for many various reasons, be it the emotion it generates, the memories it triggers, or the beauty it transcends. Nevertheless, this perception of aesthetics is highly subjective. There is no specific reason or explanation to why one would prefer jazz over pop music. However, this realisation has not stopped scholars and academics from generating theories that objectify aesthetics. 
+  
+  The modernist view of music aesthetics (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals.
+  
+  Furthermore, jazz might be not as popular as pop, for instance, because popularity requires accessibility. With these ongoing debates in the arena, we wanted to test if there is an objective quality to beauty. This led us to our research question: **“To what extent does musical sophistication influence the perception of beauty?” **
+
+
+Column
+-------------------------------------
+### Selected songs  {.no-padding}
+```{r}
+valueBox (15, icon ="ion-music-note", color = "primary")
+```
+
+### Expert analyses  {.no-padding}
+```{r}
+valueBox (3, icon ="ion-ios-people", color = "success")
+```
+
+### Different countries  {.no-padding}
+```{r}
+valueBox (26, icon ="ion-location", color = "info")
+```
+
+### Classes  {.no-padding}
+```{r}
+valueBox (3, icon ="ion-levels",color = "#2eb8b8")
+```
+
+column {.tabset}
 -------------------------------------
 
-### Assessing the beauty of music
-Music is valued by people for many various reasons, be it the emotion it generates, the memories it triggers, or the beauty it transcends. Nevertheless, this perception of aesthetics is highly subjective. There is no specific reason or explanation to why one would prefer jazz over pop music. However, this realisation has not stopped scholars and academics from generating theories that objectify aesthetics. The modernist view (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals. Furthermore, jazz might be not as popular as pop, for instance, because popularity requires accessibility. With these ongoing debates in the arena, we wanted to test if there is an objective quality to beauty. This led us to our research question: “To what extent does musical sophistication influence the perception of beauty?” 
+### Average expert rating per song
 
-We first made a selection of 30 songs. Then, 3 experts evaluated the snippets based on various criteria. 15 songs with the most stable evaluation were selected as stimuli. In the online survey,
-the Goldsmiths Musical Sophistication Index (<a href="https://www.gold.ac.uk/media/documents-by-section/departments/psychology/Gold-MSIv10_Documentation.pdf">Müllensiefen et al., 2013</a>) is used to measure musical sophistication. Then, participants are asked to listen to the snippets and decide if the song is beautiful or not. Finally, participants have to choose their 3 favourite genres (the selection is STOMP-based). For further analysis, we are going to use Latent Class analysis.
+```{r  fig.height=6}
 
-
-
-Row 
--------------------------------------
+#getting features for all songs
+Features30 <- read.csv2("Features30.csv")
+Features_wide <- Features30 %>%
+  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
 
 
-### Structure of our portfolio
-This website consists of three more pages.
-On the “Expert Analysis” page it is described how we selected the songs which were used in our main research. We had a selection of 30 songs analyzed by 3 musical experts with more than 10 years of formal training. The songs were analyzed based on 9 components and the final selection of songs had reliable expert ratings and covered most of the range of the 9 components.
-On the “Main research” page our research question is answered by analyzing the results from our Qualtrics survey. The data was analyzed by using Latent Class Analysis (LCA). The LCA divides the participants in groups based on the answers they gave. It was then analyzed if the LCA groups corresponded with a certain level of musical sophistication (measured with the Gold Smith MSI in the survey). It was also investigated if the genre preference of a participant correlated with their LCA group or musical sophistication, since genre preference was believed to be a cofounder.
-The song selection can be heard on the “Song Snippets” page
+#getting features for selection
+Features15 <- read.csv("Features_goed.csv", sep=";")
+
+Features15_wide <- Features15 %>%
+  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
+
+df <- Features15_wide
+
+df$tooltip <- c(paste0("Song = ", df$Song, "\n Feature = ", df$Feature, "\n Parameter = ", df$Parameter))
+
+Features_wide$Cols <- Features_wide$Feature
+
+Features15_wide$Cols <- Features15_wide$Feature
+
+
+tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
+
+Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, label = Song)) +
+  geom_boxplot(show.legend = FALSE, alpha = 0.4, outlier.shape = NA) +
+    theme(text = element_text(),
+        axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
+    geom_jitter_interactive(data = Features15_wide, width = 0.25, alpha = 0.7, aes(colour = Cols, tooltip= df$tooltip, data_id = Song), show.legend = FALSE) +
+    theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
+  scale_x_discrete(labels = labs)  +
+  theme(legend.position='none')
+
+
+ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
+
+
+#ggplotly(p = Box_jitter, width = NULL, height = NULL, tooltip = c("Song", "Parameter", "Feature"), dynamicTicks = FALSE, layerData = 1, originalData = TRUE, source = "A")
 
 
 
+```
+
+### **Research Process**
+
+
+Step 1: Stimuli selection
+
+- Three musical experts, who have more than 10 years of formal training, were invited to evaluate 30 music snippets based on various criteria. Based on expert analyses, 15 songs with the most stable evaluation were selected as stimuli. 
 
 
 
-### Contact information and Names
-Hello, and welcome to our portfolio.
-We are students from the honours course The Data Science of Everyday Music Listening coordinated by dr. J.A. Burgoyne, and we wanted to know more about the beauty of music. In our brainstorm sessions we concluded that the experience of musical beauty differs from person to person. We wanted to know if someone’s musical sophistication influenced what songs they deemed beautiful. 
-In this portfolio you will find the method and results of our research and we hope you will enjoy it.
-Sincerely,
-Willem Pleiter, Kristina Savickaja, Xiaoqing Li, Denise Quek, Nikita van ‘t Rood and Esther Liefting.
+Step 2: Suvey design
 
-For further information, please contact us at estherliefting@student.uva.nl
+- In the online survey, the Goldsmiths Musical Sophistication Index (<a href="https://www.gold.ac.uk/media/documents-by-section/departments/psychology/Gold-MSIv10_Documentation.pdf">Müllensiefen et al., 2013</a>) is used to measure musical sophistication.
+
+- Then, participants are asked to listen to the snippets and decide if the song is beautiful or not. Finally, participants have to choose their 3 favourite genres (the selection is STOMP-based).
+
+
+
+Step 3: Latent Class Analysis (LCA)
+
+- The LCA divides the participants in groups based on the answers they gave. It was then analyzed if the LCA groups corresponded with a certain level of musical sophistication (measured with the Gold Smith MSI in the survey).
+
+- It was also investigated if the genre preference of a participant correlated with their LCA group or musical sophistication, since genre preference was believed to be a cofounder.
 
 
 
@@ -86,23 +158,78 @@ Column
 -------------------------------------
 
 
-### Analysis and results part
-Short xplanation of LCA, with then our findings
+### The LCA
+Latent Class Analysis or LCA is a psychometric method in which participants are grouped based on how likely they would respond positive to a certain survey item, in our case a song snippet that is either beautiful or not. After running the results of our 119 participants through the LCA, it appeared that only a 3-class model fitted the data appropriately, so that is what you see in the table. 
 
+At the top of the table, the currently unnamed classes are visible. The row with class proportions shows how many of our participants where predicted to be in that class, which means that 14% belongs to class 1, 38% to class 2 etc. Below that are the item percentages, which indicate the probability of a person belonging to that class to say that they liked the song, so for instance on Item 8, a person belonging to class 1 has an 8% chance of liking the song, class 2 a 31% chance of liking the song and a person belonging to class 3 a 16% chance of liking the song. 
 
-### Chart tables of lca
-<i>Under construction</i>
+Judging by tables, it appears that the 3 classes can be interpreted as follows: A class that likes very little songs (class 1), a class that likes a lot of the songs (class 2) and a class that lies somewhere in between these 2 classes. 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+### LCA class table
+![The LCA Class table](LCA_table.png)
+
+ 
 
 Column
 -------------------------------------
 
 
-### More analysis
-Class characteristics, plotting of Gold-MSI scores per class, maybe gender differences between classes, is a bit dependant on what we can find
+### ANOVA of Gold-MSI yields what we suspected
+On the right you see the distribution of Gold-MSI scores per class, an ANOVA indicated that there was a difference between classes and post-hoc analysis with bonferonni correction showed this to be only probable for the classes 1 and 2. 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
 
 
 ### Charts of class charateristics
-<i>Under construction</i>
+![](Gold-class.png)
+
+```
 
 
 
@@ -333,6 +460,21 @@ USA III Rail <br>
 <iframe src="https://open.spotify.com/embed/playlist/10OqKYDJG7e4fEBZDCzcvw" width="300" height="800" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
+
+Contact us
+==================================
+
+Row
+--------------------------------
+
+### Contact information and Names
+Hello, and welcome to our portfolio.
+We are students from the honours course The Data Science of Everyday Music Listening coordinated by dr. J.A. Burgoyne, and we wanted to know more about the beauty of music. In our brainstorm sessions we concluded that the experience of musical beauty differs from person to person. We wanted to know if someone’s musical sophistication influenced what songs they deemed beautiful. 
+In this portfolio you will find the method and results of our research and we hope you will enjoy it.
+Sincerely,
+Willem Pleiter, Kristina Savickaja, Xiaoqing Li, Denise Quek, Nikita van ‘t Rood and Esther Liefting.
+
+For further information, please contact us at estherliefting@student.uva.nl
 
 
 
