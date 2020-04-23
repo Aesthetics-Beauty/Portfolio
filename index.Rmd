@@ -53,7 +53,6 @@ valueBox (15, icon ="ion-music-note", color = "primary")
 valueBox (3, icon ="ion-ios-people", color = "success")
 ```
 
-<<<<<<< HEAD
 ### Different countries  {.no-padding}
 ```{r}
 valueBox (26, icon ="ion-location", color = "info")
@@ -64,18 +63,6 @@ valueBox (26, icon ="ion-location", color = "info")
 valueBox (3, icon ="ion-levels",color = "#2eb8b8")
 ```
 
-=======
-### Different regions  {.no-padding}
-```{r}
-valueBox (26, icon ="ion-location", color = "info")
-```
-
-### LCA classes  {.no-padding}
-```{r}
-valueBox (3, icon ="ion-levels",color = "#2eb8b8")
-```
-
->>>>>>> ff02f7ca55fc2edecbc215a1bfcca642590e26d7
 column {.tabset}
 -------------------------------------
 
@@ -98,19 +85,11 @@ Features15_wide <- Features15 %>%
 df <- Features15_wide
 
 df$tooltip <- c(paste0("Song = ", df$Song, "\n Feature = ", df$Feature, "\n Parameter = ", df$Parameter))
-<<<<<<< HEAD
 
 Features_wide$Cols <- Features_wide$Feature
 
 Features15_wide$Cols <- Features15_wide$Feature
 
-=======
-
-Features_wide$Cols <- Features_wide$Feature
-
-Features15_wide$Cols <- Features15_wide$Feature
-
->>>>>>> ff02f7ca55fc2edecbc215a1bfcca642590e26d7
 
 tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
 
@@ -143,11 +122,7 @@ Step 1: Stimuli selection
 
 
 
-<<<<<<< HEAD
 Step 2: Suvey design
-=======
-Step 2: Survey design
->>>>>>> ff02f7ca55fc2edecbc215a1bfcca642590e26d7
 
 - In the online survey, the Goldsmiths Musical Sophistication Index (<a href="https://www.gold.ac.uk/media/documents-by-section/departments/psychology/Gold-MSIv10_Documentation.pdf">Müllensiefen et al., 2013</a>) is used to measure musical sophistication.
 
