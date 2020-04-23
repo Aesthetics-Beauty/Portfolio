@@ -1,0 +1,618 @@
+---
+title:  'Beauty in the Ear of the Beholder '
+output: 
+    flexdashboard::flex_dashboard:
+        css: mytheme.css
+        vertical_layout: scroll
+        orientation: rows
+---
+
+```{r setup}
+# In order to use these packages, we need to install flexdashboard, plotly, and Cairo (and dlexdashboard & DiagrammeR).
+library(tidyverse)
+library(plotly)
+library(spotifyr)
+library(Cairo)
+library(gridExtra)
+library(grid)
+library(gtable)
+library(ggplot2)
+library(compmus)
+library(viridis)
+library(DT)
+library(ggiraph)
+library(flexdashboard)
+library (DiagrammeR)
+source('spotify.R')
+library("psych")
+
+```
+
+Intro
+====================================
+
+
+Topic {.sidebar data-width=420}
+-------------------------------------
+### **Assessing the beauty of music**  {.no-padding}
+  Music is valued by people for many various reasons, be it the emotion it generates, the memories it triggers, or the beauty it transcends. Nevertheless, this perception of aesthetics is highly subjective. There is no specific reason or explanation to why one would prefer jazz over pop music. However, this realisation has not stopped scholars and academics from generating theories that objectify aesthetics. 
+  
+  The modernist view of music aesthetics (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals.
+  
+  Furthermore, jazz might be not as popular as pop, for instance, because popularity requires accessibility. With these ongoing debates in the arena, we wanted to test if there is an objective quality to beauty. This led us to our research question: **“To what extent does musical sophistication influence the perception of beauty?” **
+
+
+Column
+-------------------------------------
+### Selected songs  {.no-padding}
+```{r}
+valueBox (15, icon ="ion-music-note", color = "primary")
+```
+
+### Expert analyses  {.no-padding}
+```{r}
+valueBox (3, icon ="ion-ios-people", color = "success")
+```
+
+### Different regions  {.no-padding}
+```{r}
+valueBox (26, icon ="ion-location", color = "info")
+```
+
+### LCA classes  {.no-padding}
+```{r}
+valueBox (3, icon ="ion-levels",color = "#2eb8b8")
+```
+
+column {.tabset}
+-------------------------------------
+
+### Average expert rating per song
+
+```{r  fig.height=6}
+
+#getting features for all songs
+Features30 <- read.csv2("Features30.csv")
+Features_wide <- Features30 %>%
+  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
+
+
+#getting features for selection
+Features15 <- read.csv("Features_goed.csv", sep=";")
+
+Features15_wide <- Features15 %>%
+  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
+
+df <- Features15_wide
+
+df$tooltip <- c(paste0("Song = ", df$Song, "\n Feature = ", df$Feature, "\n Parameter = ", df$Parameter))
+
+Features_wide$Cols <- Features_wide$Feature
+
+Features15_wide$Cols <- Features15_wide$Feature
+
+
+tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
+
+Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, label = Song)) +
+  geom_boxplot(show.legend = FALSE, alpha = 0.4, outlier.shape = NA) +
+    theme(text = element_text(),
+        axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
+    geom_jitter_interactive(data = Features15_wide, width = 0.25, alpha = 0.7, aes(colour = Cols, tooltip= df$tooltip, data_id = Song), show.legend = FALSE) +
+    theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
+  scale_x_discrete(labels = labs)  +
+  theme(legend.position='none')
+
+
+ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
+
+
+#ggplotly(p = Box_jitter, width = NULL, height = NULL, tooltip = c("Song", "Parameter", "Feature"), dynamicTicks = FALSE, layerData = 1, originalData = TRUE, source = "A")
+
+
+
+```
+
+### **Research Process**
+
+
+Step 1: Stimuli selection
+
+- Three musical experts, who have more than 10 years of formal training, were invited to evaluate 30 music snippets based on various criteria. Based on expert analyses, 15 songs with the most stable evaluation were selected as stimuli. 
+
+
+
+Step 2: Suevey design
+
+- In the online survey, the Goldsmiths Musical Sophistication Index (<a href="https://www.gold.ac.uk/media/documents-by-section/departments/psychology/Gold-MSIv10_Documentation.pdf">Müllensiefen et al., 2013</a>) is used to measure musical sophistication.
+
+- Then, participants are asked to listen to the snippets and decide if the song is beautiful or not. Finally, participants have to choose their 3 favourite genres (the selection is STOMP-based).
+
+
+
+Step 3: Latent Class Analysis (LCA)
+
+- The LCA divides the participants in groups based on the answers they gave. It was then analyzed if the LCA groups corresponded with a certain level of musical sophistication (measured with the Gold Smith MSI in the survey).
+
+- It was also investigated if the genre preference of a participant correlated with their LCA group or musical sophistication, since genre preference was believed to be a cofounder.
+
+
+
+Main research
+========================================
+
+
+Column
+-------------------------------------
+
+
+### Intro page about 
+How we sampled people, general construction and explanation of Gold-MSI and our genre/gender questions and announing setup of our research
+
+
+### Age distribution of participants
+
+
+```{r  fig.height=6}
+#age barplot
+age = read.csv("AGE.csv", sep=";")
+Age = sort(age$AGE)
+ggplot(age, aes(x= Age)) + geom_bar() + ggtitle("age distribution of participants") + ylab("number of participants") 
+
+
+```
+
+### Gender distribution of participants
+
+#gender data
+```{r}
+gender = read.csv("GENDER.csv", sep=";")
+```
+
+
+
+#categorizing data for gender
+
+```{r}
+gender$Gender[gender$GENDER == 1] = "Male"
+gender$Gender[gender$GENDER == 2] = "Female"
+gender$Gender[gender$GENDER == 3] = "Other"
+```
+
+
+
+#barplot gender
+
+```{r}
+ggplot(gender, aes(x = Gender)) + geom_bar() + ggtitle("gender distribution of participants") + ylab("number of participants")
+```
+
+
+
+
+```
+
+### Nationality of participants by country
+
+# nationality barplot countries
+nation = read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).CSV", sep=";")
+nationality = nation$TEXT.VALUE
+ggplot(nation, aes(x= nationality)) + geom_bar() + theme(text = element_text(),
+  axis.text.x = element_text(size=7, angle = 45, hjust = 1) + ggtitle("nationality of participants") + ylab("number of participants")
+
+```
+
+### Nationality of participants by continent
+
+#nationality categorization continent
+nation$continent[nation$COUNTRY.OF.ORIGIN == 31] = "North America"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 187] = "North America"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 100] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 122] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 65] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 185] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 44] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 84] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 82] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 61] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 163] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 60] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 16] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 26] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 143] = "Europe"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 162] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 156] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 179] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 79] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 36] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 86] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 75] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 192] = "Asia"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 116] = "Africa"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 89] = "Africa"
+nation$continent[nation$COUNTRY.OF.ORIGIN == 51] = "Africa"
+
+#nationality barplot by continent
+ggplot(nation, aes(x= continent)) + geom_bar() + theme(text = element_text(),
+axis.text.x = element_text(size=7, angle = 45, hjust = 1)) + ggtitle("nationality distribution of participants") + ylab("number of participants")
+
+
+
+```
+
+### Genre preferences of participants (STOMP)
+
+#genre data
+genre = read.csv("GENRE.csv", sep=";")
+View(genre)
+# categorizing data for genre
+genre$first.choice[genre$GENRE.1 ==1] = "Alternative"
+genre$first.choice[genre$GENRE.1 ==2] = "Bluegrass"
+genre$first.choice[genre$GENRE.1 ==3] = "Blues"
+genre$first.choice[genre$GENRE.1 ==4] = "Classical"
+genre$first.choice[genre$GENRE.1 ==5] = "Country"
+genre$first.choice[genre$GENRE.1 ==6] = "Dance/Electronica"
+genre$first.choice[genre$GENRE.1 ==7] = "Folk"
+genre$first.choice[genre$GENRE.1 ==8] = "Funk"
+genre$first.choice[genre$GENRE.1 ==9] = "Gospel"
+genre$first.choice[genre$GENRE.1 ==10] = "Heavy Metal"
+genre$first.choice[genre$GENRE.1 ==11] = "World"
+genre$first.choice[genre$GENRE.1 ==12] = "Jazz"
+genre$first.choice[genre$GENRE.1 ==13] = "New Age"
+genre$first.choice[genre$GENRE.1 ==14] = "Oldies"
+genre$first.choice[genre$GENRE.1 ==15] = "Opera"
+genre$first.choice[genre$GENRE.1 ==16] = "Pop"
+genre$first.choice[genre$GENRE.1 ==17] = "Punk"
+genre$first.choice[genre$GENRE.1 ==18] = "Rap/Hip-Hop"
+genre$first.choice[genre$GENRE.1 ==19] = "Reggae"
+genre$first.choice[genre$GENRE.1 ==20] = "Religious"
+genre$first.choice[genre$GENRE.1 ==21] = "Rock"
+genre$first.choice[genre$GENRE.1 ==22] = "Soul/R&B"
+genre$first.choice[genre$GENRE.1 ==23] = "Soundtracks/Theme Songs"
+genre$first.choice[genre$GENRE.1 ==24] = "Other"
+
+#second choice
+genre$sec.choice[genre$GENRE.2 ==1] = "Alternative"
+genre$sec.choice[genre$GENRE.2 ==2] = "Bluegrass"
+genre$sec.choice[genre$GENRE.2 ==3] = "Blues"
+genre$sec.choice[genre$GENRE.2 ==4] = "Classical"
+genre$sec.choice[genre$GENRE.2 ==5] = "Country"
+genre$sec.choice[genre$GENRE.2 ==6] = "Dance/Electronica"
+genre$sec.choice[genre$GENRE.2 ==7] = "Folk"
+genre$sec.choice[genre$GENRE.2 ==8] = "Funk"
+genre$sec.choice[genre$GENRE.2 ==9] = "Gospel"
+genre$sec.choice[genre$GENRE.2 ==10] = "Heavy Metal"
+genre$sec.choice[genre$GENRE.2 ==11] = "World"
+genre$sec.choice[genre$GENRE.2 ==12] = "Jazz"
+genre$sec.choice[genre$GENRE.2 ==13] = "New Age"
+genre$sec.choice[genre$GENRE.2 ==14] = "Oldies"
+genre$sec.choice[genre$GENRE.2 ==15] = "Opera"
+genre$sec.choice[genre$GENRE.2 ==16] = "Pop"
+genre$sec.choice[genre$GENRE.2 ==17] = "Punk"
+genre$sec.choice[genre$GENRE.2 ==18] = "Rap/Hip-Hop"
+genre$sec.choice[genre$GENRE.2 ==19] = "Reggae"
+genre$sec.choice[genre$GENRE.2 ==20] = "Religious"
+genre$sec.choice[genre$GENRE.2 ==21] = "Rock"
+genre$sec.choice[genre$GENRE.2 ==22] = "Soul/R&B"
+genre$sec.choice[genre$GENRE.2 ==23] = "Soundtracks/Theme Songs"
+genre$sec.choice[genre$GENRE.2 ==24] = "Other"
+
+#Third choice
+genre$third.choice[genre$GENRE.3 ==1] = "Alternative"
+genre$third.choice[genre$GENRE.3 ==2] = "Bluegrass"
+genre$third.choice[genre$GENRE.3 ==3] = "Blues"
+genre$third.choice[genre$GENRE.3 ==4] = "Classical"
+genre$third.choice[genre$GENRE.3 ==5] = "Country"
+genre$third.choice[genre$GENRE.3 ==6] = "Dance/Electronica"
+genre$third.choice[genre$GENRE.3 ==7] = "Folk"
+genre$third.choice[genre$GENRE.3 ==8] = "Funk"
+genre$third.choice[genre$GENRE.3 ==9] = "Gospel"
+genre$third.choice[genre$GENRE.3 ==10] = "Heavy Metal"
+genre$third.choice[genre$GENRE.3 ==11] = "World"
+genre$third.choice[genre$GENRE.3 ==12] = "Jazz"
+genre$third.choice[genre$GENRE.3 ==13] = "New Age"
+genre$third.choice[genre$GENRE.3 ==14] = "Oldies"
+genre$third.choice[genre$GENRE.3 ==15] = "Opera"
+genre$third.choice[genre$GENRE.3 ==16] = "Pop"
+genre$third.choice[genre$GENRE.3 ==17] = "Punk"
+genre$third.choice[genre$GENRE.3 ==18] = "Rap/Hip-Hop"
+genre$third.choice[genre$GENRE.3 ==19] = "Reggae"
+genre$third.choice[genre$GENRE.3 ==20] = "Religious"
+genre$third.choice[genre$GENRE.3 ==21] = "Rock"
+genre$third.choice[genre$GENRE.3 ==22] = "Soul/R&B"
+genre$third.choice[genre$GENRE.3 ==23] = "Soundtracks/Theme Songs"
+genre$third.choice[genre$GENRE.3 ==24] = "Other"
+
+genre.preference <- c(genre$first.choice, genre$sec.choice, genre$third.choice)
+genre.p <- data.frame(genre.preference)
+
+#plot of genre preferences
+ggplot(genre.p, aes(x=genre.preference)+ geom_bar() + theme(text = element_text(),
+    axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences"))
+
+
+```
+
+
+
+### Gold-MSI score of participants
+
+#GOLD-MSI Scatterplot
+GOLD_MSI = read.csv("GOLD-MSI.csv", sep = ";")
+GOLD_MSI_SCORE = sort(GOLD_MSI$GOLD.MSI.SCORE)
+ggplot(GOLD_MSI, aes(y=GOLD_MSI_SCORE, x= PARTICIPANT.ID)) + geom_point()
+
+
+
+
+Column
+-------------------------------------
+
+
+### Analysis and results part
+Short xplanation of LCA, with then our findings
+
+
+### Chart tables of lca
+<i>Under construction</i>
+
+Column
+-------------------------------------
+
+
+### More analysis
+Class characteristics, plotting of Gold-MSI scores per class, maybe gender differences between classes, is a bit dependant on what we can find
+
+
+### Charts of class charateristics
+<i>Under construction</i>
+
+
+
+
+Column
+-------------------------------------
+
+
+### Conclusion
+<i>Under construction</i>
+
+### Discussion
+<i>Under construction</i>
+
+
+
+Expert Analysis
+=========================================
+ 
+
+Column
+-------------------------------------
+### Rating the Songs
+When starting out our survey, we searched online for known datasets that included musical pieces that were dissected on their musical components. This was important as we wanted to compare musical sophistication with musical pieces and we needed information about the structure of these pieces. Since this yielded no results, we decided to each supply 5 instrumental songs to a playlist on Spotify. These songs needed to be instrumental to control for the influence of language on the perception of beauty. After we compiled 30 songs, we then used 3 musical experts with more than 10 years of formal training to rate them on 9 components on a 10-point Likert-scale, copying the method used in the article of Aljanaki et al. (<a href="https://www.researchgate.net/publication/267326664_COMPUTATIONAL_MODELING_OF_INDUCED_EMOTION_USING_GEMS">2016</a>). The following components were:
+
+- Tempo: the general pulse of the song, ranging from very slow (1) to very fast (10)
+
+- Articulation: The rhythmic articulation of each song, ranging from very staccato (1) to completely legato (10), staccato are separate notes with rests in between, legato notes are notes that are strung together.
+
+- Mode: overall mode and feel of the songs, ranging from minor (1) to major (10)
+
+- Intensity: overall loudness and crescendos and decrescendos in a song, ranging from 1 (pianissimo) to 10 (fortissimo)
+
+- Tonalness: overall tonalness of the composition, ranging from (1) atonal, with no discernable mode or key to tonal (10) with no use of "outside" extensions and very clear discernable key and mode
+
+- Pitch: overall distribution of the pitches, ranging from all bass (1) to all treble (10)
+
+- Melody: overall presence and dominance of melody, ranging from very unmelodious (1) to very melodious (10)
+
+- Rhythmic Clarity: overall presence of a pulse, ranging from very vague (1) to very firm (10)
+
+- Rhythmic Complexity: the extent to which different meters, odd tempo's or complex rhytmic patterns are utilized, ranging from very simple (1) to very complex (10)
+
+
+After all songs were rated, we selected 15 songs to include on our survey based on A) Feature Representability and B) Reliability
+
+***
+<b>A) Feature Representability </b><br>
+<i>The panel on the right is interactive, hover over a point with your mouse to find out more </i>
+
+The combined box and jitterplot shows the overall distribution of the characteristics of the selected songs. The boxplot represents the feature values of all 30 songs. The jitterplot shows the feature values of the 15 songs we selected for our survey. 
+
+Examining the jitterplot, it becomes apparent that our selection covers quite a large range for most components, with a range of around 6 for most components. Certain interest should be given towards the component of Pitch, which features mostly average Bass/Treble compositions, with 1 lower range song. 
+
+Overall this looks to be an okay distribution of songs, given that the playlist was compiled by 6 different people with different preferences. For some components however, a more extreme rating would be preferred so we would've had more room to examine the eventual class differences.
+
+
+
+
+### Box and jitterplot of average expert rating per song
+
+```{r figure.height=20}
+
+#getting features for all songs
+Features30 <- read.csv2("Features30.csv")
+Features_wide <- Features30 %>%
+  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
+
+
+#getting features for selection
+Features15 <- read.csv("Features_goed.csv", sep=";")
+
+Features15_wide <- Features15 %>%
+  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
+
+df <- Features15_wide
+
+df$tooltip <- c(paste0("Song = ", df$Song, "\n Feature = ", df$Feature, "\n Parameter = ", df$Parameter))
+
+Features_wide$Cols <- Features_wide$Feature
+
+Features15_wide$Cols <- Features15_wide$Feature
+
+
+tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
+
+Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, label = Song)) +
+  geom_boxplot(show.legend = FALSE, alpha = 0.4, outlier.shape = NA) +
+    theme(text = element_text(),
+        axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
+    geom_jitter_interactive(data = Features15_wide, width = 0.25, alpha = 0.7, aes(colour = Cols, tooltip= df$tooltip, data_id = Song), show.legend = FALSE) +
+    theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
+  scale_x_discrete(labels = labs)  +
+  theme(legend.position='none')
+
+
+ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
+
+
+
+
+#ggplotly(p = Box_jitter, width = NULL, height = NULL, tooltip = c("Song", "Parameter", "Feature"), dynamicTicks = FALSE, layerData = 1, originalData = TRUE, source = "A")
+
+
+
+
+
+
+```
+
+Column
+-------------------------------------
+
+### Assessing reliability
+To start our selection of 15 songs, we first estimated the reliability of the expert ratings per song. To do this we computed distance scores between each of the 3 experts. For example, each rater provided a rating of the component Tempo for a given song. The first rater gave it a 5, the second rater gave it a 6 and the third a 7. The distance could then be calculated by taking the distance between the first and the second rater (6 - 5 = 1), the distance between the second and the third rater (7 - 6 = 1) and the distance between the first and the third rater (7 - 5 = 2). We then summed the difference (1 + 1 + 2 = 4), which provided an estimate of rater consensus on the component tempo.
+
+Subsequently, this was done for all components per song, and then all the reliability scores per component were summed to give an estimate of overall reliability. The table on the right shows these scores for all 30 songs.
+
+As can be seen from the table, the reliability scores range between 26 and 64, with a lower score representing better consensus on that song. Based on these scores, we estimated a cut-off point for song selection (reliability score < 45), and used this to select our songs. Upon examining our prior selection however, it became apparent that the distribution of tempo ratings was skewed to favour higher tempos and not enough atonal songs (low score on tonalness). To correct for this we decided to swap the song Sesiu Nata Drama (reliability score of 46) of the song The Kiss (reliability score of 42), to make sure our songs represented most of the component ranges. In the next segment we will examine this further.
+
+
+
+### Reliability scores per song
+```{r}
+Rela <- read.csv("Reliability.csv", sep=";")
+
+datatable(Rela,
+  rownames = FALSE, options = list(pageLength = 10)
+)
+```
+
+
+
+
+
+Songs
+========================================
+
+Row
+-------------------------------------
+
+###  Snippets 
+
+Blueming<br>
+<audio controls>
+  <source src="Blueming.mp3" type="audio/mpeg"> 
+</audio> <br>
+
+
+Bygone Bumps <br>
+<audio controls>
+  <source src="Bygone Bumps.mp3" type="audio/mpeg">
+</audio>  <br>
+
+
+Cia Pat <br>
+<audio controls>
+  <source src="Cia Pat.mp3" type="audio/mpeg">
+</audio>  <br>
+
+Decision (Price of Love)<br>
+<audio controls>
+  <source src="Decision (Price of Love).mp3" type="audio/mpeg"> 
+</audio> <br>
+
+
+Elysium <br>
+<audio controls>
+  <source src="Elysium.mp3" type="audio/mpeg">
+</audio>  <br>
+
+
+
+Firth Of Fifth <br>
+<audio controls>
+  <source src="Firth Of Fifth.mp3" type="audio/mpeg">
+</audio>  <br>
+
+Less Is Moi <br>
+<audio controls>
+  <source src="Less Is Moi.mp3" type="audio/mpeg">
+</audio>  <br>
+
+Married Life <br>
+<audio controls>
+  <source src="Married Life.mp3" type="audio/mpeg">
+</audio>  <br>
+
+Resolver <br>
+<audio controls>
+  <source src="Resolver.mp3" type="audio/mpeg">
+</audio>  <br>
+
+Scarface Theme <br>
+<audio controls>
+  <source src="ScarFace 'Tony Theme' Giorgio Moroder.mp3" type="audio/mpeg">
+</audio>  <br>
+
+
+Single Petal Of A Rose <br>
+<audio controls>
+  <source src="Single Petal Of A Rose.mp3" type="audio/mpeg">
+</audio>  <br>
+
+Song For A New Beginning <br>
+<audio controls>
+  <source src="Song For A New Beginning.mp3" type="audio/mpeg">
+</audio>  <br>
+
+syro u473t8+e <br>
+<audio controls>
+  <source src="syro u473t8+e [141.98] (piezoluminescence mix).mp3" type="audio/mpeg">
+</audio>  <br>
+
+Šešių Natų Drama _ Drama In Six Notes <br>
+<audio controls>
+  <source src="Šešių Natų Drama _ Drama In Six Notes.mp3" type="audio/mpeg">
+</audio>  <br>
+
+USA III Rail <br>
+<audio controls>
+  <source src="USA III Rail.mp3" type="audio/mpeg">
+</audio>  <br>
+
+### Full songs
+
+<iframe src="https://open.spotify.com/embed/playlist/10OqKYDJG7e4fEBZDCzcvw" width="300" height="800" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
+
+Contact us
+==================================
+
+Row
+--------------------------------
+
+### Contact information and Names
+Hello, and welcome to our portfolio.
+We are students from the honours course The Data Science of Everyday Music Listening coordinated by dr. J.A. Burgoyne, and we wanted to know more about the beauty of music. In our brainstorm sessions we concluded that the experience of musical beauty differs from person to person. We wanted to know if someone’s musical sophistication influenced what songs they deemed beautiful. 
+In this portfolio you will find the method and results of our research and we hope you will enjoy it.
+Sincerely,
+Willem Pleiter, Kristina Savickaja, Xiaoqing Li, Denise Quek, Nikita van ‘t Rood and Esther Liefting.
+
+For further information, please contact us at estherliefting@student.uva.nl
+
+
+
+

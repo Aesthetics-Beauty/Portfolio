@@ -48,7 +48,7 @@ Column
 valueBox (15, icon ="ion-music-note", color = "primary")
 ```
 
-### Expert analyses  {.no-padding}
+### Experts curated our playlist {.no-padding}
 ```{r}
 valueBox (3, icon ="ion-ios-people", color = "success")
 ```
@@ -63,193 +63,197 @@ valueBox (26, icon ="ion-location", color = "info")
 valueBox (3, icon ="ion-levels",color = "#2eb8b8")
 ```
 
-column {.tabset}
+Column
+------------------------------------
+
+### Our Research
+Consider the following snippet of music:
+
+<audio controls>
+  <source src="Married Life.mp3" type="audio/mpeg">
+</audio>  <br>
+
+What are your thoughts about this, did you like or dislike it? What made you dislike the song? Is there a particular instrument you like? Can you dissect the music? Is it a genre of your preference?
+
+In short, what would you guess is the most important aspect of the music that made you decide whether you liked it or not? This question is at the hart of our research. We wanted to know why people valued certain music as beautiful and other music not, and hopefully you do too! Click through the website to find out more!
+
+Exploring Beauty through different characteristics{data-navmenu="Main Research" data-orientation=columns} 
+============================================================================================================
+
+Column
 -------------------------------------
 
-### Average expert rating per song
 
+### What do musical sophistication, gender, nationality and genre preferences have to do with the perception of beauty?
+No-one has an objective view of beauty, as beauty can be seen in anything and by anyone. This was the main notion that we wrestled with when setting up our research. Since we could not come up with a definitive answer on what stimulates people to perceive beauty, we decided to make our very own playlist, based on what we found either interesting and different music ourselves. Based on this playlist we let 3 experts analyse these songs on their musical components, so that we could curate a diverse playlist containing all different kinds of musical elements. By having such a diverse playlist, the aim was that we could classify people based on what their preferences would be. The playlist consists of 15 songs and can be found under the songs tab. Each song is played for 30 seconds after which the people either rated the song as beautiful or not with a yes/no answer.
+
+To find out how people differ in their perceptions of beauty, we decided to collect additional data about their characteristics. The additional characteristics were nationality, gender, age, genre preferences and musical sophistication. The end-goal of our research is to divide people into classes by their musical preferences, and then check whether there were any significant changes in characteristics per class. 
+
+
+<i> Right now we've supplied you with all data, which is waaay too much, but feel free to give advice on which features to select, then we'll polish the graph up and get back to you :) </i>
+
+Column {.tabset}
+----------------------------------------------------
+
+### Age Distribution of Sample
 ```{r  fig.height=6}
-
-#getting features for all songs
-Features30 <- read.csv2("Features30.csv")
-Features_wide <- Features30 %>%
-  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
-
-
-#getting features for selection
-Features15 <- read.csv("Features_goed.csv", sep=";")
-
-Features15_wide <- Features15 %>%
-  gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
-
-df <- Features15_wide
-
-df$tooltip <- c(paste0("Song = ", df$Song, "\n Feature = ", df$Feature, "\n Parameter = ", df$Parameter))
-
-Features_wide$Cols <- Features_wide$Feature
-
-Features15_wide$Cols <- Features15_wide$Feature
-
-
-tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
-
-Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, label = Song)) +
-  geom_boxplot(show.legend = FALSE, alpha = 0.4, outlier.shape = NA) +
-    theme(text = element_text(),
-        axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
-    geom_jitter_interactive(data = Features15_wide, width = 0.25, alpha = 0.7, aes(colour = Cols, tooltip= df$tooltip, data_id = Song), show.legend = FALSE) +
-    theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
-  scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
-  scale_x_discrete(labels = labs)  +
-  theme(legend.position='none')
-
-
-ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
-
-
-#ggplotly(p = Box_jitter, width = NULL, height = NULL, tooltip = c("Song", "Parameter", "Feature"), dynamicTicks = FALSE, layerData = 1, originalData = TRUE, source = "A")
-
+#age barplot
+age = read.csv("AGE.csv", sep=";")
+Age = sort(age$AGE)
+ggplot(age, aes(x= Age)) + geom_bar() + ggtitle("age distribution of participants") + ylab("number of participants") 
 
 
 ```
 
-### **Research Process**
+### Gender distribution of Sample
+
+```{r}
+gender = read.csv("GENDER.csv", sep=";")
+```
 
 
-Step 1: Stimuli selection
-
-- Three musical experts, who have more than 10 years of formal training, were invited to evaluate 30 music snippets based on various criteria. Based on expert analyses, 15 songs with the most stable evaluation were selected as stimuli. 
-
-
-
-Step 2: Suvey design
-
-- In the online survey, the Goldsmiths Musical Sophistication Index (<a href="https://www.gold.ac.uk/media/documents-by-section/departments/psychology/Gold-MSIv10_Documentation.pdf">Müllensiefen et al., 2013</a>) is used to measure musical sophistication.
-
-- Then, participants are asked to listen to the snippets and decide if the song is beautiful or not. Finally, participants have to choose their 3 favourite genres (the selection is STOMP-based).
-
-
-
-Step 3: Latent Class Analysis (LCA)
-
-- The LCA divides the participants in groups based on the answers they gave. It was then analyzed if the LCA groups corresponded with a certain level of musical sophistication (measured with the Gold Smith MSI in the survey).
-
-- It was also investigated if the genre preference of a participant correlated with their LCA group or musical sophistication, since genre preference was believed to be a cofounder.
-
-
-
-Main research
-========================================
-
-
-Column
--------------------------------------
-
-
-### Intro page about 
-How we sampled people, general construction and explanation of Gold-MSI and our genre/gender questions and announing setup of our research
-
-
-### Some graphs with general info about gender, sophistication scores and genre preferences
-<i>Under construction</i>
-
-
-Column
--------------------------------------
-
-
-### The LCA
-Latent Class Analysis or LCA is a psychometric method in which participants are grouped based on how likely they would respond positive to a certain survey item, in our case a song snippet that is either beautiful or not. After running the results of our 119 participants through the LCA, it appeared that only a 3-class model fitted the data appropriately, so that is what you see in the table. 
-
-At the top of the table, the currently unnamed classes are visible. The row with class proportions shows how many of our participants where predicted to be in that class, which means that 14% belongs to class 1, 38% to class 2 etc. Below that are the item percentages, which indicate the probability of a person belonging to that class to say that they liked the song, so for instance on Item 8, a person belonging to class 1 has an 8% chance of liking the song, class 2 a 31% chance of liking the song and a person belonging to class 3 a 16% chance of liking the song. 
-
-Judging by tables, it appears that the 3 classes can be interpreted as follows: A class that likes very little songs (class 1), a class that likes a lot of the songs (class 2) and a class that lies somewhere in between these 2 classes. 
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-  <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-  <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-
-### LCA class table
-![The LCA Class table](LCA_table.png)
-
- 
-
-Column
--------------------------------------
-
-
-### ANOVA of Gold-MSI yields what we suspected
-On the right you see the distribution of Gold-MSI scores per class, an ANOVA indicated that there was a difference between classes and post-hoc analysis with bonferonni correction showed this to be only probable for the classes 1 and 2. 
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-  <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-  <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-
-
-### Charts of class charateristics
-![](Gold-class.png)
-
+```{r}
+gender$Gender[gender$GENDER == 1] = "Male"
+gender$Gender[gender$GENDER == 2] = "Female"
+gender$Gender[gender$GENDER == 3] = "Other"
 ```
 
 
 
 
-Column
--------------------------------------
+```{r}
+ggplot(gender, aes(x = Gender)) + geom_bar() + ggtitle("gender distribution of participants") + ylab("number of participants")
+```
 
 
-### Conclusion
-<i>Under construction</i>
+### Nationalities
 
-### Discussion
-<i>Under construction</i>
+```{r}
+nation = read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).CSV", sep=";")
+nationality = nation$TEXT.VALUE
+ggplot(nation, aes(x= nationality)) + geom_bar() + theme(text = element_text(),
+  axis.text.x = element_text(size=7, angle = 45, hjust = 1)) + ggtitle("nationality of participants") + ylab("number of participants")
+```
 
 
 
-Expert Analysis
+### Genre preferences of participants
+
+
+```{r}
+genre = read.csv("GENRE.csv", sep=";")
+
+```
+
+```{r}
+genre$first.choice[genre$GENRE.1 ==1] = "Alternative"
+genre$first.choice[genre$GENRE.1 ==2] = "Bluegrass"
+genre$first.choice[genre$GENRE.1 ==3] = "Blues"
+genre$first.choice[genre$GENRE.1 ==4] = "Classical"
+genre$first.choice[genre$GENRE.1 ==5] = "Country"
+genre$first.choice[genre$GENRE.1 ==6] = "Dance/Electronica"
+genre$first.choice[genre$GENRE.1 ==7] = "Folk"
+genre$first.choice[genre$GENRE.1 ==8] = "Funk"
+genre$first.choice[genre$GENRE.1 ==9] = "Gospel"
+genre$first.choice[genre$GENRE.1 ==10] = "Heavy Metal"
+genre$first.choice[genre$GENRE.1 ==11] = "World"
+genre$first.choice[genre$GENRE.1 ==12] = "Jazz"
+genre$first.choice[genre$GENRE.1 ==13] = "New Age"
+genre$first.choice[genre$GENRE.1 ==14] = "Oldies"
+genre$first.choice[genre$GENRE.1 ==15] = "Opera"
+genre$first.choice[genre$GENRE.1 ==16] = "Pop"
+genre$first.choice[genre$GENRE.1 ==17] = "Punk"
+genre$first.choice[genre$GENRE.1 ==18] = "Rap/Hip-Hop"
+genre$first.choice[genre$GENRE.1 ==19] = "Reggae"
+genre$first.choice[genre$GENRE.1 ==20] = "Religious"
+genre$first.choice[genre$GENRE.1 ==21] = "Rock"
+genre$first.choice[genre$GENRE.1 ==22] = "Soul/R&B"
+genre$first.choice[genre$GENRE.1 ==23] = "Soundtracks/Theme Songs"
+genre$first.choice[genre$GENRE.1 ==24] = "Other"
+```
+
+```{r}
+genre$sec.choice[genre$GENRE.2 ==1] = "Alternative"
+genre$sec.choice[genre$GENRE.2 ==2] = "Bluegrass"
+genre$sec.choice[genre$GENRE.2 ==3] = "Blues"
+genre$sec.choice[genre$GENRE.2 ==4] = "Classical"
+genre$sec.choice[genre$GENRE.2 ==5] = "Country"
+genre$sec.choice[genre$GENRE.2 ==6] = "Dance/Electronica"
+genre$sec.choice[genre$GENRE.2 ==7] = "Folk"
+genre$sec.choice[genre$GENRE.2 ==8] = "Funk"
+genre$sec.choice[genre$GENRE.2 ==9] = "Gospel"
+genre$sec.choice[genre$GENRE.2 ==10] = "Heavy Metal"
+genre$sec.choice[genre$GENRE.2 ==11] = "World"
+genre$sec.choice[genre$GENRE.2 ==12] = "Jazz"
+genre$sec.choice[genre$GENRE.2 ==13] = "New Age"
+genre$sec.choice[genre$GENRE.2 ==14] = "Oldies"
+genre$sec.choice[genre$GENRE.2 ==15] = "Opera"
+genre$sec.choice[genre$GENRE.2 ==16] = "Pop"
+genre$sec.choice[genre$GENRE.2 ==17] = "Punk"
+genre$sec.choice[genre$GENRE.2 ==18] = "Rap/Hip-Hop"
+genre$sec.choice[genre$GENRE.2 ==19] = "Reggae"
+genre$sec.choice[genre$GENRE.2 ==20] = "Religious"
+genre$sec.choice[genre$GENRE.2 ==21] = "Rock"
+genre$sec.choice[genre$GENRE.2 ==22] = "Soul/R&B"
+genre$sec.choice[genre$GENRE.2 ==23] = "Soundtracks/Theme Songs"
+genre$sec.choice[genre$GENRE.2 ==24] = "Other"
+```
+
+```{r}
+genre$third.choice[genre$GENRE.3 ==1] = "Alternative"
+genre$third.choice[genre$GENRE.3 ==2] = "Bluegrass"
+genre$third.choice[genre$GENRE.3 ==3] = "Blues"
+genre$third.choice[genre$GENRE.3 ==4] = "Classical"
+genre$third.choice[genre$GENRE.3 ==5] = "Country"
+genre$third.choice[genre$GENRE.3 ==6] = "Dance/Electronica"
+genre$third.choice[genre$GENRE.3 ==7] = "Folk"
+genre$third.choice[genre$GENRE.3 ==8] = "Funk"
+genre$third.choice[genre$GENRE.3 ==9] = "Gospel"
+genre$third.choice[genre$GENRE.3 ==10] = "Heavy Metal"
+genre$third.choice[genre$GENRE.3 ==11] = "World"
+genre$third.choice[genre$GENRE.3 ==12] = "Jazz"
+genre$third.choice[genre$GENRE.3 ==13] = "New Age"
+genre$third.choice[genre$GENRE.3 ==14] = "Oldies"
+genre$third.choice[genre$GENRE.3 ==15] = "Opera"
+genre$third.choice[genre$GENRE.3 ==16] = "Pop"
+genre$third.choice[genre$GENRE.3 ==17] = "Punk"
+genre$third.choice[genre$GENRE.3 ==18] = "Rap/Hip-Hop"
+genre$third.choice[genre$GENRE.3 ==19] = "Reggae"
+genre$third.choice[genre$GENRE.3 ==20] = "Religious"
+genre$third.choice[genre$GENRE.3 ==21] = "Rock"
+genre$third.choice[genre$GENRE.3 ==22] = "Soul/R&B"
+genre$third.choice[genre$GENRE.3 ==23] = "Soundtracks/Theme Songs"
+genre$third.choice[genre$GENRE.3 ==24] = "Other"
+```
+
+```{r}
+genre.preference <- c(genre$first.choice, genre$sec.choice, genre$third.choice)
+genre.p <- data.frame(genre.preference)
+genre.p$genre.preference <- as.factor(genre.p$genre.preference)
+```
+
+
+```{r}
+ggplot(genre.p, aes(x=genre.preference)) + geom_bar() + theme(axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences")
+```
+
+
+
+
+
+### Sophistication score of participants
+```{r}
+GOLD_MSI = read.csv("GOLD-MSI.csv", sep = ";")
+GOLD_MSI_SCORE = sort(GOLD_MSI$GOLD.MSI.SCORE)
+ggplot(GOLD_MSI, aes(y=GOLD_MSI_SCORE, x= PARTICIPANT.ID)) + geom_point()
+```
+
+
+
+
+Compiling the playlist
 =========================================
  
-
 Column
 -------------------------------------
 ### Rating the Songs
@@ -475,6 +479,78 @@ Sincerely,
 Willem Pleiter, Kristina Savickaja, Xiaoqing Li, Denise Quek, Nikita van ‘t Rood and Esther Liefting.
 
 For further information, please contact us at estherliefting@student.uva.nl
+
+
+  
+Splitting the Sample {data-navmenu="Main Research" data-orientation=columns}
+===============================================================================
+  
+  
+Column
+------------------------------------------------------------
+  
+### The LCA
+  Latent Class Analysis or LCA is a psychometric method in which participants are grouped based on how likely they would respond positive to a certain survey item, in our case a song snippet that is either beautiful or not. After running the results of our 119 participants through the LCA, it appeared that only a 3-class model fitted the data appropriately, so that is what you see in the table. 
+
+At the top of the table, the currently unnamed classes are visible. The row with class proportions shows how many of our participants where predicted to be in that class, which means that 14% belongs to class 1, 38% to class 2 etc. Below that are the item percentages, which indicate the probability of a person belonging to that class to say that they liked the song, so for instance on Item 8, a person belonging to class 1 has an 8% chance of liking the song, class 2 a 31% chance of liking the song and a person belonging to class 3 a 16% chance of liking the song. 
+
+Judging by tables, it appears that the 3 classes can be interpreted as follows: A class that likes very little songs (class 1), a class that likes a lot of the songs (class 2) and a class that lies somewhere in between these 2 classes. 
+
+On the second tab you see the distribution of Gold-MSI scores per class, an ANOVA indicated that there was a difference between classes and post-hoc analysis with bonferonni correction showed this to be only probable for the classes 1 and 2. 
+
+<i>This table is a placeholder, eventually the classes will be named, and the percentages will be replaced by Colours indicating magnitude, the table will be made interactive as well.)</i>
+
+  
+Column {.tabset .tabset-fade}
+--------------------------------------------------
+### LCA class table
+  ![The LCA Class table](LCA_table.png)
+
+### Charts of class charateristics
+![](Gold-class.png)
+
+
+Sample charachteristics by class{data-navmenu="Main Research" data-orientation=columns}
+=========================================================================================
+  
+Column
+-------------------------------------------
+  
+  
+### Class descriptions
+  <i>Here we will interpret the graphs</i>
+  
+  Column
+-------------------------------------------
+  
+### Vizualisations
+  <i>Here we will visualize some Gender, STOMP-scores, Gold-MSI and other types of class characteristics that are interesting in a tabset form</i>
+  
+  
+  
+  
+  
+Conclusion and Discussion {data-navmenu="Main Research" data-orientation=columns}
+===============================================================================
+  
+  Column
+-------------------------------------
+  
+  
+### Conclusion
+  <i>Here we will interpret the graphs</i>
+  
+Column
+-------------------------------------
+
+
+
+### Discussion
+  <i>Here we will visualize some Gender, STOMP-scores, Gold-MSI and other types of class characteristics that are interesting in a tabset form</i>
+
+  
+  
+  
 
 
 
