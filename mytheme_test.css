@@ -1,0 +1,109 @@
+body {
+  padding-top: 0px;
+  font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-image: url("triangles.jpg");
+  color:#ffffff
+}
+
+.navbar {
+  position:static;
+    }
+
+.section.sidebar {
+  top: 51px;
+  background-color: rgba(3, 60, 115, 0.1);
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: #2fa4e7;
+}
+
+.storyboard-nav .sbframelist ul li.active {
+  background-color: rgba(47, 164, 231, 0.7);
+}
+
+.dashboard-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
+    background: #0c4eff2e;
+    border: 2px solid #fdfdfd;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.chart-title {
+    border-bottom: 2px solid #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 7px 10px 4px;
+    color: white;
+}
+
+
+
+.navbar-inverse {
+    background-color: #851d5700;
+    border-color: transparent;
+    margin-top: 2px;
+}
+
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #ffffff;
+    background-color: transparent;
+    border: 1.5px solid #ffffff;
+    border-radius: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: #2b698ef5;
+    border: 0px solid #ffffff;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+
+
+
+a {
+    margin-right: 5px;
+}
+
+
+div#main-research {
+    transition: 0.3s;
+}
+
+div#re-examing-the-components-of-our-song-selection{
+  height: fit-content;
+}
+
+div#the-jitterplot-shows-our-song-selection-more-clearly {
+    height: 700px;
+}
+
+div#row {
+    margin-right: 50%;
+}
+
+
+div#songs {
+    margin-right: 50%;
+}
+
+div#concluding-the-expert-analysis {
+    height: fit-content;
+}

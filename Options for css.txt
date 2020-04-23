@@ -1,0 +1,15 @@
+.chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
+    background: #0c4eff2e;
+    border: 2px solid #fdfdfd;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}    
+
+.chart-title {
+    border-bottom: 2px solid #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 7px 10px 4px;
+    color: white;
+}
