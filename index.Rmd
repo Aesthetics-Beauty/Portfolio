@@ -2,7 +2,7 @@
 title:  'Beauty in the Ear of the Beholder '
 output: 
     flexdashboard::flex_dashboard:
-        css: mytheme.css
+        css: mytheme_experimental.css
         vertical_layout: scroll
         orientation: rows
 ---
@@ -24,6 +24,11 @@ library(ggiraph)
 library(flexdashboard)
 library (DiagrammeR)
 source('spotify.R')
+
+library(scales)
+
+
+Theme_experimental <- theme(plot.background = element_rect(fill = "#2c5c8b", colour = "#2c5c8b"), text = element_text(colour = "white"), axis.text = element_text(colour = "white"))
 
 ```
 
@@ -100,7 +105,7 @@ Column {.tabset}
 #age barplot
 age = read.csv("AGE.csv", sep=";")
 Age = sort(age$AGE)
-ggplot(age, aes(x= Age)) + geom_bar() + ggtitle("age distribution of participants") + ylab("number of participants") 
+ggplot(age, aes(x= Age)) + geom_bar() + ggtitle("age distribution of participants") + ylab("number of participants") + Theme_experimental
 
 
 ```
@@ -122,17 +127,19 @@ gender$Gender[gender$GENDER == 3] = "Other"
 
 
 ```{r}
-ggplot(gender, aes(x = Gender)) + geom_bar() + ggtitle("gender distribution of participants") + ylab("number of participants")
+
+ggplot(gender, aes(x = Gender)) + geom_bar() + ggtitle("gender distribution of participants") + ylab("number of participants") + Theme_experimental
 ```
 
 
 ### Nationalities
 
 ```{r}
-nation = read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).CSV", sep=";")
+nation = read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
 nationality = nation$TEXT.VALUE
-ggplot(nation, aes(x= nationality)) + geom_bar() + theme(text = element_text(),
-  axis.text.x = element_text(size=7, angle = 45, hjust = 1)) + ggtitle("nationality of participants") + ylab("number of participants")
+ggplot(nation, aes(x= COUNTRY)) + geom_bar() + theme(text = element_text(),
+  axis.text.x = element_text(size=7, angle = 45, hjust = 1)) + ggtitle("nationality of participants") + ylab("number of participants") + Theme_experimental
+
 ```
 
 
@@ -234,7 +241,7 @@ genre.p$genre.preference <- as.factor(genre.p$genre.preference)
 
 
 ```{r}
-ggplot(genre.p, aes(x=genre.preference)) + geom_bar() + theme(axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences")
+ggplot(genre.p, aes(x=genre.preference)) + geom_bar() + theme(axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental
 ```
 
 
@@ -245,7 +252,7 @@ ggplot(genre.p, aes(x=genre.preference)) + geom_bar() + theme(axis.text.x = elem
 ```{r}
 GOLD_MSI = read.csv("GOLD-MSI.csv", sep = ";")
 GOLD_MSI_SCORE = sort(GOLD_MSI$GOLD.MSI.SCORE)
-ggplot(GOLD_MSI, aes(y=GOLD_MSI_SCORE, x= PARTICIPANT.ID)) + geom_point()
+ggplot(GOLD_MSI, aes(y=GOLD_MSI_SCORE, x= PARTICIPANT.ID)) + geom_point() + Theme_experimental
 ```
 
 
@@ -328,7 +335,7 @@ Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, 
     theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
   scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
   scale_x_discrete(labels = labs)  +
-  theme(legend.position='none')
+  theme(legend.position='none') + Theme_experimental
 
 
 ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
@@ -500,14 +507,59 @@ On the second tab you see the distribution of Gold-MSI scores per class, an ANOV
 
 <i>This table is a placeholder, eventually the classes will be named, and the percentages will be replaced by Colours indicating magnitude, the table will be made interactive as well.)</i>
 
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+
   
-Column {.tabset .tabset-fade}
+Column
 --------------------------------------------------
 ### LCA class table
-  ![The LCA Class table](LCA_table.png)
+```{r}
+Beauty_wide <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Beauty_wide.csv")
+Beauty_wide$Class <- factor(Beauty_wide$Class, levels = c("Likes everything", "Likes somethings", "Does not like anything"))
+colnames(Beauty_wide) <- c(colnames(Beauty_wide)[1:3], "Probability")
 
-### Charts of class charateristics
-![](Gold-class.png)
+Beauty_wide$percent <- percent(Beauty_wide$Probability)
+
+LCA_table <- ggplot(Beauty_wide, aes(x = Class, y = song, fill = Probability, colour = "grey50")) +
+  geom_tile_interactive(colour = "darkgrey", aes(tooltip = percent)) + theme_minimal() + scale_x_discrete(position = "top") + scale_fill_gradient(
+    low = "#efedf5",
+    high = "#40217d",
+    space = "Lab",
+    na.value = "grey50",
+    guide = "colourbar",
+    aesthetics = "fill") + Theme_experimental + theme(axis.ticks.x = element_blank(), axis.ticks.y  =  element_blank(), axis.text = element_text(size = 7))
+
+
+ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css, width = 0.8, height = 4)
+
+
+
+
+```
+
+
 
 
 Sample charachteristics by class{data-navmenu="Main Research" data-orientation=columns}

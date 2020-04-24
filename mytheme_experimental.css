@@ -1,0 +1,229 @@
+body {
+  padding-top: 0px;
+  font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-image: url("triangles_darker.jpg");
+  color:#313131
+}
+
+.navbar {
+  position:static;
+    }
+
+.section.sidebar {
+  top: 51px;
+  background-color: rgba(3, 60, 115, 0.1);
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: #2fa4e7;
+}
+
+.storyboard-nav .sbframelist ul li.active {
+  background-color: rgba(47, 164, 231, 0.7);
+}
+
+.dashboard-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.chart-title {
+    border-bottom: 1px solid #9ccdff;
+    color: #313131;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 7px 10px 4px;
+}
+
+.chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
+    background: #fff;
+    border: 1px solid #2780e3;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+
+.navbar-inverse {
+    background-color: #851d5700;
+    border-color: transparent;
+    margin-top: 2px;
+}
+
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #ffffff;
+    background-color: transparent;
+    border: 1.5px solid #ffffff;
+    border-radius: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: #2b698ef5;
+    border: 0px solid #ffffff;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.section.sidebar {
+    top: 76px;
+    background-color: rgba(3, 60, 115, 0.1);
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #15171900;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    background-color: #1967be;
+    border-radius: 10px;
+    color: white;
+}
+
+.section.sidebar {
+    top: 76px;
+    background-color: rgba(3, 60, 115, 0.78);
+    color: white;
+}
+
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #dcdcdc;
+    white-space: nowrap;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: #1967be;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.nav-tabs-custom > .nav-tabs {
+    margin-left: 10px;
+    padding-bottom: 5px;
+    padding-left: 1px;
+    margin-bottom: 10px;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active > a, .nav-tabs-custom > .nav-tabs > li.active:hover > a {
+    background-color: #2c5c8b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+     border-top-color: transparent;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active > a {
+    border: 1px solid white;
+    border-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    /* border-top-color: transparent; */
+    /* border-left-color: #d7d7d7; */
+    /* border-right-color: #d7d7d7; */
+}
+
+.nav-tabs-custom > .nav-tabs > li > a, .nav-tabs-custom > .nav-tabs > li > a:active {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 0;
+    padding: 3px 10px 5px;
+    text-transform: none;
+    /* background-color: blueviolet; */
+}
+
+a {
+    margin-right: 5px;
+}
+
+
+div#main-research {
+    transition: 0.3s;
+}
+
+div#re-examing-the-components-of-our-song-selection{
+  height: fit-content;
+}
+
+div#the-jitterplot-shows-our-song-selection-more-clearly {
+    height: 700px;
+}
+
+.value-box {
+    border-radius: 20px;
+    color: #f9f9f9;
+}
+
+
+.chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
+    background: #2c5c8b9c;
+    border: 1.5px solid #ffffff;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding-top: 5px;
+    color: white;
+    padding:10px;
+}
+
+
+
+.nav-tabs-custom > .tab-content > .chart-wrapper {
+    background: #2c5c8b;
+    border: none;
+    margin: 0;
+}
+
+.nav-tabs-custom > .tab-content {
+    background: #2c5c8b;
+    padding: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.chart-title {
+    border-bottom: 1.2px solid #f9f9f9;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 7px 10px 4px;
+}
+
+
+
+
+div#songs {
+    margin-right: 50%;
+}
+
+div#concluding-the-expert-analysis {
+    height: fit-content;
+}

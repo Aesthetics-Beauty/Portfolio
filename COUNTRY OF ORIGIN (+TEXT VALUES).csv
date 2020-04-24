@@ -1,11 +1,11 @@
-PARTICIPANT ID;COUNTRY OF ORIGIN;TEXT VALUE
+PARTICIPANT ID;Code;COUNTRY
 1;100;Lithuania
 2;100;Lithuania
 3;122;Netherlands
 4;65;Germany
 5;187;United States of America
 6;122;Netherlands
-7;185;United Kingdom of Great Britain and Northern Ireland
+7;185;United Kingdom
 8;187;United States of America
 9;122;Netherlands
 10;143;Russian Federation
@@ -35,7 +35,7 @@ PARTICIPANT ID;COUNTRY OF ORIGIN;TEXT VALUE
 34;187;United States of America
 35;82;Ireland
 36;162;South Korea
-37;185;United Kingdom of Great Britain and Northern Ireland
+37;185;United Kingdom
 38;61;France
 39;122;Netherlands
 40;163;Spain
@@ -58,7 +58,7 @@ PARTICIPANT ID;COUNTRY OF ORIGIN;TEXT VALUE
 57;122;Netherlands
 58;100;Lithuania
 59;100;Lithuania
-60;185;United Kingdom of Great Britain and Northern Ireland
+60;185;United Kingdom
 61;122;Netherlands
 62;79;Indonesia
 63;60;Finland
@@ -104,44 +104,17 @@ PARTICIPANT ID;COUNTRY OF ORIGIN;TEXT VALUE
 103;162;South Korea
 104;100;Lithuania
 105;122;Netherlands
-106;75;Hong Kong (S.A.R.)
+106;75;Hong Kong
 107;122;Netherlands
 108;51;Dominican Republic
 109;122;Netherlands
 110;65;Germany
 111;65;Germany
-112;75;Hong Kong (S.A.R.)
+112;75;Hong Kong
 113;61;France
 114;65;Germany
-115;192;Viet Nam
+115;192;Vietnam
 116;100;Lithuania
 117;65;Germany
 118;31;Canada
 119;82;Ireland
-;;
-16;Belarus;
-26;Bulgaria;
-31;Canada;
-36;China;
-44;Cyprus;
-51;Dominican Republic;
-60;Finland;
-61;France;
-65;Germany;
-75;Hong Kong;
-79;Indonesia;
-82;Ireland;
-84;Italy;
-86;Japan;
-89;Kenya;
-100;Lithuania;
-116;Morocco;
-122;Netherlands;
-143;Russian Federation;
-156;Singapore;
-162;South Korea;
-163;Spain;
-179;Turkey;
-185;United Kingdom of Great Britain and Northern Ireland;
-187;United States of America;
-192;Vietnam;
