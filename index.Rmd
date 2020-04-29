@@ -82,179 +82,184 @@ What are your thoughts about this, did you like or dislike it? What made you dis
 
 In short, what would you guess is the most important aspect of the music that made you decide whether you liked it or not? This question is at the hart of our research. We wanted to know why people valued certain music as beautiful and other music not, and hopefully you do too! Click through the website to find out more!
 
+Background information
+==================================================================
+Row
+--------------------------------
+
+### Musical sophistication and beauty
+
+The majority of people would agree that perception of beauty, especially in music, is a highly
+subjective phenomenon. Or is it? In our research, we aim to explore the relationship between beauty
+assessment and musical sophistication.
+
+Previous research done on aesthetics and music mainly focusses on personality traits and how those
+influence perception. For instance, awe is one of the profound aesthetic experiences, often described
+as being touched, moved, fascinated and amazed. It was found that people who are more open to
+experience are more susceptible to awe-like states (<a
+href="https://www.researchgate.net/profile/Roger_Beaty/publication/280112363_Openness_to_Expe
+rience_and_Awe_in_Response_to_Nature_and_Music_Personality_and_Profound_Aesthetic_Experi
+ences/links/55ae399808aed9b7dcdc845d/Openness-to-Experience-and-Awe-in-Response-to-Nature-
+and-Music-Personality-and-Profound-Aesthetic-Experiences.pdf">Silvia et al., 2015</a>).
+Interestingly, the study was conducted in 2 domains, that is visual and auditory stimuli were used.
+Across both domains, openness to experience was the only factor predictive of the higher experience
+of awe. One of the drawbacks of the methodology is that judgements were made by listening to only
+one song (<a href="https://www.youtube.com/watch?v=hnAwPeqrdAk">'Hoppípolla' by Sigur
+Rós</a>). Furthermore, although none of the participants understood the Icelandic language, the
+overall perceived 'melodicity', familiarity, etc. of the language could have affected the perception of
+the song (<a href="https://www.theguardian.com/education/2014/jul/17/what-makes-a-language-
+attractive">Jenkin, 2014</a>). In the present study, we use only instrumental music to control for the
+language factor. Furthermore, 15 music snippets were chosen as stimuli.
+
+Usually, listening to music is an aesthetic experience that requires activation of not only affective,
+but also cognitive and evaluative processes. Studies have found that music expertise modulates the
+cortical processing of different aspects of music perception (e.g. <a
+href="http://learnmem.cshlp.org/content/9/3/138.full.pdf">Atienza et al., 2002</a>; <a
+href="https://academic.oup.com/cercor/article/14/10/1088/275703">Bosnyak al., 2004</a>).
+Cognitive researchers (<a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334">Müller et al.,
+2010</a>) compared aesthetic judgements between experts and laypersons by using event-related
+potential (ERP) measurements. They found that when exposed to the same stimuli, experts' and
+laypersons' ERP measures systematically differed. We believe that if there is a difference in aesthetic
+
+judgements between groups of experts and laypersons on the 'brain' level, then there should be an
+observable distinction on a more conscious level, too. As in <a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334">Müller's
+paper</a>, the question of whether the piece is beautiful or not, as opposed to 'do you like it', used in
+the majority of previous papers (e.g. <a
+href="https://www.ncbi.nlm.nih.gov/pubmed/19673799">Brattico & Jacobsen, 2009</a>) will be
+used to quantify beauty assessment. In this way, the question becomes more linguistically sound and
+precise.
+
+Sophistication is not the only factor that could potentially influence beauty perception. Genre
+preference might also have a profound impact on whether the participant finds a piece beautiful or
+not (<a href="https://www.sciencedirect.com/science/article/pii/S0301051112002505">Istók et al.,
+2013</a>). The modernist view of music aesthetics (<a
+href="https://journals.sagepub.com/doi/abs/10.2466/pms.1990.71.2.687">Burke & Gridley,
+1990</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz,
+is less popularly valued because of its high intellectual demand. Followers of the theory would argue
+that jazz is a genre that can be comprehended and appreciated only by musically sophisticated
+individuals. For this reason, our stimuli includes a variety of genres, for instance jazz (<a
+href="https://aesthetics-beauty.github.io/Portfolio/#songs">Drama in Six Notes</a>), bluegrass (<a
+href="https://aesthetics-beauty.github.io/Portfolio/#songs">Less is Moi</a>) and electronic (<a
+href="https://aesthetics-beauty.github.io/Portfolio/#songs">syro u473t8+e [141.98]</a>). In
+addition, we will check if certain genre preferences correspond with higher musical sophistication
+scores.
+
+Inspired by the aforementioned literature and also personal experiences, we would like to see if
+musical sophistication influences the perception of beauty. We hypothesize that higher scores for
+music sophistication will align with higher scores for beauty. Furthermore, we will analyze the
+potential correlation between said scores and genre preference.
+
+### Review: Are musicians particularly sensitive to music?
+
+In the article "Are Musicians Particularly Sensitive to Beauty and Goodness" (<a href=" https://www.zora.uzh.ch/id/eprint/88127/">Güsewell & Ruch, 2014</a>) the degree and form of musical practice of participants is compared to responsiveness to artistic, natural and non-aesthetic beauty and goodness. This was examined using self-report and stimulus-based instruments.
+It was found that professional musicians had the highest scores in responsiveness to artistic beauty, experience seeking, and absorption compared to the other groups. The amateur musicians scored highest on overall responsiveness, responsiveness to non-aesthetic goodness and responsiveness to nature. This supports the hypothesis that there is a link between sensitivity to beauty, goodness and musical practice.
+From the data, researchers concluded that the responsiveness to beauty was related to the degree of involvement in musical practice. It was suggested that the opportunity to artistically express oneself was needed for a balanced responsiveness to the beauty profile. The groups that scored highest in responsiveness to beauty were believed to have more opportunities to express themselves (amateurs and soloists) or take part in musical activities where strong expressive and artistic involvement was needed (high-level orchestra musicians). 
+However, the participants were not grouped based on the opportunity for expression through music. Thus, based on the results of soloists and amateur musicians it is not yet possible to conclude that personal interpretation of music increases responsiveness to beauty. In our study, we focus on the musical sophistication of a larger sample, including participants with both low and high scores. Such a sample might provide a more in-depth look at the relationship between musical experience and perception of beauty. 
+
+
 Exploring Beauty through different characteristics{data-navmenu="Main Research" data-orientation=columns} 
 ============================================================================================================
 
-Column
+Column {.tabset}
 -------------------------------------
 
 
-### What do musical sophistication, gender, nationality and genre preferences have to do with the perception of beauty?
+### The perception of Beauty
 No-one has an objective view of beauty, as beauty can be seen in anything and by anyone. This was the main notion that we wrestled with when setting up our research. Since we could not come up with a definitive answer on what stimulates people to perceive beauty, we decided to make our very own playlist, based on what we found either interesting and different music ourselves. Based on this playlist we let 3 experts analyse these songs on their musical components, so that we could curate a diverse playlist containing all different kinds of musical elements. By having such a diverse playlist, the aim was that we could classify people based on what their preferences would be. The playlist consists of 15 songs and can be found under the songs tab. Each song is played for 30 seconds after which the people either rated the song as beautiful or not with a yes/no answer.
 
-To find out how people differ in their perceptions of beauty, we decided to collect additional data about their characteristics. The additional characteristics were nationality, gender, age, genre preferences and musical sophistication. The end-goal of our research is to divide people into classes by their musical preferences, and then check whether there were any significant changes in characteristics per class. 
+To find out how people differ in their perceptions of beauty, we decided to collect additional data about their characteristics. The additional characteristics were nationality, gender, age, genre preferences and musical sophistication.Visualisations of those characteristics are found on the right. 
+
+The end-goal of our research is to divide people into classes by their musical preferences, and then check whether there were any significant changes in characteristics per class. 
+
+### Characteristics of our sample
+
+In this section, we will analyse the graphs to determine the characteristics of our sample. 
+
+Before we begin with the analysis, we would like to mention that our data might be a bit biased, as our participants are predominantly females that are in their 20s. 
+
+<b>Nationality</b> <br>
+As you can see from the nationality graph, the majority of our participants are from The Netherlands. Nevertheless, we are proud to mention that we managed to gather a group of very diverse participants. Coming from 26 different countries, we have participants from all over the world, ranging from Asia, Africa, Europe and America. Majority of our participants are either European or Asian. 
+
+<b>Genre Preference</b> <br>
+To assess genre preferences, we asked participants to rank three of their best preferred genres through a questionnaire. When looking at the genre distribution graph, we can see that the majority of our sample prefers listening to pop over other genres. This might be due to the fact that our participants are predominantly in their 20s. Tied next in line is classical and rock music. This is then followed by soundtracks and alternative. Country, electronic dance, jazz, oldies, hip hop, soul and R&B are genres that are also relatively preferred by our sample. The rest of the remaining genres are not as well-preferred, with Bluegrass ranked last. This might be due to the fact that it is not a common and thus, unfamiliar genre to the participants. 
+
+(Genre preference using STOMPR) <br>
+We also conducted a STOMPR test for making subclasses for later analysis. 
+The Short Test of Music Preference-Revised (STOMPR) is a test, designed to assess music preferences that are related to personality variables, self-views and cognitive abilities. The test consisted of 4 sub-scales (reflective & complex; intense & rebellion; upbeat & conventional; energetic & rhythmic) used to measure music preferences.
+1.	Reflective & complex: classical, blues, folk and jazz
+2.	Intense & rebellious: alternative, rock and heavy metal
+3.	Upbeat and conventional: country, religious, pop, soundtracks
+4.	Energetic & rhythmic: electronic dance, hip-hop, soul and funk 
+We divided the top 3 genre preferences within these STOMPR groups. The height of the bar is thus the number of times these genres were mentioned as most preferable in the group. 
+
+From the graph, with upbeat & conventional category mentioned most, we can infer that the majority of our participants prefer country, religious, pop and film music over other genres. Second in line would be classical, blues, folk and jazz. Alternative, rock and heavy metal are relatively liked while electronic dance, hip-hop, soul and funk music are least preferred. 
+
+<b>Gold-MSI</b> <br>
+To test individual differences in musical sophistication, we used the Goldsmiths Musical Sophistication Index (Gold-MSI). The following 5 aspects are measured using a self-report questionnaire. 
+1.	active musical engagement: the amount of time and resources spent on music
+2.	self-reported perceptual abilities: the accuracy of musical listening skills
+3.	musical training: the amount of formal musical training received
+4.	self-reported singing abilities: the accuracy of singing
+5.	sophisticated emotional engagement with music: the ability to talk about the emotions that music expresses
+The higher the score, the more musically sophisticated an individual is.  
+
+To see if musical sophistication affects genre preferences, we looked at the distribution of the Gold-MSI scores in STOMP groups. 
+From the graph, we can infer that all 4 categories have pretty similar median scores. The median score is highest in the energetic & median category. This means that generally, a higher level of musical sophistication is required to appreciate electronic dance, hip-hop, soul and funk music. 
+A slightly lower level of musical sophistication is necessary to appreciate genres in the upbeat & conventional category. This is not only shown by a lower median score, but also by the much lower lowest score, in comparison to the energetic & median category.  
+This difference is however not as obvious for the 2 other remaining categories. We can see that the median score for both the intense & rebellious and reflective & complex categories are not that different. According to the density of the plot, while more people with a lower score would appreciate genres in the intense & rebellious category, this difference is not obvious. The distribution and interquartile range don’t differ for both categories. 
+In fact, we can see that the difference across all 4 categories are not obvious. Hence, from the graph, we can conclude that musical sophistication does not have much effect on genre preferences. 
 
 
-<i> Right now we've supplied you with all data, which is waaay too much, but feel free to give advice on which features to select, then we'll polish the graph up and get back to you :) </i>
+
+
+
 
 Column {.tabset}
 ----------------------------------------------------
 
-### Age Distribution of Sample
-```{r  fig.height=6}
-#age barplot
-age = read.csv("AGE.csv", sep=";")
-Age = sort(age$AGE)
-ggplot(age, aes(x= Age)) + geom_bar() + ggtitle("age distribution of participants") + ylab("number of participants") + Theme_experimental
 
-
-```
-
-### Gender distribution of Sample
-
-```{r}
-gender = read.csv("GENDER.csv", sep=";")
-```
-
-
-```{r}
-gender$Gender[gender$GENDER == 1] = "Male"
-gender$Gender[gender$GENDER == 2] = "Female"
-gender$Gender[gender$GENDER == 3] = "Other"
-```
-
-
-
-
-```{r}
-
-ggplot(gender, aes(x = Gender)) + geom_bar() + ggtitle("gender distribution of participants") + ylab("number of participants") + Theme_experimental
-```
 
 
 ### Nationalities
 
 ```{r}
-nation = read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
-nationality = nation$TEXT.VALUE
-ggplot(nation, aes(x= COUNTRY)) + geom_bar() + theme(text = element_text(),
-  axis.text.x = element_text(size=7, angle = 45, hjust = 1)) + ggtitle("nationality of participants") + ylab("number of participants") + Theme_experimental
+nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
+
+ggplot(nation, aes(x= COUNTRY)) + geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", 
+"#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC")) + theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("nationality of participants") +ylab("number of participants") + Theme_experimental + xlab("Country of origin") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
+
 
 ```
 
 
 
-### Genre preferences of participants
-
+### Genre preferences
 
 ```{r}
-genre = read.csv("GENRE.csv", sep=";")
+genre = read.csv("GENRE STOMP.csv", sep=";")
+ggplot(genre, aes(x=genre.preference))+ geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
 
 ```
 
+### STOMP
 ```{r}
-genre$first.choice[genre$GENRE.1 ==1] = "Alternative"
-genre$first.choice[genre$GENRE.1 ==2] = "Bluegrass"
-genre$first.choice[genre$GENRE.1 ==3] = "Blues"
-genre$first.choice[genre$GENRE.1 ==4] = "Classical"
-genre$first.choice[genre$GENRE.1 ==5] = "Country"
-genre$first.choice[genre$GENRE.1 ==6] = "Dance/Electronica"
-genre$first.choice[genre$GENRE.1 ==7] = "Folk"
-genre$first.choice[genre$GENRE.1 ==8] = "Funk"
-genre$first.choice[genre$GENRE.1 ==9] = "Gospel"
-genre$first.choice[genre$GENRE.1 ==10] = "Heavy Metal"
-genre$first.choice[genre$GENRE.1 ==11] = "World"
-genre$first.choice[genre$GENRE.1 ==12] = "Jazz"
-genre$first.choice[genre$GENRE.1 ==13] = "New Age"
-genre$first.choice[genre$GENRE.1 ==14] = "Oldies"
-genre$first.choice[genre$GENRE.1 ==15] = "Opera"
-genre$first.choice[genre$GENRE.1 ==16] = "Pop"
-genre$first.choice[genre$GENRE.1 ==17] = "Punk"
-genre$first.choice[genre$GENRE.1 ==18] = "Rap/Hip-Hop"
-genre$first.choice[genre$GENRE.1 ==19] = "Reggae"
-genre$first.choice[genre$GENRE.1 ==20] = "Religious"
-genre$first.choice[genre$GENRE.1 ==21] = "Rock"
-genre$first.choice[genre$GENRE.1 ==22] = "Soul/R&B"
-genre$first.choice[genre$GENRE.1 ==23] = "Soundtracks/Theme Songs"
-genre$first.choice[genre$GENRE.1 ==24] = "Other"
+STOMP<- subset(genre, STOMP1!= "#N/B")
+ggplot(STOMP, aes(x=STOMP1))+ geom_bar(fill= aes("#0066CC", "#0080FF","#3399FF","#66B2FF") ) + theme(text = element_text(),  axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("Genre preferences grouped by STOMP") + ylab("number of genre preferences") + xlab("STOMP groups")+
+  Theme_experimental+ theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
 ```
 
+### Musical sophistication and genre preference
 ```{r}
-genre$sec.choice[genre$GENRE.2 ==1] = "Alternative"
-genre$sec.choice[genre$GENRE.2 ==2] = "Bluegrass"
-genre$sec.choice[genre$GENRE.2 ==3] = "Blues"
-genre$sec.choice[genre$GENRE.2 ==4] = "Classical"
-genre$sec.choice[genre$GENRE.2 ==5] = "Country"
-genre$sec.choice[genre$GENRE.2 ==6] = "Dance/Electronica"
-genre$sec.choice[genre$GENRE.2 ==7] = "Folk"
-genre$sec.choice[genre$GENRE.2 ==8] = "Funk"
-genre$sec.choice[genre$GENRE.2 ==9] = "Gospel"
-genre$sec.choice[genre$GENRE.2 ==10] = "Heavy Metal"
-genre$sec.choice[genre$GENRE.2 ==11] = "World"
-genre$sec.choice[genre$GENRE.2 ==12] = "Jazz"
-genre$sec.choice[genre$GENRE.2 ==13] = "New Age"
-genre$sec.choice[genre$GENRE.2 ==14] = "Oldies"
-genre$sec.choice[genre$GENRE.2 ==15] = "Opera"
-genre$sec.choice[genre$GENRE.2 ==16] = "Pop"
-genre$sec.choice[genre$GENRE.2 ==17] = "Punk"
-genre$sec.choice[genre$GENRE.2 ==18] = "Rap/Hip-Hop"
-genre$sec.choice[genre$GENRE.2 ==19] = "Reggae"
-genre$sec.choice[genre$GENRE.2 ==20] = "Religious"
-genre$sec.choice[genre$GENRE.2 ==21] = "Rock"
-genre$sec.choice[genre$GENRE.2 ==22] = "Soul/R&B"
-genre$sec.choice[genre$GENRE.2 ==23] = "Soundtracks/Theme Songs"
-genre$sec.choice[genre$GENRE.2 ==24] = "Other"
+STOMP<- subset(genre, STOMP1!= "#N/B")
+ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE)+ xlab("STOMP groups") + ylab("Gold Smith MSI score")+ 
+  ggtitle("Distribution of Gold Smith MSI scores in STOMP groups")+ stat_summary(fun.data="mean_sdl", geom="pointrange", color="blue",show.legend = FALSE)+
+  theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1))+
+  Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
 ```
-
-```{r}
-genre$third.choice[genre$GENRE.3 ==1] = "Alternative"
-genre$third.choice[genre$GENRE.3 ==2] = "Bluegrass"
-genre$third.choice[genre$GENRE.3 ==3] = "Blues"
-genre$third.choice[genre$GENRE.3 ==4] = "Classical"
-genre$third.choice[genre$GENRE.3 ==5] = "Country"
-genre$third.choice[genre$GENRE.3 ==6] = "Dance/Electronica"
-genre$third.choice[genre$GENRE.3 ==7] = "Folk"
-genre$third.choice[genre$GENRE.3 ==8] = "Funk"
-genre$third.choice[genre$GENRE.3 ==9] = "Gospel"
-genre$third.choice[genre$GENRE.3 ==10] = "Heavy Metal"
-genre$third.choice[genre$GENRE.3 ==11] = "World"
-genre$third.choice[genre$GENRE.3 ==12] = "Jazz"
-genre$third.choice[genre$GENRE.3 ==13] = "New Age"
-genre$third.choice[genre$GENRE.3 ==14] = "Oldies"
-genre$third.choice[genre$GENRE.3 ==15] = "Opera"
-genre$third.choice[genre$GENRE.3 ==16] = "Pop"
-genre$third.choice[genre$GENRE.3 ==17] = "Punk"
-genre$third.choice[genre$GENRE.3 ==18] = "Rap/Hip-Hop"
-genre$third.choice[genre$GENRE.3 ==19] = "Reggae"
-genre$third.choice[genre$GENRE.3 ==20] = "Religious"
-genre$third.choice[genre$GENRE.3 ==21] = "Rock"
-genre$third.choice[genre$GENRE.3 ==22] = "Soul/R&B"
-genre$third.choice[genre$GENRE.3 ==23] = "Soundtracks/Theme Songs"
-genre$third.choice[genre$GENRE.3 ==24] = "Other"
-```
-
-```{r}
-genre.preference <- c(genre$first.choice, genre$sec.choice, genre$third.choice)
-genre.p <- data.frame(genre.preference)
-genre.p$genre.preference <- as.factor(genre.p$genre.preference)
-```
-
-
-```{r}
-ggplot(genre.p, aes(x=genre.preference)) + geom_bar() + theme(axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental
-```
-
-
-
-
-
-### Sophistication score of participants
-```{r}
-GOLD_MSI = read.csv("GOLD-MSI.csv", sep = ";")
-GOLD_MSI_SCORE = sort(GOLD_MSI$GOLD.MSI.SCORE)
-ggplot(GOLD_MSI, aes(y=GOLD_MSI_SCORE, x= PARTICIPANT.ID)) + geom_point() + Theme_experimental
-```
-
 
 
 
@@ -325,6 +330,10 @@ Features_wide$Cols <- Features_wide$Feature
 Features15_wide$Cols <- Features15_wide$Feature
 
 
+
+Features_wide$Feature <- factor(Features_wide$Feature, levels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhytmic.Clarity", "Tempo", "Rhythmic.Complexity", "Mode"))
+
+
 tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
 
 Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, label = Song)) +
@@ -335,7 +344,7 @@ Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, 
     theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
   scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
   scale_x_discrete(labels = labs)  +
-  theme(legend.position='none') + Theme_experimental
+  theme(legend.position='none') + Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
 
 
 ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
@@ -497,47 +506,34 @@ Column
 ------------------------------------------------------------
   
 ### The LCA
-  Latent Class Analysis or LCA is a psychometric method in which participants are grouped based on how likely they would respond positive to a certain survey item, in our case a song snippet that is either beautiful or not. After running the results of our 119 participants through the LCA, it appeared that only a 3-class model fitted the data appropriately, so that is what you see in the table. 
+Latent Class Analysis or LCA is a psychometric method in which participants are grouped based on how likely they would respond positive to a certain survey item, in our case a song snippet that is either beautiful or not. After running the results of our 119 participants through the LCA, it appeared that only a 3-class model fitted the data properly, so that was our choice. 
 
-At the top of the table, the currently unnamed classes are visible. The row with class proportions shows how many of our participants where predicted to be in that class, which means that 14% belongs to class 1, 38% to class 2 etc. Below that are the item percentages, which indicate the probability of a person belonging to that class to say that they liked the song, so for instance on Item 8, a person belonging to class 1 has an 8% chance of liking the song, class 2 a 31% chance of liking the song and a person belonging to class 3 a 16% chance of liking the song. 
+An LCA-table can be interpreted as follows: Firstly, at the top of our table, the class names are given. We've chosen to name our classes the Likers, Indifferents and the Dislikers. The Likers comprised 38% of our sample, the indifferents 48%  and the dislikers were 14% of our sample. Below these class you see cells belonging to a song, when you hover over these cells with your mouse you see another percentage, so for instance the top left cell (Married Life, Likers) has 100%, this means that a person belonging to the class of Likers has a 100% chance of liking this song. At the bottom is Syro, where there is only a 15% chance that someone in the "Likers" class will like that song.
 
-Judging by tables, it appears that the 3 classes can be interpreted as follows: A class that likes very little songs (class 1), a class that likes a lot of the songs (class 2) and a class that lies somewhere in between these 2 classes. 
+These conditional probabilities are available for all classes, so you can hover over the table to see which songs were generally very liked and which were disliked. The idea behind the LCA is that you yourself will belong to one of these classes when filling out our survey, depending on how consistent your response pattern is with one of the classes. If you've listened to our samples, you might already have an idea to which class you could belong.
 
-On the second tab you see the distribution of Gold-MSI scores per class, an ANOVA indicated that there was a difference between classes and post-hoc analysis with bonferonni correction showed this to be only probable for the classes 1 and 2. 
+***
 
-<i>This table is a placeholder, eventually the classes will be named, and the percentages will be replaced by Colours indicating magnitude, the table will be made interactive as well.)</i>
+<b>ANOVA</b> <br>
+On the second tab, the posthoc results are visible from our ANOVA. Analysis of variance (ANOVA) is a method in which means and variance between groups (in our case: classes) are compared to see whether the differences in Gold MSI scores are significant (meaning that they are not due to variation or natural occuring error). If an ANOVA is significant, than it means that the groups are different, but the ANOVA itself will not tell you which groups differ from each other. Assumptions of normality and equal variance were checked and came out OK for our test.
 
-<br>
-<br>
+To find out which groups differ from each other, so called post-hoc tests can be used, which compare the groups one by one, instead of all at once like ANOVA does. A conventional method to run post-hoc analyses is the Tukey-Test, of which you see the output in the right panel. This test can be interpreted as follows: on the y-axis you see which test has been done (either comparing indifferents with likers, likers with dislikers and so on). The x-axis tells you the size of the difference. When looking at the plot itself, three intervals are visible. These are the 95% confidence intervals, which can be defined as the interval that in 95% of the cases will contain the "true" difference in Gold MSI score. Since the red lines do not contain a value of 0, we can say that if we were to repeat the experiment an infinite amount of times, the differences between measured scores will almost never be 0, so that means that allows is to conclude to refute the hypothesis that these groups do not differ in Gold scores.
 
-<br>
+Phrased more clearly, the plot shows evidence that the Likers tend to have higher Gold-scores than both the Dislikers and the Indifferents, but there is no difference between the Dislikers and the Indifferents (since the confidence interval contains a zero). This confirms our hypothesis. In the next section, we'll illustrate how big these differences are exactly and examine if any other characteristics can explain the difference found between groups.
 
-<br>
 
-<br>
-
-<br>
-
-<br>
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
 
 
 
   
-Column
+Column {.tabset}
 --------------------------------------------------
 ### LCA class table
 ```{r}
 Beauty_wide <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Beauty_wide.csv")
-Beauty_wide$Class <- factor(Beauty_wide$Class, levels = c("Likes everything", "Likes somethings", "Does not like anything"))
+Beauty_wide$Class <- factor(Beauty_wide$Class, levels = c("Likers", "Indifferents", "Dislikers"))
+Beauty_wide$song <- factor(Beauty_wide$song, levels = c("SYRO", "DRAMA IN SIX NOTES", "CIA PAT", "RESOLVER", "USA III RAIL","SCARFACE", "Elysium", "LESS IS MOI", "FIRTH OF FIFTH", "SINGLE PETAL OF A ROSE", "BYGONE BUMPS", "DECISION", "SONG FOR A NEW BEGINNING", "BLUEMING", "MARRIED LIFE"))
+
 colnames(Beauty_wide) <- c(colnames(Beauty_wide)[1:3], "Probability")
 
 Beauty_wide$percent <- percent(Beauty_wide$Probability)
@@ -557,6 +553,18 @@ ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", t
 
 
 
+```
+
+### ANOVA Post-Hoc Results
+
+```{r}
+tky <- readRDS(file = "tky.rds")
+ggplot(tky, aes(colour=cut(`p adj`, c(0, 0.01, 0.05, 1), 
+                           label=c("p<0.01","p < 0.05","Non-Sig")))) +
+  geom_hline(yintercept=0, lty="11", colour="grey30") +
+  geom_errorbar(aes(pair, ymin=lwr, ymax=upr), width=0.2) +
+  geom_point(aes(pair, diff)) +
+  labs(colour="") + ylab("Difference") + xlab("Pair") + Theme_experimental + theme(legend.background = element_rect(fill = "#2c5c8b")) + coord_flip()
 ```
 
 

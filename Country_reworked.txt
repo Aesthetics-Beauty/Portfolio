@@ -1,0 +1,120 @@
+PARTICIPANT ID;Code;COUNTRY
+1;100;Lithuania
+2;100;Lithuania
+3;122;Netherlands
+4;65;Germany
+5;187;United States of America
+6;122;Netherlands
+7;185;United Kingdom
+8;187;United States of America
+9;122;Netherlands
+10;143;Russian Federation
+11;187;United States of America
+12;122;Netherlands
+13;122;Netherlands
+14;122;Netherlands
+15;122;Netherlands
+16;122;Netherlands
+17;122;Netherlands
+18;122;Netherlands
+19;122;Netherlands
+20;122;Netherlands
+21;122;Netherlands
+22;122;Netherlands
+23;122;Netherlands
+24;122;Netherlands
+25;122;Netherlands
+26;65;Germany
+27;122;Netherlands
+28;122;Netherlands
+29;122;Netherlands
+30;122;Netherlands
+31;122;Netherlands
+32;44;Cyprus
+33;84;Italy
+34;187;United States of America
+35;82;Ireland
+36;162;South Korea
+37;185;United Kingdom
+38;61;France
+39;122;Netherlands
+40;163;Spain
+41;100;Lithuania
+42;122;Netherlands
+43;156;Singapore
+44;122;Netherlands
+45;162;South Korea
+46;179;Turkey
+47;122;Netherlands
+48;122;Netherlands
+49;122;Netherlands
+50;122;Netherlands
+51;100;Lithuania
+52;122;Netherlands
+53;100;Lithuania
+54;116;Morocco
+55;143;Russian Federation
+56;60;Finland
+57;122;Netherlands
+58;100;Lithuania
+59;100;Lithuania
+60;185;United Kingdom
+61;122;Netherlands
+62;79;Indonesia
+63;60;Finland
+64;122;Netherlands
+65;122;Netherlands
+66;122;Netherlands
+67;156;Singapore
+68;156;Singapore
+69;156;Singapore
+70;156;Singapore
+71;36;China
+72;122;Netherlands
+73;36;China
+74;61;France
+75;122;Netherlands
+76;31;Canada
+77;89;Kenya
+78;156;Singapore
+79;156;Singapore
+80;156;Singapore
+81;16;Belarus
+82;156;Singapore
+83;187;United States of America
+84;86;Japan
+85;100;Lithuania
+86;100;Lithuania
+87;100;Lithuania
+88;122;Netherlands
+89;122;Netherlands
+90;122;Netherlands
+91;122;Netherlands
+92;26;Bulgaria
+93;122;Netherlands
+94;122;Netherlands
+95;156;Singapore
+96;162;South Korea
+97;100;Lithuania
+98;36;China
+99;36;China
+100;156;Singapore
+101;36;China
+102;100;Lithuania
+103;162;South Korea
+104;100;Lithuania
+105;122;Netherlands
+106;75;Hong Kong
+107;122;Netherlands
+108;51;Dominican Republic
+109;122;Netherlands
+110;65;Germany
+111;65;Germany
+112;75;Hong Kong
+113;61;France
+114;65;Germany
+115;192;Vietnam
+116;100;Lithuania
+117;65;Germany
+118;31;Canada
+119;82;Ireland

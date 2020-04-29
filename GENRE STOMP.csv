@@ -1,0 +1,358 @@
+PARTICIPANT ID;GENRE;genre.preference;STOMP2;STOMP1;GOLD-MSI SCORE
+1;16;Pop;Unpretentious;Upbeat & Conventional;60
+2;1;Alternative;Intense;Intense & Rebellious;58
+3;6;Dance/Electronic;Mellow;Energetic & Rhythmic;63
+4;16;Pop;Unpretentious;Upbeat & Conventional;83
+5;1;Alternative;Intense;Intense & Rebellious;68
+6;7;Folk;Sophisticated;Reflective&Complex;30
+7;5;Country;Unpretentious;Upbeat & Conventional;53
+8;10;Heavy Metal;Intense;Intense & Rebellious;78
+9;3;Blues;Sophisticated;Reflective&Complex;57
+10;7;Folk;Sophisticated;Reflective&Complex;66
+11;1;Alternative;Intense;Intense & Rebellious;92
+12;3;Blues;Sophisticated;Reflective&Complex;53
+13;4;Classical;Sophisticated;Reflective&Complex;101
+14;4;Classical;Sophisticated;Reflective&Complex;63
+15;3;Blues;Sophisticated;Reflective&Complex;70
+16;3;Blues;Sophisticated;Reflective&Complex;54
+17;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;101
+18;4;Classical;Sophisticated;Reflective&Complex;55
+19;16;Pop;Unpretentious;Upbeat & Conventional;46
+20;12;Jazz;Sophisticated;Reflective&Complex;73
+21;1;Alternative;Intense;Intense & Rebellious;58
+22;1;Alternative;Intense;Intense & Rebellious;60
+23;21;Rock;Intense;Intense & Rebellious;49
+24;7;Folk;Sophisticated;Reflective&Complex;52
+25;16;Pop;Unpretentious;Upbeat & Conventional;68
+26;6;Dance/Electronic;Mellow;Energetic & Rhythmic;67
+27;14;Oldies;#N/B;Upbeat & Conventional;44
+28;5;Country;Unpretentious;Upbeat & Conventional;46
+29;4;Classical;Sophisticated;Reflective&Complex;96
+30;16;Pop;Unpretentious;Upbeat & Conventional;74
+31;1;Alternative;Intense;Intense & Rebellious;101
+32;16;Pop;Unpretentious;Upbeat & Conventional;86
+33;6;Dance/Electronic;Mellow;Energetic & Rhythmic;98
+34;8;Funk;Contemporary;Energetic & Rhythmic;80
+35;4;Classical;Sophisticated;Reflective&Complex;79
+36;16;Pop;Unpretentious;Upbeat & Conventional;53
+37;4;Classical;Sophisticated;Reflective&Complex;79
+38;1;Alternative;Intense;Intense & Rebellious;99
+39;8;Funk;Contemporary;Energetic & Rhythmic;75
+40;3;Blues;Sophisticated;Reflective&Complex;65
+41;1;Alternative;Intense;Intense & Rebellious;59
+42;4;Classical;Sophisticated;Reflective&Complex;63
+43;16;Pop;Unpretentious;Upbeat & Conventional;82
+44;1;Alternative;Intense;Intense & Rebellious;53
+45;12;Jazz;Sophisticated;Reflective&Complex;88
+46;4;Classical;Sophisticated;Reflective&Complex;119
+47;1;Alternative;Intense;Intense & Rebellious;64
+48;16;Pop;Unpretentious;Upbeat & Conventional;82
+49;1;Alternative;Intense;Intense & Rebellious;49
+50;6;Dance/Electronic;Mellow;Energetic & Rhythmic;49
+51;4;Classical;Sophisticated;Reflective&Complex;89
+52;5;Country;Unpretentious;Upbeat & Conventional;108
+53;1;Alternative;Intense;Intense & Rebellious;62
+54;1;Alternative;Intense;Intense & Rebellious;35
+55;1;Alternative;Intense;Intense & Rebellious;57
+56;1;Alternative;Intense;Intense & Rebellious;108
+57;4;Classical;Sophisticated;Reflective&Complex;83
+58;3;Blues;Sophisticated;Reflective&Complex;99
+59;1;Alternative;Intense;Intense & Rebellious;54
+60;6;Dance/Electronic;Mellow;Energetic & Rhythmic;69
+61;4;Classical;Sophisticated;Reflective&Complex;49
+62;16;Pop;Unpretentious;Upbeat & Conventional;87
+63;16;Pop;Unpretentious;Upbeat & Conventional;37
+64;1;Alternative;Intense;Intense & Rebellious;79
+65;8;Funk;Contemporary;Energetic & Rhythmic;103
+66;4;Classical;Sophisticated;Reflective&Complex;106
+67;16;Pop;Unpretentious;Upbeat & Conventional;77
+68;3;Blues;Sophisticated;Reflective&Complex;107
+69;4;Classical;Sophisticated;Reflective&Complex;90
+70;12;Jazz;Sophisticated;Reflective&Complex;91
+71;4;Classical;Sophisticated;Reflective&Complex;82
+72;5;Country;Unpretentious;Upbeat & Conventional;54
+73;8;Funk;Contemporary;Energetic & Rhythmic;100
+74;2;Bluegrass;Sophisticated;Reflective&Complex;101
+75;3;Blues;Sophisticated;Reflective&Complex;81
+76;1;Alternative;Intense;Intense & Rebellious;115
+77;6;Dance/Electronic;Mellow;Energetic & Rhythmic;73
+78;4;Classical;Sophisticated;Reflective&Complex;62
+79;4;Classical;Sophisticated;Reflective&Complex;100
+80;4;Classical;Sophisticated;Reflective&Complex;85
+81;1;Alternative;Intense;Intense & Rebellious;69
+82;5;Country;Unpretentious;Upbeat & Conventional;51
+83;1;Alternative;Intense;Intense & Rebellious;46
+84;16;Pop;Unpretentious;Upbeat & Conventional;70
+85;13;New Age;Mellow;Reflective&Complex;56
+86;6;Dance/Electronic;Mellow;Energetic & Rhythmic;83
+87;16;Pop;Unpretentious;Upbeat & Conventional;69
+88;4;Classical;Sophisticated;Reflective&Complex;104
+89;4;Classical;Sophisticated;Reflective&Complex;60
+90;14;Oldies;#N/B;Upbeat & Conventional;58
+91;12;Jazz;Sophisticated;Reflective&Complex;29
+92;7;Folk;Sophisticated;Reflective&Complex;72
+93;4;Classical;Sophisticated;Reflective&Complex;87
+94;14;Oldies;#N/B;Upbeat & Conventional;34
+95;9;Gospel;Sophisticated;Upbeat & Conventional;81
+96;4;Classical;Sophisticated;Reflective&Complex;110
+97;4;Classical;Sophisticated;Reflective&Complex;52
+98;4;Classical;Sophisticated;Reflective&Complex;79
+99;15;Opera;Sophisticated;Reflective&Complex;80
+100;5;Country;Unpretentious;Upbeat & Conventional;85
+101;3;Blues;Sophisticated;Reflective&Complex;66
+102;12;Jazz;Sophisticated;Reflective&Complex;64
+103;13;New Age;Mellow;Reflective&Complex;85
+104;6;Dance/Electronic;Mellow;Energetic & Rhythmic;90
+105;5;Country;Unpretentious;Upbeat & Conventional;62
+106;3;Blues;Sophisticated;Reflective&Complex;77
+107;14;Oldies;#N/B;Upbeat & Conventional;73
+108;4;Classical;Sophisticated;Reflective&Complex;83
+109;4;Classical;Sophisticated;Reflective&Complex;78
+110;4;Classical;Sophisticated;Reflective&Complex;110
+111;1;Alternative;Intense;Intense & Rebellious;89
+112;5;Country;Unpretentious;Upbeat & Conventional;79
+113;4;Classical;Sophisticated;Reflective&Complex;43
+114;1;Alternative;Intense;Intense & Rebellious;85
+115;16;Pop;Unpretentious;Upbeat & Conventional;67
+116;4;Classical;Sophisticated;Reflective&Complex;86
+117;4;Classical;Sophisticated;Reflective&Complex;59
+118;1;Alternative;Intense;Intense & Rebellious;83
+119;1;Alternative;Intense;Intense & Rebellious;88
+1;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;60
+2;17;Punk;Intense;Intense & Rebellious;58
+3;16;Pop;Unpretentious;Upbeat & Conventional;63
+4;21;Rock;Intense;Intense & Rebellious;83
+5;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;68
+6;21;Rock;Intense;Intense & Rebellious;30
+7;21;Rock;Intense;Intense & Rebellious;53
+8;17;Punk;Intense;Intense & Rebellious;78
+9;14;Oldies;#N/B;Upbeat & Conventional;57
+10;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;66
+11;11;World;Mellow;Reflective&Complex;92
+12;4;Classical;Sophisticated;Reflective&Complex;53
+13;6;Dance/Electronic;Mellow;Energetic & Rhythmic;101
+14;16;Pop;Unpretentious;Upbeat & Conventional;63
+15;10;Heavy Metal;Intense;Intense & Rebellious;70
+16;5;Country;Unpretentious;Upbeat & Conventional;54
+17;19;Reggae;Contemporary;Energetic & Rhythmic;101
+18;19;Reggae;Contemporary;Energetic & Rhythmic;55
+19;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;46
+20;16;Pop;Unpretentious;Upbeat & Conventional;73
+21;16;Pop;Unpretentious;Upbeat & Conventional;58
+22;16;Pop;Unpretentious;Upbeat & Conventional;60
+23;16;Pop;Unpretentious;Upbeat & Conventional;49
+24;16;Pop;Unpretentious;Upbeat & Conventional;52
+25;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;68
+26;16;Pop;Unpretentious;Upbeat & Conventional;67
+27;16;Pop;Unpretentious;Upbeat & Conventional;44
+28;16;Pop;Unpretentious;Upbeat & Conventional;46
+29;16;Pop;Unpretentious;Upbeat & Conventional;96
+30;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;74
+31;12;Jazz;Sophisticated;Reflective&Complex;101
+32;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;86
+33;16;Pop;Unpretentious;Upbeat & Conventional;98
+34;21;Rock;Intense;Intense & Rebellious;80
+35;14;Oldies;#N/B;Upbeat & Conventional;79
+36;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;53
+37;14;Oldies;#N/B;Upbeat & Conventional;79
+38;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;99
+39;16;Pop;Unpretentious;Upbeat & Conventional;75
+40;4;Classical;Sophisticated;Reflective&Complex;65
+41;16;Pop;Unpretentious;Upbeat & Conventional;59
+42;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;63
+43;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;82
+44;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;53
+45;13;New Age;Mellow;Reflective&Complex;88
+46;11;World;Mellow;Reflective&Complex;119
+47;12;Jazz;Sophisticated;Reflective&Complex;64
+48;12;Jazz;Sophisticated;Reflective&Complex;82
+49;10;Heavy Metal;Intense;Intense & Rebellious;49
+50;16;Pop;Unpretentious;Upbeat & Conventional;49
+51;15;Opera;Sophisticated;Reflective&Complex;89
+52;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;108
+53;21;Rock;Intense;Intense & Rebellious;62
+54;5;Country;Unpretentious;Upbeat & Conventional;35
+55;7;Folk;Sophisticated;Reflective&Complex;57
+56;4;Classical;Sophisticated;Reflective&Complex;108
+57;8;Funk;Contemporary;Energetic & Rhythmic;83
+58;12;Jazz;Sophisticated;Reflective&Complex;99
+59;12;Jazz;Sophisticated;Reflective&Complex;54
+60;8;Funk;Contemporary;Energetic & Rhythmic;69
+61;21;Rock;Intense;Intense & Rebellious;49
+62;22;Soul/R&B;Contemporary;Energetic & Rhythmic;87
+63;21;Rock;Intense;Intense & Rebellious;37
+64;6;Dance/Electronic;Mellow;Energetic & Rhythmic;79
+65;14;Oldies;#N/B;Upbeat & Conventional;103
+66;6;Dance/Electronic;Mellow;Energetic & Rhythmic;106
+67;20;Religious;Unpretentious;Upbeat & Conventional;77
+68;12;Jazz;Sophisticated;Reflective&Complex;107
+69;16;Pop;Unpretentious;Upbeat & Conventional;90
+70;20;Religious;Unpretentious;Upbeat & Conventional;91
+71;16;Pop;Unpretentious;Upbeat & Conventional;82
+72;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;54
+73;12;Jazz;Sophisticated;Reflective&Complex;100
+74;4;Classical;Sophisticated;Reflective&Complex;101
+75;4;Classical;Sophisticated;Reflective&Complex;81
+76;4;Classical;Sophisticated;Reflective&Complex;115
+77;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;73
+78;5;Country;Unpretentious;Upbeat & Conventional;62
+79;14;Oldies;#N/B;Upbeat & Conventional;100
+80;21;Rock;Intense;Intense & Rebellious;85
+81;6;Dance/Electronic;Mellow;Energetic & Rhythmic;69
+82;14;Oldies;#N/B;Upbeat & Conventional;51
+83;17;Punk;Intense;Intense & Rebellious;46
+84;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;70
+85;16;Pop;Unpretentious;Upbeat & Conventional;56
+86;16;Pop;Unpretentious;Upbeat & Conventional;83
+87;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;69
+88;11;World;Mellow;Reflective&Complex;104
+89;15;Opera;Sophisticated;Reflective&Complex;60
+90;16;Pop;Unpretentious;Upbeat & Conventional;58
+91;13;New Age;Mellow;Reflective&Complex;29
+92;16;Pop;Unpretentious;Upbeat & Conventional;72
+93;11;World;Mellow;Reflective&Complex;87
+94;16;Pop;Unpretentious;Upbeat & Conventional;34
+95;14;Oldies;#N/B;Upbeat & Conventional;81
+96;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;110
+97;16;Pop;Unpretentious;Upbeat & Conventional;52
+98;12;Jazz;Sophisticated;Reflective&Complex;79
+99;16;Pop;Unpretentious;Upbeat & Conventional;80
+100;6;Dance/Electronic;Mellow;Energetic & Rhythmic;85
+101;4;Classical;Sophisticated;Reflective&Complex;66
+102;14;Oldies;#N/B;Upbeat & Conventional;64
+103;16;Pop;Unpretentious;Upbeat & Conventional;85
+104;10;Heavy Metal;Intense;Intense & Rebellious;90
+105;10;Heavy Metal;Intense;Intense & Rebellious;62
+106;15;Opera;Sophisticated;Reflective&Complex;77
+107;16;Pop;Unpretentious;Upbeat & Conventional;73
+108;9;Gospel;Sophisticated;Upbeat & Conventional;83
+109;8;Funk;Contemporary;Energetic & Rhythmic;78
+110;21;Rock;Intense;Intense & Rebellious;110
+111;14;Oldies;#N/B;Upbeat & Conventional;89
+112;11;World;Mellow;Reflective&Complex;79
+113;21;Rock;Intense;Intense & Rebellious;43
+114;21;Rock;Intense;Intense & Rebellious;85
+115;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;67
+116;6;Dance/Electronic;Mellow;Energetic & Rhythmic;86
+117;6;Dance/Electronic;Mellow;Energetic & Rhythmic;59
+118;6;Dance/Electronic;Mellow;Energetic & Rhythmic;83
+119;21;Rock;Intense;Intense & Rebellious;88
+1;21;Rock;Intense;Intense & Rebellious;60
+2;21;Rock;Intense;Intense & Rebellious;58
+3;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;63
+4;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;83
+5;21;Rock;Intense;Intense & Rebellious;68
+6;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;30
+7;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;53
+8;21;Rock;Intense;Intense & Rebellious;78
+9;21;Rock;Intense;Intense & Rebellious;57
+10;24;Other;#N/B;#N/B;66
+11;24;Other;#N/B;#N/B;92
+12;11;World;Mellow;Reflective&Complex;53
+13;16;Pop;Unpretentious;Upbeat & Conventional;101
+14;22;Soul/R&B;Contemporary;Energetic & Rhythmic;63
+15;21;Rock;Intense;Intense & Rebellious;70
+16;21;Rock;Intense;Intense & Rebellious;54
+17;22;Soul/R&B;Contemporary;Energetic & Rhythmic;101
+18;21;Rock;Intense;Intense & Rebellious;55
+19;24;Other;#N/B;#N/B;46
+20;21;Rock;Intense;Intense & Rebellious;73
+21;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;58
+22;21;Rock;Intense;Intense & Rebellious;60
+23;14;Oldies;#N/B;Upbeat & Conventional;49
+24;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;52
+25;24;Other;#N/B;#N/B;68
+26;24;Other;#N/B;#N/B;67
+27;24;Other;#N/B;#N/B;44
+28;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;46
+29;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;96
+30;24;Other;#N/B;#N/B;74
+31;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;101
+32;22;Soul/R&B;Contemporary;Energetic & Rhythmic;86
+33;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;98
+34;24;Other;#N/B;#N/B;80
+35;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;79
+36;24;Other;#N/B;#N/B;53
+37;21;Rock;Intense;Intense & Rebellious;79
+38;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;99
+39;24;Other;#N/B;#N/B;75
+40;12;Jazz;Sophisticated;Reflective&Complex;65
+41;21;Rock;Intense;Intense & Rebellious;59
+42;21;Rock;Intense;Intense & Rebellious;63
+43;24;Other;#N/B;#N/B;82
+44;22;Soul/R&B;Contemporary;Energetic & Rhythmic;53
+45;22;Soul/R&B;Contemporary;Energetic & Rhythmic;88
+46;21;Rock;Intense;Intense & Rebellious;119
+47;14;Oldies;#N/B;Upbeat & Conventional;64
+48;4;Classical;Sophisticated;Reflective&Complex;82
+49;21;Rock;Intense;Intense & Rebellious;49
+50;24;Other;#N/B;#N/B;49
+51;16;Pop;Unpretentious;Upbeat & Conventional;89
+52;24;Other;#N/B;#N/B;108
+53;24;Other;#N/B;#N/B;62
+54;13;New Age;Mellow;Reflective&Complex;35
+55;21;Rock;Intense;Intense & Rebellious;57
+56;16;Pop;Unpretentious;Upbeat & Conventional;108
+57;12;Jazz;Sophisticated;Reflective&Complex;83
+58;16;Pop;Unpretentious;Upbeat & Conventional;99
+59;16;Pop;Unpretentious;Upbeat & Conventional;54
+60;22;Soul/R&B;Contemporary;Energetic & Rhythmic;69
+61;22;Soul/R&B;Contemporary;Energetic & Rhythmic;49
+62;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;87
+63;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;37
+64;21;Rock;Intense;Intense & Rebellious;79
+65;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;103
+66;16;Pop;Unpretentious;Upbeat & Conventional;106
+67;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;77
+68;20;Religious;Unpretentious;Upbeat & Conventional;107
+69;22;Soul/R&B;Contemporary;Energetic & Rhythmic;90
+70;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;91
+71;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;82
+72;22;Soul/R&B;Contemporary;Energetic & Rhythmic;54
+73;16;Pop;Unpretentious;Upbeat & Conventional;100
+74;5;Country;Unpretentious;Upbeat & Conventional;101
+75;12;Jazz;Sophisticated;Reflective&Complex;81
+76;13;New Age;Mellow;Reflective&Complex;115
+77;24;Other;#N/B;#N/B;73
+78;14;Oldies;#N/B;Upbeat & Conventional;62
+79;21;Rock;Intense;Intense & Rebellious;100
+80;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;85
+81;8;Funk;Contemporary;Energetic & Rhythmic;69
+82;16;Pop;Unpretentious;Upbeat & Conventional;51
+83;21;Rock;Intense;Intense & Rebellious;46
+84;22;Soul/R&B;Contemporary;Energetic & Rhythmic;70
+85;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;56
+86;22;Soul/R&B;Contemporary;Energetic & Rhythmic;83
+87;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;69
+88;12;Jazz;Sophisticated;Reflective&Complex;104
+89;16;Pop;Unpretentious;Upbeat & Conventional;60
+90;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;58
+91;16;Pop;Unpretentious;Upbeat & Conventional;29
+92;18;Rap/Hip-Hop;Contemporary;Energetic & Rhythmic;72
+93;12;Jazz;Sophisticated;Reflective&Complex;87
+94;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;34
+95;21;Rock;Intense;Intense & Rebellious;81
+96;24;Other;#N/B;#N/B;110
+97;22;Soul/R&B;Contemporary;Energetic & Rhythmic;52
+98;19;Reggae;Contemporary;Energetic & Rhythmic;79
+99;22;Soul/R&B;Contemporary;Energetic & Rhythmic;80
+100;16;Pop;Unpretentious;Upbeat & Conventional;85
+101;12;Jazz;Sophisticated;Reflective&Complex;66
+102;22;Soul/R&B;Contemporary;Energetic & Rhythmic;64
+103;22;Soul/R&B;Contemporary;Energetic & Rhythmic;85
+104;21;Rock;Intense;Intense & Rebellious;90
+105;21;Rock;Intense;Intense & Rebellious;62
+106;16;Pop;Unpretentious;Upbeat & Conventional;77
+107;22;Soul/R&B;Contemporary;Energetic & Rhythmic;73
+108;20;Religious;Unpretentious;Upbeat & Conventional;83
+109;14;Oldies;#N/B;Upbeat & Conventional;78
+110;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;110
+111;21;Rock;Intense;Intense & Rebellious;89
+112;16;Pop;Unpretentious;Upbeat & Conventional;79
+113;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;43
+114;24;Other;#N/B;#N/B;85
+115;22;Soul/R&B;Contemporary;Energetic & Rhythmic;67
+116;23;Soundtracks/Theme Songs;#N/B;Upbeat & Conventional;86
+117;21;Rock;Intense;Intense & Rebellious;59
+118;7;Folk;Sophisticated;Reflective&Complex;83
+119;24;Other;#N/B;#N/B;88

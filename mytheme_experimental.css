@@ -178,6 +178,29 @@ div#the-jitterplot-shows-our-song-selection-more-clearly {
     color: #f9f9f9;
 }
 
+a {
+    color: #c7e1ff;
+    text-decoration: underline;
+}
+
+
+.nav-tabs-custom > .tab-content {
+    background: transparent !important;
+    padding: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.nav-tabs-custom > .tab-content > .chart-wrapper {
+    background: transparent !important;
+    border: none;
+    margin: 0;
+}
+
 
 .chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
     background: #2c5c8b9c;
@@ -217,8 +240,15 @@ div#the-jitterplot-shows-our-song-selection-more-clearly {
     padding: 7px 10px 4px;
 }
 
+/* LCA TABLE */
+div#column-7 {
+    height: fit-content;
+}
 
-
+/* General Characteristics */
+div#column-3 {
+    height: fit-content;
+}
 
 div#songs {
     margin-right: 50%;

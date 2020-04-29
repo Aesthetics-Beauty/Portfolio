@@ -1,46 +1,46 @@
 "","song","Class","Prob"
-"1","Elysium","Likes everything",0.968
-"2","USA III RAIL","Likes everything",0.72
-"3","RESOLVER","Likes everything",0.579
-"4","SYRO","Likes everything",0.217
-"5","BYGONE BUMPS","Likes everything",1
-"6","LESS IS MOI","Likes everything",0.978
-"7","SCARFACE","Likes everything",0.89
-"8","DRAMA IN SIX NOTES","Likes everything",0.31
-"9","MARRIED LIFE","Likes everything",1
-"10","DECISION","Likes everything",1
-"11","CIA PAT","Likes everything",0.506
-"12","SONG FOR A NEW BEGINNING","Likes everything",1
-"13","FIRTH OF FIFTH","Likes everything",1
-"14","BLUEMING","Likes everything",1
-"15","SINGLE PETAL OF A ROSE","Likes everything",1
-"16","Elysium","Likes somethings",0.699
-"17","USA III RAIL","Likes somethings",0.488
-"18","RESOLVER","Likes somethings",0.425
-"19","SYRO","Likes somethings",0.146
-"20","BYGONE BUMPS","Likes somethings",0.601
-"21","LESS IS MOI","Likes somethings",0.766
-"22","SCARFACE","Likes somethings",0.355
-"23","DRAMA IN SIX NOTES","Likes somethings",0.161
-"24","MARRIED LIFE","Likes somethings",0.855
-"25","DECISION","Likes somethings",0.741
-"26","CIA PAT","Likes somethings",0.428
-"27","SONG FOR A NEW BEGINNING","Likes somethings",0.753
-"28","FIRTH OF FIFTH","Likes somethings",0.481
-"29","BLUEMING","Likes somethings",0.785
-"30","SINGLE PETAL OF A ROSE","Likes somethings",0.595
-"31","Elysium","Does not like anything",0.514
-"32","USA III RAIL","Does not like anything",0
-"33","RESOLVER","Does not like anything",0.224
-"34","SYRO","Does not like anything",0
-"35","BYGONE BUMPS","Does not like anything",0
-"36","LESS IS MOI","Does not like anything",0.264
-"37","SCARFACE","Does not like anything",0.23
-"38","DRAMA IN SIX NOTES","Does not like anything",0.056
-"39","MARRIED LIFE","Does not like anything",0.202
-"40","DECISION","Does not like anything",0
-"41","CIA PAT","Does not like anything",0.112
-"42","SONG FOR A NEW BEGINNING","Does not like anything",0.424
-"43","FIRTH OF FIFTH","Does not like anything",0.108
-"44","BLUEMING","Does not like anything",0.551
-"45","SINGLE PETAL OF A ROSE","Does not like anything",0.312
+"1","Elysium","Likers",0.968
+"2","USA III RAIL","Likers",0.72
+"3","RESOLVER","Likers",0.579
+"4","SYRO","Likers",0.217
+"5","BYGONE BUMPS","Likers",1
+"6","LESS IS MOI","Likers",0.978
+"7","SCARFACE","Likers",0.89
+"8","DRAMA IN SIX NOTES","Likers",0.31
+"9","MARRIED LIFE","Likers",1
+"10","DECISION","Likers",1
+"11","CIA PAT","Likers",0.506
+"12","SONG FOR A NEW BEGINNING","Likers",1
+"13","FIRTH OF FIFTH","Likers",1
+"14","BLUEMING","Likers",1
+"15","SINGLE PETAL OF A ROSE","Likers",1
+"16","Elysium","Indifferents",0.699
+"17","USA III RAIL","Indifferents",0.488
+"18","RESOLVER","Indifferents",0.425
+"19","SYRO","Indifferents",0.146
+"20","BYGONE BUMPS","Indifferents",0.601
+"21","LESS IS MOI","Indifferents",0.766
+"22","SCARFACE","Indifferents",0.355
+"23","DRAMA IN SIX NOTES","Indifferents",0.161
+"24","MARRIED LIFE","Indifferents",0.855
+"25","DECISION","Indifferents",0.741
+"26","CIA PAT","Indifferents",0.428
+"27","SONG FOR A NEW BEGINNING","Indifferents",0.753
+"28","FIRTH OF FIFTH","Indifferents",0.481
+"29","BLUEMING","Indifferents",0.785
+"30","SINGLE PETAL OF A ROSE","Indifferents",0.595
+"31","Elysium","Dislikers",0.514
+"32","USA III RAIL","Dislikers",0
+"33","RESOLVER","Dislikers",0.224
+"34","SYRO","Dislikers",0
+"35","BYGONE BUMPS","Dislikers",0
+"36","LESS IS MOI","Dislikers",0.264
+"37","SCARFACE","Dislikers",0.23
+"38","DRAMA IN SIX NOTES","Dislikers",0.056
+"39","MARRIED LIFE","Dislikers",0.202
+"40","DECISION","Dislikers",0
+"41","CIA PAT","Dislikers",0.112
+"42","SONG FOR A NEW BEGINNING","Dislikers",0.424
+"43","FIRTH OF FIFTH","Dislikers",0.108
+"44","BLUEMING","Dislikers",0.551
+"45","SINGLE PETAL OF A ROSE","Dislikers",0.312
