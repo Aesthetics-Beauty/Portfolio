@@ -240,7 +240,10 @@ a {
     padding: 7px 10px 4px;
 }
 
-
+/* safari bug fix */
+div#column-2 {
+    height: 700px;
+}
 
 div#songs {
     margin-right: 50%;

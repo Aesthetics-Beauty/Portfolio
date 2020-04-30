@@ -83,6 +83,121 @@ What are your thoughts about this, did you like or dislike it? What made you dis
 
 In short, what would you guess is the most important aspect of the music that made you decide whether you liked it or not? This question is at the hart of our research. We wanted to know why people valued certain music as beautiful and other music not, and hopefully you do too! Click through the website to find out more!
 
+
+Exploring Beauty through different characteristics{data-navmenu="Main Research" data-orientation=columns} 
+============================================================================================================
+
+Column {.tabset}
+-------------------------------------
+
+
+### The perception of Beauty
+No-one has an objective view of beauty, as beauty can be seen in anything and by anyone. This was the main notion that we wrestled with when setting up our research. Since we could not come up with a definitive answer on what stimulates people to perceive beauty, we decided to make our very own playlist, based on what we found either interesting and different music ourselves. Based on this playlist we let 3 experts analyse these songs on their musical components, so that we could curate a diverse playlist containing all different kinds of musical elements. By having such a diverse playlist, the aim was that we could classify people based on what their preferences would be. The playlist consists of 15 songs and can be found under the songs tab. Each song is played for 30 seconds after which the people either rated the song as beautiful or not with a yes/no answer.
+
+To find out how people differ in their perceptions of beauty, we decided to collect additional data about their characteristics. The additional characteristics were nationality, gender, age, genre preferences and musical sophistication.Visualisations of those characteristics are found on the right. 
+
+The end-goal of our research is to divide people into classes by their musical preferences, and then check whether there were any significant changes in characteristics per class. 
+
+***
+<b>Characteristics of our sample</b>
+
+In this section, we will analyse the graphs to determine the characteristics of our sample. 
+
+Before we begin with the analysis, we would like to mention that our data might be a bit biased, as our participants are predominantly females that are in their 20s. 
+
+
+### Nationality
+Click on the tab <i>Nationality</i> on the right side to see the graph
+
+As you can see from the nationality graph, the majority of our participants are from The Netherlands. Nevertheless, we are proud to mention that we managed to gather a group of very diverse participants. Coming from 26 different countries, we have participants from all over the world, ranging from Asia, Africa, Europe and America. Majority of our participants are either European or Asian. 
+
+### Genre Preference
+Click on the tab <i>Genre preferences</i> on the right side to see the graph
+
+To assess genre preferences, we asked participants to rank three of their best preferred genres through a questionnaire. When looking at the genre distribution graph, we can see that the majority of our sample prefers listening to pop over other genres. This might be due to the fact that our participants are predominantly in their 20s. Tied next in line is classical and rock music. This is then followed by soundtracks and alternative. Country, electronic dance, jazz, oldies, hip hop, soul and R&B are genres that are also relatively preferred by our sample. The rest of the remaining genres are not as well-preferred, with Bluegrass ranked last. This might be due to the fact that it is not a common and thus, unfamiliar genre to the participants. 
+
+### STOMP
+Click on the tab <i>STOMP</i> on the right side to see the graph
+
+We also conducted a STOMPR test for making subclasses for later analysis. 
+The Short Test of Music Preference-Revised (STOMPR) is a test, designed to assess music preferences that are related to personality variables, self-views and cognitive abilities. The test consisted of 4 sub-scales (reflective & complex; intense & rebellion; upbeat & conventional; energetic & rhythmic) used to measure music preferences.
+1.	Reflective & complex: classical, blues, folk and jazz
+2.	Intense & rebellious: alternative, rock and heavy metal
+3.	Upbeat and conventional: country, religious, pop, soundtracks
+4.	Energetic & rhythmic: electronic dance, hip-hop, soul and funk 
+We divided the top 3 genre preferences within these STOMPR groups. The height of the bar is thus the number of times these genres were mentioned as most preferable in the group. 
+
+From the graph, with upbeat & conventional category mentioned most, we can infer that the majority of our participants prefer country, religious, pop and film music over other genres. Second in line would be classical, blues, folk and jazz. Alternative, rock and heavy metal are relatively liked while electronic dance, hip-hop, soul and funk music are least preferred. 
+
+### Musical sophistication and genre preference
+
+Click on the tab <i>Musical sophistication and genre preference</i> on the right side to see the graph
+
+To test individual differences in musical sophistication, we used the Goldsmiths Musical Sophistication Index (Gold-MSI). The following 5 aspects are measured using a self-report questionnaire. 
+1.	active musical engagement: the amount of time and resources spent on music
+2.	self-reported perceptual abilities: the accuracy of musical listening skills
+3.	musical training: the amount of formal musical training received
+4.	self-reported singing abilities: the accuracy of singing
+5.	sophisticated emotional engagement with music: the ability to talk about the emotions that music expresses
+The higher the score, the more musically sophisticated an individual is.  
+
+To see if musical sophistication affects genre preferences, we looked at the distribution of the Gold-MSI scores in STOMP groups. 
+From the graph, we can infer that all 4 categories have pretty similar median scores. The median score is highest in the energetic & median category. This means that generally, a higher level of musical sophistication is required to appreciate electronic dance, hip-hop, soul and funk music. 
+A slightly lower level of musical sophistication is necessary to appreciate genres in the upbeat & conventional category. This is not only shown by a lower median score, but also by the much lower lowest score, in comparison to the energetic & median category.  
+This difference is however not as obvious for the 2 other remaining categories. We can see that the median score for both the intense & rebellious and reflective & complex categories are not that different. According to the density of the plot, while more people with a lower score would appreciate genres in the intense & rebellious category, this difference is not obvious. The distribution and interquartile range don’t differ for both categories. 
+In fact, we can see that the difference across all 4 categories are not obvious. Hence, from the graph, we can conclude that musical sophistication does not have much effect on genre preferences. 
+
+
+
+
+
+
+Column {.tabset}
+----------------------------------------------------
+
+
+
+
+### Nationalities
+
+```{r}
+nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
+
+ggplot(nation, aes(x= COUNTRY)) + geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", 
+"#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC")) + theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("nationality of participants") +ylab("number of participants") + Theme_experimental + xlab("Country of origin") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
+
+
+```
+
+
+
+### Genre preferences
+
+```{r}
+genre = read.csv("GENRE STOMP.csv", sep=";")
+ggplot(genre, aes(x=genre.preference))+ geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
+```
+
+### STOMP
+```{r}
+STOMP<- subset(genre, STOMP1!= "#N/B")
+ggplot(STOMP, aes(x=STOMP1))+ geom_bar(fill= aes("#0066CC", "#0080FF","#3399FF","#66B2FF") ) + theme(text = element_text(),  axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("Genre preferences grouped by STOMP") + ylab("number of genre preferences") + xlab("STOMP groups")+
+  Theme_experimental+ theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+```
+
+### Musical sophistication and genre preference
+```{r}
+STOMP<- subset(genre, STOMP1!= "#N/B")
+ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE)+ xlab("STOMP groups") + ylab("Gold Smith MSI score")+ 
+  ggtitle("Distribution of Gold Smith MSI scores in STOMP groups")+ stat_summary(fun.data="mean_sdl", geom="pointrange", color="blue",show.legend = FALSE)+
+  theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1))+
+  Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
+```
+
+
 Background information
 ==================================================================
 Row
@@ -160,111 +275,19 @@ From the data, researchers concluded that the responsiveness to beauty was relat
 However, the participants were not grouped based on the opportunity for expression through music. Thus, based on the results of soloists and amateur musicians it is not yet possible to conclude that personal interpretation of music increases responsiveness to beauty. In our study, we focus on the musical sophistication of a larger sample, including participants with both low and high scores. Such a sample might provide a more in-depth look at the relationship between musical experience and perception of beauty. 
 
 
-Exploring Beauty through different characteristics{data-navmenu="Main Research" data-orientation=columns} 
-============================================================================================================
+***
 
-Column {.tabset}
--------------------------------------
+<b>Contact Information and Names</b> <br>
 
+Hello, and welcome to our portfolio.
+We are students from the honours course The Data Science of Everyday Music Listening coordinated by dr. J.A. Burgoyne, and we wanted to know more about the beauty of music. In our brainstorm sessions we concluded that the experience of musical beauty differs from person to person. We wanted to know if someone’s musical sophistication influenced what songs they deemed beautiful. 
+In this portfolio you will find the method and results of our research and we hope you will enjoy it.
+Sincerely,
+Willem Pleiter, Kristina Savickaja, Xiaoqing Li, Denise Quek, Nikita van ‘t Rood and Esther Liefting.
 
-### The perception of Beauty
-No-one has an objective view of beauty, as beauty can be seen in anything and by anyone. This was the main notion that we wrestled with when setting up our research. Since we could not come up with a definitive answer on what stimulates people to perceive beauty, we decided to make our very own playlist, based on what we found either interesting and different music ourselves. Based on this playlist we let 3 experts analyse these songs on their musical components, so that we could curate a diverse playlist containing all different kinds of musical elements. By having such a diverse playlist, the aim was that we could classify people based on what their preferences would be. The playlist consists of 15 songs and can be found under the songs tab. Each song is played for 30 seconds after which the people either rated the song as beautiful or not with a yes/no answer.
+For further information, please contact us at estherliefting@student.uva.nl
 
-To find out how people differ in their perceptions of beauty, we decided to collect additional data about their characteristics. The additional characteristics were nationality, gender, age, genre preferences and musical sophistication.Visualisations of those characteristics are found on the right. 
-
-The end-goal of our research is to divide people into classes by their musical preferences, and then check whether there were any significant changes in characteristics per class. 
-
-### Characteristics of our sample
-
-In this section, we will analyse the graphs to determine the characteristics of our sample. 
-
-Before we begin with the analysis, we would like to mention that our data might be a bit biased, as our participants are predominantly females that are in their 20s. 
-
-<b>Nationality</b> <br>
-As you can see from the nationality graph, the majority of our participants are from The Netherlands. Nevertheless, we are proud to mention that we managed to gather a group of very diverse participants. Coming from 26 different countries, we have participants from all over the world, ranging from Asia, Africa, Europe and America. Majority of our participants are either European or Asian. 
-
-<b>Genre Preference</b> <br>
-To assess genre preferences, we asked participants to rank three of their best preferred genres through a questionnaire. When looking at the genre distribution graph, we can see that the majority of our sample prefers listening to pop over other genres. This might be due to the fact that our participants are predominantly in their 20s. Tied next in line is classical and rock music. This is then followed by soundtracks and alternative. Country, electronic dance, jazz, oldies, hip hop, soul and R&B are genres that are also relatively preferred by our sample. The rest of the remaining genres are not as well-preferred, with Bluegrass ranked last. This might be due to the fact that it is not a common and thus, unfamiliar genre to the participants. 
-
-(Genre preference using STOMPR) <br>
-We also conducted a STOMPR test for making subclasses for later analysis. 
-The Short Test of Music Preference-Revised (STOMPR) is a test, designed to assess music preferences that are related to personality variables, self-views and cognitive abilities. The test consisted of 4 sub-scales (reflective & complex; intense & rebellion; upbeat & conventional; energetic & rhythmic) used to measure music preferences.
-1.	Reflective & complex: classical, blues, folk and jazz
-2.	Intense & rebellious: alternative, rock and heavy metal
-3.	Upbeat and conventional: country, religious, pop, soundtracks
-4.	Energetic & rhythmic: electronic dance, hip-hop, soul and funk 
-We divided the top 3 genre preferences within these STOMPR groups. The height of the bar is thus the number of times these genres were mentioned as most preferable in the group. 
-
-From the graph, with upbeat & conventional category mentioned most, we can infer that the majority of our participants prefer country, religious, pop and film music over other genres. Second in line would be classical, blues, folk and jazz. Alternative, rock and heavy metal are relatively liked while electronic dance, hip-hop, soul and funk music are least preferred. 
-
-<b>Gold-MSI</b> <br>
-To test individual differences in musical sophistication, we used the Goldsmiths Musical Sophistication Index (Gold-MSI). The following 5 aspects are measured using a self-report questionnaire. 
-1.	active musical engagement: the amount of time and resources spent on music
-2.	self-reported perceptual abilities: the accuracy of musical listening skills
-3.	musical training: the amount of formal musical training received
-4.	self-reported singing abilities: the accuracy of singing
-5.	sophisticated emotional engagement with music: the ability to talk about the emotions that music expresses
-The higher the score, the more musically sophisticated an individual is.  
-
-To see if musical sophistication affects genre preferences, we looked at the distribution of the Gold-MSI scores in STOMP groups. 
-From the graph, we can infer that all 4 categories have pretty similar median scores. The median score is highest in the energetic & median category. This means that generally, a higher level of musical sophistication is required to appreciate electronic dance, hip-hop, soul and funk music. 
-A slightly lower level of musical sophistication is necessary to appreciate genres in the upbeat & conventional category. This is not only shown by a lower median score, but also by the much lower lowest score, in comparison to the energetic & median category.  
-This difference is however not as obvious for the 2 other remaining categories. We can see that the median score for both the intense & rebellious and reflective & complex categories are not that different. According to the density of the plot, while more people with a lower score would appreciate genres in the intense & rebellious category, this difference is not obvious. The distribution and interquartile range don’t differ for both categories. 
-In fact, we can see that the difference across all 4 categories are not obvious. Hence, from the graph, we can conclude that musical sophistication does not have much effect on genre preferences. 
-
-
-
-
-
-
-Column {.tabset}
-----------------------------------------------------
-
-
-
-
-### Nationalities
-
-```{r}
-nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
-
-ggplot(nation, aes(x= COUNTRY)) + geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", 
-"#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC")) + theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("nationality of participants") +ylab("number of participants") + Theme_experimental + xlab("Country of origin") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
-
-
-
-```
-
-
-
-### Genre preferences
-
-```{r}
-genre = read.csv("GENRE STOMP.csv", sep=";")
-ggplot(genre, aes(x=genre.preference))+ geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
-
-```
-
-### STOMP
-```{r}
-STOMP<- subset(genre, STOMP1!= "#N/B")
-ggplot(STOMP, aes(x=STOMP1))+ geom_bar(fill= aes("#0066CC", "#0080FF","#3399FF","#66B2FF") ) + theme(text = element_text(),  axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("Genre preferences grouped by STOMP") + ylab("number of genre preferences") + xlab("STOMP groups")+
-  Theme_experimental+ theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
-```
-
-### Musical sophistication and genre preference
-```{r}
-STOMP<- subset(genre, STOMP1!= "#N/B")
-ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE)+ xlab("STOMP groups") + ylab("Gold Smith MSI score")+ 
-  ggtitle("Distribution of Gold Smith MSI scores in STOMP groups")+ stat_summary(fun.data="mean_sdl", geom="pointrange", color="blue",show.legend = FALSE)+
-  theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1))+
-  Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
-
-```
-
-
-
-Compiling the playlist
+Compiling the playlist {data-navmenu="Playlist"}
 =========================================
  
 Column
@@ -387,7 +410,7 @@ datatable(Rela,
 
 
 
-Songs
+Songs {data-navmenu="Playlist"}
 ========================================
 
 Row
@@ -482,23 +505,7 @@ USA III Rail <br>
 
 
 
-Contact us
-==================================
 
-Row
---------------------------------
-
-### Contact information and Names
-Hello, and welcome to our portfolio.
-We are students from the honours course The Data Science of Everyday Music Listening coordinated by dr. J.A. Burgoyne, and we wanted to know more about the beauty of music. In our brainstorm sessions we concluded that the experience of musical beauty differs from person to person. We wanted to know if someone’s musical sophistication influenced what songs they deemed beautiful. 
-In this portfolio you will find the method and results of our research and we hope you will enjoy it.
-Sincerely,
-Willem Pleiter, Kristina Savickaja, Xiaoqing Li, Denise Quek, Nikita van ‘t Rood and Esther Liefting.
-
-For further information, please contact us at estherliefting@student.uva.nl
-
-
-  
 Splitting the Sample {data-navmenu="Main Research" data-orientation=columns}
 ===============================================================================
   
@@ -571,7 +578,7 @@ ggplot(tky, aes(colour=cut(`p adj`, c(0, 0.01, 0.05, 1),
 
 
 
-Sample charachteristics by class{data-navmenu="Main Research" data-orientation=columns}
+Sample characteristics by class{data-navmenu="Main Research" data-orientation=columns}
 =========================================================================================
   
 Column
