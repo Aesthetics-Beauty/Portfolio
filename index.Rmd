@@ -48,6 +48,7 @@ Topic {.sidebar data-width=420}
 
 Column
 -------------------------------------
+
 ### Selected songs  {.no-padding}
 ```{r}
 valueBox (15, icon ="ion-music-note", color = "primary")

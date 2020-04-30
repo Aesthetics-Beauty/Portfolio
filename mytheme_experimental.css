@@ -240,20 +240,22 @@ a {
     padding: 7px 10px 4px;
 }
 
-/* LCA TABLE */
-div#column-7 {
-    height: fit-content;
-}
 
-/* General Characteristics */
-div#column-3 {
-    height: fit-content;
-}
 
 div#songs {
     margin-right: 50%;
 }
 
-div#concluding-the-expert-analysis {
-    height: fit-content;
+
+
+
+/*Play and pause button */
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: smaller;
+    line-height: inherit;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0px;
+    vertical-align: middle;
 }
