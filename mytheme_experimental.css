@@ -242,7 +242,7 @@ a {
 
 /* safari bug fix */
 div#column-2 {
-    height: 700px;
+    height: 800px;
 }
 
 div#songs {
@@ -258,7 +258,20 @@ input, button, select, textarea {
     font-size: smaller;
     line-height: inherit;
     background-color: transparent;
-    border-color: transparent;
+    border: 1px solid white;
     padding: 0px;
     vertical-align: middle;
+}
+
+button:hover {
+    background-color: #0000006b;
+}
+
+
+button:active {
+    background-color: #686767;
+}
+
+button:focus {
+    background-color: black;
 }
