@@ -597,15 +597,11 @@ As you may have figured out, the names of classes correspond with the quantity o
 ***
 
 <b>ANOVA</b> <br>
-On the second tab, the post-hoc and ANOVA are shown. 
+On the second tab, the posthoc results are visible from our ANOVA. Analysis of variance (ANOVA) is a method in which means and variance between groups (in our case: classes) are compared to see whether the differences in Gold MSI scores are significant (meaning that they are not different due to variation or natural occurring error). If an ANOVA is significant, it means that the null-hypothesis that the groups do not differ from eachother can be rejected, but the ANOVA itself will not tell you which groups differ from each other. Assumptions of normality and equal variance were checked with a Shapiro Wilk's test and Levene test, and came out OK for our test (ie. the p-values were not significant for either test).
 
-In our analysis, ANOVA is a method in which means and variance between classes are compared to see whether the differences in Gold-MSI scores are significant. To find out which particular classes differ from each other, a Tukey's test was performed. The test compares the groups one by one, instead of all at once like ANOVA does.
+To find out which groups differ from each other, so called post-hoc tests can be used, which compare the groups one by one, instead of all at once like ANOVA does. A conventional method to run post-hoc analyses is the Tukey-test, of which you the output is plotted on the second tab in the right panel. This test can be interpreted as follows: on the y-axis you see which test has been done (either comparing indifferents with likers, likers with dislikers and so on). The x-axis tells you the size of the difference. When looking at the plot itself, three intervals are visible. These are 95% confidence intervals. Since the red lines do not contain a value of 0, we can confidently say that were we to repeat our research an infinite amount of times, and construct confidence intervals an infinite amount of times, there is a 95% that the confidence intervals that are calculated (similar to our own confidence interval), will contain the "true" mean.
 
-On x-axis, the size of the difference between groups (illustrated on y-axes) can be seen. The visible intervals are 95% confidence intervals - the intervals that in 95% of the cases will contain the "true" difference in Gold-MSI score. 
-
-To illustrate the Tukey's test further, since the red lines do not contain a value of 0, we can confidently say that if we were to repeat the experiment an infinite amount of times, that in 95% of the time they will contain the "true" difference. That allows us to refute the idea that these groups do not differ in Gold-MSI scores.
-
-In conclusion, the plot shows evidence that the 'Likers' tend to have higher musical sophistication scores than both 'Dislikers' and 'Indifferents'. There is no difference between 'Dislikers' and 'Indifferents'. These results confirm our hypothesis that higher Gold-MSI score will correspond with a higher number of  "yes, I find this song beautiful" answers. 
+Phrased more clearly, the plot shows evidence that the Likers tend to have higher Gold-scores than both the Dislikers and the Indifferents, but there is no difference between the Dislikers and the Indifferents (since the confidence interval contains a zero). This confirms our hypothesis. In the next section, we’ll illustrate how big these differences are exactly and examine if any other characteristics can explain the difference found between groups.
 
 <br>
 <br>
