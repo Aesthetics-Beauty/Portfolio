@@ -430,15 +430,24 @@ Features_wide <- Features30 %>%
   gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
 
 
+
+
 #getting features for selection
 Features15 <- read.csv("Features_goed.csv", sep=";")
+
+
 
 Features15_wide <- Features15 %>%
   gather("Tempo", "Articulation", "Mode", "Intensity", "Tonalness", "Pitch", "Melody", "Rhytmic.Clarity", "Rhythmic.Complexity", key = Feature, value = Parameter)
 
+Features15_wide$Feature <- factor(Features15_wide$Feature)
+
 df <- Features15_wide
 
 df$tooltip <- c(paste0("Song = ", df$Song, "\n Feature = ", df$Feature, "\n Parameter = ", df$Parameter))
+
+
+
 
 Features_wide$Cols <- Features_wide$Feature
 
@@ -446,7 +455,7 @@ Features15_wide$Cols <- Features15_wide$Feature
 
 
 
-Features_wide$Feature <- factor(Features_wide$Feature, levels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhytmic.Clarity", "Tempo", "Rhythmic.Complexity", "Mode"), labels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhythmic Clarity", "Tempo", "Rhythmic Complexity", "Mode"))
+Features_wide$Feature <- factor(Features_wide$Feature, levels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhytmic.Clarity", "Tempo", "Rhythmic.Complexity", "Mode"))
 
 
 tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
@@ -458,8 +467,8 @@ Box_jitter <- ggplot(Features_wide, aes(x = Feature, y = Parameter, col = Cols, 
     geom_jitter_interactive(data = Features15_wide, width = 0.25, alpha = 0.7, aes(colour = Cols, tooltip= df$tooltip, data_id = Song), show.legend = FALSE) +
     theme(axis.text.x = element_text(size=7, angle = 45, hjust = 1)) +
   scale_y_continuous(limits = c(0, 10), breaks = seq(0,10, by = 1)) +
-  scale_x_discrete(labels = labs)  +
-  theme(legend.position='none') + Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+  theme(legend.position='none') + Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF")) +
+  scale_x_discrete(name = "Feature", limits = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhytmic.Clarity", "Tempo", "Rhythmic.Complexity", "Mode"), labels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhythmic Clarity", "Tempo", "Rhythmic Complexity", "Mode"))
 
 
 ggiraph(ggobj = Box_jitter, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css)
