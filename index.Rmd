@@ -41,7 +41,7 @@ Topic {.sidebar data-width=420}
 ### **Assessing the Beauty of Music**  {.no-padding}
   Music is valued by people for many various reasons, be it the emotion it generates, the memories it triggers, or the beauty it transcends. Nevertheless, this perception of aesthetics is highly subjective. There is no specific reason or explanation to why one would prefer jazz over pop music. However, this realisation has not stopped scholars and academics from generating theories that objectify aesthetics. 
   
-  The modernist view of music aesthetics (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals.
+  The modernist view of music aesthetics (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/ target="_blank"">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals.
   
   Furthermore, jazz might be not as popular as pop, for instance, because popularity requires accessibility. With these ongoing debates in the arena, we wanted to test if there is an objective quality to beauty. This led us to our research question: **"To what extent does musical sophistication influence the perception of beauty?"**
 
@@ -92,7 +92,7 @@ Column {.tabset}
 
 
 ### Procedure
-To compile suitable stimuli, <a href="https://aesthetics-beauty.github.io/Portfolio/#compiling-the-playlist">a pre-test was conducted</a>. After choosing 15 stimuli snippets, we created a <a href="https://www.qualtrics.com/">Qualtrics</a> survey. Firstly, participants had to answer basic background questions, namely age, gender and country of origin. Afterwards, they were presented with a short version of <a href="https://www.gold.ac.uk/music-mind-brain/gold-msi/">Gold-MSI </a> test. Then, participants were presented with the 15 songs in a random order. They had to choose whether they found the snippet beautiful or not. Additionally, they were asked if they were familiar with the snippet. Participants could listen to the song as many times as they like. Finally, they had to choose three favorite genres based on a <a href="https://gosling.psy.utexas.edu/scales-weve-developed/short-test-of-music-preferences-stomp/">STOMP</a> selection. All in all, we collected the data from 119 participants.
+To compile suitable stimuli, <a href="https://aesthetics-beauty.github.io/Portfolio/#compiling-the-playlist" target="_blank">a pre-test was conducted</a>. After choosing 15 stimuli snippets, we created a <a href="https://www.qualtrics.com/" target="_blank">Qualtrics</a> survey. Firstly, participants had to answer basic background questions, namely age, gender and country of origin. Afterwards, they were presented with a short version of <a href="https://www.gold.ac.uk/music-mind-brain/gold-msi/" target="_blank">Gold-MSI</a> test. Then, participants were presented with the 15 songs in a random order. They had to choose whether they found the snippet beautiful or not. Additionally, they were asked if they were familiar with the snippet. Participants could listen to the song as many times as they like. Finally, they had to choose three favorite genres based on a <a href="https://gosling.psy.utexas.edu/scales-weve-developed/short-test-of-music-preferences-stomp/" target="_blank">STOMP</a> selection. All in all, we collected the data from 119 participants.
 
 Such procedure helps to divide people into classes by their musical preferences, and then check whether there are any significant changes in characteristics per class. 
 
@@ -220,41 +220,41 @@ experience are more susceptible to awe-like states (<a
 href="https://www.researchgate.net/profile/Roger_Beaty/publication/280112363_Openness_to_Expe
 rience_and_Awe_in_Response_to_Nature_and_Music_Personality_and_Profound_Aesthetic_Experi
 ences/links/55ae399808aed9b7dcdc845d/Openness-to-Experience-and-Awe-in-Response-to-Nature-
-and-Music-Personality-and-Profound-Aesthetic-Experiences.pdf">Silvia et al., 2015</a>).
+and-Music-Personality-and-Profound-Aesthetic-Experiences.pdf" target="_blank">Silvia et al., 2015</a>).
 Interestingly, the study was conducted in 2 domains, that is visual and auditory stimuli were used.
 Across both domains, openness to experience was the only factor predictive of the higher experience
 of awe. One of the drawbacks of the methodology is that judgements were made by listening to only
-one song (<a href="https://www.youtube.com/watch?v=hnAwPeqrdAk">'Hoppípolla' by Sigur
+one song (<a href="https://www.youtube.com/watch?v=hnAwPeqrdAk" target="_blank">'Hoppípolla' by Sigur
 Rós</a>). Furthermore, although none of the participants understood the Icelandic language, the
 overall perceived 'melodicity', familiarity, etc. of the language could have affected the perception of
 the song (<a href="https://www.theguardian.com/education/2014/jul/17/what-makes-a-language-
-attractive">Jenkin, 2014</a>). In the present study, we use only instrumental music to control for the
+attractive" target="_blank">Jenkin, 2014</a>). In the present study, we use only instrumental music to control for the
 language factor. Furthermore, 15 music snippets were chosen as stimuli.
 
 Usually, listening to music is an aesthetic experience that requires activation of not only affective,
 but also cognitive and evaluative processes. Studies have found that music expertise modulates the
 cortical processing of different aspects of music perception (e.g. <a
-href="http://learnmem.cshlp.org/content/9/3/138.full.pdf">Atienza et al., 2002</a>; <a
-href="https://academic.oup.com/cercor/article/14/10/1088/275703">Bosnyak al., 2004</a>).
+href="http://learnmem.cshlp.org/content/9/3/138.full.pdf" target="_blank">Atienza et al., 2002</a>; <a
+href="https://academic.oup.com/cercor/article/14/10/1088/275703" target="_blank">Bosnyak al., 2004</a>).
 Cognitive researchers (<a
-href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334">Müller et al.,
+href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334" target="_blank">Müller et al.,
 2010</a>) compared aesthetic judgements between experts and laypersons by using event-related
 potential (ERP) measurements. They found that when exposed to the same stimuli, experts' and
 laypersons' ERP measures systematically differed. We believe that if there is a difference in aesthetic
 judgements between groups of experts and laypersons on the 'brain' level, then there should be an
 observable distinction on a more conscious level, too. As in <a
-href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334">Müller's
+href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334" target="_blank">Müller's
 paper</a>, the question of whether the piece is beautiful or not, as opposed to 'do you like it', used in
 the majority of previous papers (e.g. <a
-href="https://www.ncbi.nlm.nih.gov/pubmed/19673799">Brattico & Jacobsen, 2009</a>) will be
+href="https://www.ncbi.nlm.nih.gov/pubmed/19673799" target="_blank">Brattico & Jacobsen, 2009</a>) will be
 used to quantify beauty assessment. In this way, the question becomes more linguistically sound and
 precise.
 
 Sophistication is not the only factor that could potentially influence beauty perception. Genre
 preference might also have a profound impact on whether the participant finds a piece beautiful or
-not (<a href="https://www.sciencedirect.com/science/article/pii/S0301051112002505">Istók et al.,
+not (<a href="https://www.sciencedirect.com/science/article/pii/S0301051112002505" target="_blank">Istók et al.,
 2013</a>). The modernist view of music aesthetics (<a
-href="https://journals.sagepub.com/doi/abs/10.2466/pms.1990.71.2.687">Burke & Gridley,
+href="https://journals.sagepub.com/doi/abs/10.2466/pms.1990.71.2.687" target="_blank">Burke & Gridley,
 1990</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz,
 is less popularly valued because of its high intellectual demand. Followers of the theory would argue
 that jazz is a genre that can be comprehended and appreciated only by musically sophisticated
@@ -329,7 +329,7 @@ potential correlation between said scores and genre preference.
 
 ### Article Review: Are musicians particularly sensitive to music?
 
-In the article "Are Musicians Particularly Sensitive to Beauty and Goodness" (<a href=" https://www.zora.uzh.ch/id/eprint/88127/">Güsewell & Ruch, 2014</a>) the degree and form of musical practice of participants is compared to responsiveness to artistic, natural and non-aesthetic beauty and goodness. This was examined using self-report and stimulus-based instruments.
+In the article "Are Musicians Particularly Sensitive to Beauty and Goodness" (<a href="https://www.zora.uzh.ch/id/eprint/88127/" target="_blank"> Güsewell & Ruch, 2014</a>) the degree and form of musical practice of participants is compared to responsiveness to artistic, natural and non-aesthetic beauty and goodness. This was examined using self-report and stimulus-based instruments.
 
 It was found that professional musicians had the highest scores in responsiveness to artistic beauty, experience seeking, and absorption compared to the other groups. The amateur musicians scored highest on overall responsiveness, responsiveness to non-aesthetic goodness and responsiveness to nature. This supports the hypothesis that there is a link between sensitivity to beauty, goodness and musical practice.
 
@@ -381,7 +381,7 @@ To create the stimuli, we searched online for known datasets that include musica
 - <i>Rhythmic Complexity</i>: the extent to which different meters, odd tempo or complex rhythmic patterns are utilized, very simple (1) - very complex (10)
 
 
-This method is based on the evaluation system used by Aljanaki et al. (<a href="https://www.researchgate.net/publication/267326664_COMPUTATIONAL_MODELING_OF_INDUCED_EMOTION_USING_GEMS">2016</a>). The final selection of 15 stimuli songs was chosen based on **A) Feature Representability** and **B) Reliability**.
+This method is based on the evaluation system used by Aljanaki et al. (<a href="https://www.researchgate.net/publication/267326664_COMPUTATIONAL_MODELING_OF_INDUCED_EMOTION_USING_GEMS" target="_blank">2016</a>). The final selection of 15 stimuli songs was chosen based on **A) Feature Representability** and **B) Reliability**.
 
 
 ***
@@ -593,11 +593,21 @@ On the second tab, the post-hoc and ANOVA are shown.
 
 In our analysis, ANOVA is a method in which means and variance between classes are compared to see whether the differences in Gold-MSI scores are significant. To find out which particular classes differ from each other, a Tukey's test was performed. The test compares the groups one by one, instead of all at once like ANOVA does.
 
-On x-axis, the size of the difference between groups (illustrated on y-axes) can be seen. The visible intervals are so-called 95% confidence intervals - the intervals that in 95% of the cases will contain the "true" difference in Gold-MSI score. 
+On x-axis, the size of the difference between groups (illustrated on y-axes) can be seen. The visible intervals are 95% confidence intervals - the intervals that in 95% of the cases will contain the "true" difference in Gold-MSI score. 
 
-To illustrate the Tukey's test further, since the red lines do not contain a value of 0, we can confidently say that if we were to repeat the experiment an infinite amount of times, the differences between measured scores will almost never be 0. That allows us to refute the idea that these groups do not differ in Gold-MSI scores.
+To illustrate the Tukey's test further, since the red lines do not contain a value of 0, we can confidently say that if we were to repeat the experiment an infinite amount of times, that in 95% of the time they will contain the "true" difference. That allows us to refute the idea that these groups do not differ in Gold-MSI scores.
 
-In conclusion, the plot shows evidence that the 'Likers' tend to have higher musical sophistication scores than both 'Dislikers' and 'Indifferents'. There is no difference between 'Dislikers' and 'Indifferents'. These results confirm our hypothesis that higher Gold-MSI score will correspond with a higher number of  "yes, I find this song beautiful" answers.
+In conclusion, the plot shows evidence that the 'Likers' tend to have higher musical sophistication scores than both 'Dislikers' and 'Indifferents'. There is no difference between 'Dislikers' and 'Indifferents'. These results confirm our hypothesis that higher Gold-MSI score will correspond with a higher number of  "yes, I find this song beautiful" answers. 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -646,25 +656,77 @@ ggplot(tky, aes(colour=cut(`p adj`, c(0, 0.01, 0.05, 1),
 
 
 
-Sample characteristics by class{data-navmenu="Main Research" data-orientation=columns}
+Final Results {data-navmenu="Main Research" data-orientation=columns}
 =========================================================================================
   
-Column
+Column {.tabset}
 -------------------------------------------
   
   
-### Class descriptions
-  <i>Here we will interpret the graphs</i>
-  
-  Column
+### Gold-MSI and Class
+<i>Here we will interpret the graphs</i>
+
+
+### STOMP and Class
+Interpretation will follow, also add why we didn't include other graphs (Nikita will know)
+
+
+
+Column {.tabset}
 -------------------------------------------
   
-### Vizualisations
-  <i>Here we will visualize some Gender, STOMP-scores, Gold-MSI and other types of class characteristics that are interesting in a tabset form</i>
   
-  
-  
-  
+### Gold-MSI and Class
+```{r}
+my_data <- read.csv2("CLASSGOLDMSI.csv")
+p1 <- ggplot(my_data, aes(x= reorder(CLASSS, GOLD.MSI.SCORE, fun = median), y= GOLD.MSI.SCORE, group=CLASSS, fill=CLASSS)) + 
+  geom_boxplot(fill = c("pink", "lightgreen", "lightblue"), size=0.6, outlier.size = NA, coef = 0) +
+  theme_bw() +
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.backgroun = element_rect(fill = "#2c5c8b")) + 
+  xlab("Class") + ylab("Gold-MSI Score") + 
+  theme(legend.position="none", 
+        axis.text.x = element_text(colour = "white"),
+        axis.title.x = element_text(colour = "white"),
+        axis.ticks.x = element_line(colour = "white"),
+        axis.ticks.y = element_line(colour = "white"),
+        axis.title.y = element_text(colour = "white"),
+        axis.text.y = element_text(colour = "white")) + 
+scale_x_discrete(labels = c('Dislikers','Indifferents','Likers'))
+ggplotly(p1)
+```
+
+### STOMP and Class
+```{r}
+Stomp_Classes <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Stomp_Classes.csv", sep=";")
+
+data <- subset(Stomp_Classes, STOMP1!= "#N/B")
+
+d2 <- data %>% 
+  group_by(Classes,STOMP1) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count))
+
+
+d2$STOMP1 <- factor(d2$STOMP1, levels = c("Intense & Rebellious", "Reflective&Complex", "Energetic & Rhythmic", "Upbeat & Conventional", "#N/B"), labels = c("Intense & Rebellious", "Reflective & Complex", "Energetic & Rhythmic", "Upbeat & Conventional", "#N/B"))
+
+
+ggplot(d2, aes(x = STOMP1, y = perc, fill = Classes)) +
+  geom_bar(stat = "identity", position = "dodge") + 
+  Theme_experimental + 
+  theme(legend.background = element_rect(fill = "#2c5c8b"),
+        panel.background = element_rect(fill = "#CCE5FF"),
+        panel.grid.major.x = element_blank(),
+        axis.text.x = element_text(size=8, angle = 45, hjust = 1)) +
+  ylab("Percentage") + 
+  scale_y_continuous(labels=scales::percent)
+                                                                                
+```
+
   
 Conclusion and Discussion {data-navmenu="Main Research" data-orientation=columns}
 ===============================================================================

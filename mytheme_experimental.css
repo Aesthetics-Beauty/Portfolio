@@ -156,10 +156,6 @@ body {
     /* background-color: blueviolet; */
 }
 
-a {
-    margin-right: 5px;
-}
-
 
 div#main-research {
     transition: 0.3s;
@@ -245,6 +241,11 @@ div#column-2 {
     height: 800px;
 }
 
+/*final results for safari*/
+div#column-8 {
+    height: 800px;
+}
+
 div#songs {
     margin-right: 50%;
 }
@@ -274,4 +275,12 @@ button:active {
 
 button:focus {
     background-color: black;
+}
+
+
+.ggiraph-toolbar-top {
+    text-align: center;
+    /* top: 3px; */
+    right: 0px;
+    left: 0px;
 }
