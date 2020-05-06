@@ -41,9 +41,9 @@ Topic {.sidebar data-width=420}
 ### **Assessing the Beauty of Music**  {.no-padding}
   Music is valued by people for many various reasons, be it the emotion it generates, the memories it triggers, or the beauty it transcends. Nevertheless, this perception of aesthetics is highly subjective. There is no specific reason or explanation to why one would prefer jazz over pop music. However, this realisation has not stopped scholars and academics from generating theories that objectify aesthetics. 
   
-  The modernist view of music aesthetics (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/ target="_blank"">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals.
+The modernist view of music aesthetics (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/" target="_blank">Huang et al., 2016</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz, is less popularly valued because of its high intellectual demand. Followers of the theory would explain the above-mentioned example by arguing that jazz is a genre that can be comprehended and appreciated only by musically sophisticated individuals.
   
-  Furthermore, jazz might be not as popular as pop, for instance, because popularity requires accessibility. With these ongoing debates in the arena, we wanted to test if there is an objective quality to beauty. This led us to our research question: **"To what extent does musical sophistication influence the perception of beauty?"**
+Furthermore, jazz might be not as popular as pop, for instance, because popularity requires accessibility. With these ongoing debates in the arena, we wanted to test if there is an objective quality to beauty. This led us to our research question: **"To what extent does musical sophistication influence the perception of beauty?"**
 
 
 Column
@@ -92,7 +92,7 @@ Column {.tabset}
 
 
 ### Procedure
-To compile suitable stimuli, <a href="https://aesthetics-beauty.github.io/Portfolio/#compiling-the-playlist" target="_blank">a pre-test was conducted</a>. After choosing 15 stimuli snippets, we created a <a href="https://www.qualtrics.com/" target="_blank">Qualtrics</a> survey. Firstly, participants had to answer basic background questions, namely age, gender and country of origin. Afterwards, they were presented with a short version of <a href="https://www.gold.ac.uk/music-mind-brain/gold-msi/" target="_blank">Gold-MSI</a> test. Then, participants were presented with the 15 songs in a random order. They had to choose whether they found the snippet beautiful or not. Additionally, they were asked if they were familiar with the snippet. Participants could listen to the song as many times as they like. Finally, they had to choose three favorite genres based on a <a href="https://gosling.psy.utexas.edu/scales-weve-developed/short-test-of-music-preferences-stomp/" target="_blank">STOMP</a> selection. All in all, we collected the data from 119 participants.
+To compile suitable stimuli, <a href="https://aesthetics-beauty.github.io/Portfolio/#compiling-the-playlist">a pre-test was conducted</a>. After choosing 15 stimuli snippets, we created a <a href="https://www.qualtrics.com/">Qualtrics</a> survey. Firstly, participants had to answer basic background questions, namely age, gender and country of origin. Afterwards, they were presented with a short version of <a href="https://www.gold.ac.uk/music-mind-brain/gold-msi/">Gold-MSI </a> test. Then, participants were presented with the 15 songs in a random order. They had to choose whether they found the snippet beautiful or not. Additionally, they were asked if they were familiar with the snippet. Participants could listen to the song as many times as they like. Finally, they had to choose three favorite genres based on a <a href="https://gosling.psy.utexas.edu/scales-weve-developed/short-test-of-music-preferences-stomp/">STOMP</a> selection. All in all, we collected the data from 119 participants.
 
 Such procedure helps to divide people into classes by their musical preferences, and then check whether there are any significant changes in characteristics per class. 
 
@@ -166,9 +166,15 @@ Column {.tabset}
 
 ```{r}
 nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
+ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))) + 
+  geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC", "#4C0099")) + 
+  theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + 
+  ggtitle("nationality of participants") +
+  ylab("number of participants") + 
+  Theme_experimental + 
+  xlab("Country of origin") + 
+  theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
 
-ggplot(nation, aes(x= COUNTRY)) + geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", 
-"#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC")) + theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("nationality of participants") +ylab("number of participants") + Theme_experimental + xlab("Country of origin") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
 
 
 
@@ -180,7 +186,9 @@ ggplot(nation, aes(x= COUNTRY)) + geom_bar(fill= aes("#004C99", "#0066CC", "#008
 
 ```{r}
 genre = read.csv("GENRE STOMP.csv", sep=";")
-ggplot(genre, aes(x=genre.preference))+ geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+ggplot(genre, aes(x = reorder(factor(genre.preference), genre.preference, function(x) length(x)))) +
+  geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
 
 ```
 
