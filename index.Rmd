@@ -84,7 +84,7 @@ Do you find this snippet beautiful? Are you familiar with the song? Do you think
 We are curious to know what factors influenced the perception of beauty the most. After listening to the song, could you estimate what are those factors? This question is at the heart of our research. Click through the website to check if your predictions are accurate!
 
 
-Exploring Beauty through different characteristics{data-navmenu="Main Research" data-orientation=columns} 
+Exploring Beauty Through Different Characteristics{data-navmenu="Main Research" data-orientation=columns} 
 ============================================================================================================
 
 Column {.tabset}
@@ -92,7 +92,7 @@ Column {.tabset}
 
 
 ### Procedure
-To compile suitable stimuli, <a href="https://aesthetics-beauty.github.io/Portfolio/#compiling-the-playlist">a pre-test was conducted</a>. After choosing 15 stimuli snippets, we created a <a href="https://www.qualtrics.com/">Qualtrics</a> survey. Firstly, participants had to answer basic background questions, namely age, gender and country of origin. Afterwards, they were presented with a short version of <a href="https://www.gold.ac.uk/music-mind-brain/gold-msi/">Gold-MSI </a> test. Then, participants were presented with the 15 songs in a random order. They had to choose whether they found the snippet beautiful or not. Additionally, they were asked if they were familiar with the snippet. Participants could listen to the song as many times as they like. Finally, they had to choose three favorite genres based on a <a href="https://gosling.psy.utexas.edu/scales-weve-developed/short-test-of-music-preferences-stomp/">STOMP</a> selection. All in all, we collected the data from 119 participants.
+To compile suitable stimuli, <a href="https://aesthetics-beauty.github.io/Portfolio/#compiling-the-playlist">a pre-test was conducted</a>. After choosing 15 stimuli snippets, we created a <a href="https://uvacommscience.eu.qualtrics.com/jfe/form/SV_28Y6rfX6bQCp1RP/">Qualtrics</a>  survey. Firstly, participants had to answer basic background questions, namely age, gender and country of origin. Afterwards, they were presented with a short version of <a href="https://www.gold.ac.uk/music-mind-brain/gold-msi/">Gold-MSI </a> test. Then, participants were presented with the 15 songs in a random order. They had to choose whether they found the snippet beautiful or not. Additionally, they were asked if they were familiar with the snippet. Participants could listen to the song as many times as they like. Finally, they had to choose three favorite genres based on a <a href="https://gosling.psy.utexas.edu/scales-weve-developed/short-test-of-music-preferences-stomp/">STOMP</a> selection. All in all, we collected the data from 119 participants.
 
 Such procedure helps to divide people into classes by their musical preferences, and then check whether there are any significant changes in characteristics per class. 
 
@@ -104,12 +104,12 @@ In this section, we will analyse the graphs to determine the characteristics of 
 Before we begin with the analysis, we would like to mention that our data might be a bit biased, as our participants are predominantly females that are in their 20s. 
 
 
-### Nationality
-Click on the tab <i>Nationality</i> on the right to see the graph
+### Countries of Origin
+Click on the tab <i>Countries of Origin</i> on the right to see the graph
 
 As you can see from the graph, the majority of our participants are from The Netherlands. Nevertheless, we are proud to mention that we gathered a diverse group of participants. The respondents come from 26 different countries from all over the world: Asia, Africa, Europe and America. The majority of our participants are either European or Asian. 
 
-### Genre Preference
+### Genre Preferences
 Click on the tab <i>Genre Preferences</i> on the right to see the graph
 
 To assess genre preferences, we asked participants to rank three of their best preferred genres. The majority of our sample favours pop music. This might be due to the fact that our participants are predominantly in their 20s. Tied in the second place are classical and rock genres. Bluegrass proved to be the least favourite genre. One feasible explanation is that bluegrass is overall less common than the other genres, thus unfamiliar to the majority of participants.
@@ -149,7 +149,8 @@ To test individual differences in musical sophistication, we used the short vers
 
 According to the test, the higher the overall score is (on a scale from 18 to 125), the more musically sophisticated the person is. To see if musical sophistication affects genre preferences, we looked at the distribution of the Gold-MSI scores in STOMP groups. 
 
-From the graph, we can infer that all 4 categories have pretty similar median scores. Unsurprisingly, the highest Gold-MSI median is in Reflective & Complex category. In fact, the differences between categories are not significant. Hence, we can conclude that musical sophistication does not have much effect on genre preferences. 
+From the graph, we can infer that all 4 categories have pretty similar median scores. The highest Gold-MSI median is in Reflective &amp; Complex category, but the
+differences between categories are not significant.
 
 
 
@@ -162,15 +163,14 @@ Column {.tabset}
 
 
 
-### Nationalities
+### Countries of Origin
 
 ```{r}
 nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
 ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))) + 
   geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC", "#4C0099")) + 
   theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + 
-  ggtitle("nationality of participants") +
-  ylab("number of participants") + 
+  ylab("Number of participants") + 
   Theme_experimental + 
   xlab("Country of origin") + 
   theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
@@ -187,25 +187,34 @@ ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))
 ```{r}
 genre = read.csv("GENRE STOMP.csv", sep=";")
 ggplot(genre, aes(x = reorder(factor(genre.preference), genre.preference, function(x) length(x)))) +
-  geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#CCE5FF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("genre preferences") + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+  geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#a9d4ff", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.y = element_line(color = "grey"), panel.background = element_rect(fill = "white")) + scale_y_continuous(limits = c(0, 60), breaks = seq(0,60, by = 10))
 
 
 ```
 
 ### STOMP
 ```{r}
-STOMP<- subset(genre, STOMP1!= "#N/B")
-ggplot(STOMP, aes(x=STOMP1))+ geom_bar(fill= aes("#0066CC", "#0080FF","#3399FF","#66B2FF") ) + theme(text = element_text(),  axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ggtitle("Genre preferences grouped by STOMP") + ylab("number of genre preferences") + xlab("STOMP groups")+
-  Theme_experimental+ theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+STOMP <- subset(genre, STOMP1!= "#N/B")
+STOMP$STOMP1<- factor(STOMP$STOMP1, levels = c("Intense & Rebellious", "Reflective&Complex", "Energetic & Rhythmic", "Upbeat & Conventional", "#N/B"), labels = c("Intense & Rebellious", "Reflective & Complex", "Energetic & Rhythmic", "Upbeat & Conventional", "#N/B"))
+
+
+ggplot(STOMP, aes(x=STOMP1)) +  
+  geom_bar(fill= aes("#0066CC", "#0080FF","#3399FF","#66B2FF") ) + 
+  theme(text = element_text(),  axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + 
+  xlab("STOMP groups")+
+  Theme_experimental+ theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF")) +
+  ylab("Frequency")
 ```
 
 ### Musical Sophistication and Genre Preference
 ```{r}
-STOMP<- subset(genre, STOMP1!= "#N/B")
-ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE)+ xlab("STOMP groups") + ylab("Gold Smith MSI score")+ 
-  ggtitle("Distribution of Gold Smith MSI scores in STOMP groups")+ stat_summary(fun.data="mean_sdl", geom="pointrange", color="blue",show.legend = FALSE)+
+ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE) + 
+  xlab("STOMP groups") + 
+  ylab("Gold-Smith MSI score") + 
+  stat_summary(fun.data="mean_sdl", geom="pointrange", color="blue",show.legend = FALSE) + 
   theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1))+
   Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"))
+
 
 ```
 
@@ -243,7 +252,7 @@ Usually, listening to music is an aesthetic experience that requires activation 
 but also cognitive and evaluative processes. Studies have found that music expertise modulates the
 cortical processing of different aspects of music perception (e.g. <a
 href="http://learnmem.cshlp.org/content/9/3/138.full.pdf" target="_blank">Atienza et al., 2002</a>; <a
-href="https://academic.oup.com/cercor/article/14/10/1088/275703" target="_blank">Bosnyak al., 2004</a>).
+href="https://academic.oup.com/cercor/article/14/10/1088/275703" target="_blank">Bosnyak et al., 2004</a>).
 Cognitive researchers (<a
 href="https://www.sciencedirect.com/science/article/abs/pii/S0167876010000334" target="_blank">Müller et al.,
 2010</a>) compared aesthetic judgements between experts and laypersons by using event-related
@@ -266,7 +275,7 @@ href="https://journals.sagepub.com/doi/abs/10.2466/pms.1990.71.2.687" target="_b
 1990</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz,
 is less popularly valued because of its high intellectual demand. Followers of the theory would argue
 that jazz is a genre that can be comprehended and appreciated only by musically sophisticated
-individuals. For this reason, our stimuli includes a variety of genres, for instance jazz (Drama in Six Notes <audio id="myAudio"><source src="Šešių Natų Drama _ Drama In Six Notes.mp3" type="audio/mpeg"></audio><button onclick="playAudiox()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudiox()" type="button">&nbsp;❚❚&nbsp;</button>)  bluegrass (Less is Moi <audio id="myAudio2"><source src="Less Is Moi.mp3" type="audio/mpeg"></audio><button onclick="playAudioy()" type="button"> &nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioy()" type="button">&nbsp;❚❚&nbsp;</button>) and electronic (syro u473t8+e [141.98] <audio id="myAudio3"><source src="syro u473t8+e [141.98] (piezoluminescence mix).mp3" type="audio/mpeg"></audio><button onclick="playAudioz()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioz()" type="button">&nbsp;❚❚&nbsp;</button>). In addition, we will check if certain genre preferences correspond with higher musical sophistication scores.
+individuals. For this reason, our stimuli includes a variety of genres, for instance jazz (Drama in Six Notes <audio id="myAudio"><source src="Šešių Natų Drama _ Drama In Six Notes.mp3" type="audio/mpeg"></audio><button onclick="playAudiox()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudiox()" type="button">&nbsp;❚❚&nbsp;</button>,)  bluegrass (Less is Moi <audio id="myAudio2"><source src="Less Is Moi.mp3" type="audio/mpeg"></audio><button onclick="playAudioy()" type="button"> &nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioy()" type="button">&nbsp;❚❚&nbsp;</button>) and electronic (syro u473t8+e [141.98] <audio id="myAudio3"><source src="syro u473t8+e [141.98] (piezoluminescence mix).mp3" type="audio/mpeg"></audio><button onclick="playAudioz()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioz()" type="button">&nbsp;❚❚&nbsp;</button>). In addition, we will check if certain genre preferences correspond with higher musical sophistication scores.
 
 <script>
 var x = document.getElementById("myAudio"); 
@@ -330,10 +339,12 @@ function pauseAudioz() {
   z.currentTime = 0;
 } 
 </script>
-Inspired by the aforementioned literature and also personal experiences, we would like to see if
-musical sophistication influences the perception of beauty. We hypothesize that higher scores for
-music sophistication will align with higher scores for beauty. Furthermore, we will analyze the
-potential correlation between said scores and genre preference.
+
+Inspired by the aforementioned literature and also personal
+experiences, we would like to see if musical sophistication influences the perception of beauty.
+We hypothesize that higher scores for music sophistication will align with higher scores for
+beauty. Furthermore, we will analyze the potential correlation between said scores and genre
+preference.
 
 ### Article Review: Are musicians particularly sensitive to music?
 
@@ -353,12 +364,17 @@ However, the participants were not grouped based on the opportunity for expressi
 This research project was conducted as a part of an Honours "The Data Science of Everyday Music Listening" course at the University of Amsterdam (coordinated by dhr. dr. John Ashley Burgoyne).
 
 Research team members:
-Xiaoqing Li 
-Esther Liefting
-Willem Pleiter
-Denise Quek
-Nikita van 't Rood
-Kristina Savickaja
+- Xiaoqing Li 
+
+- Esther Liefting
+
+- Willem Pleiter
+
+- Denise Quek
+
+- Nikita van 't Rood
+
+- Kristina Savickaja
 
 If you have any questions or comments, please contact us at music.beauty.aesthetics@gmail.com
 
@@ -370,23 +386,25 @@ Column
 ### Rating the Songs
 To create the stimuli, we searched online for known datasets that include musical pieces that were dissected according to their musical components. Since the search yielded no results, each member of the group supplied 5 instrumental songs that they found beautiful via Spotify. The chosen songs had to be instrumental to control for the influence of language. Afterwards, the compiled songs were evaluated by 3 musical experts (10+ years of formal musical training). Experts had to rate 30 second songs snippets on a 10-point Likert scale on the following criteria:
 
-- <i>Tempo</i>: the general pulse of the song, very slow (1) - very fast (10)
-
-- <i>Articulation</i>: the rhythmic articulation of the song, very staccato (1) - completely legato (10)
-
-- <i>Mode</i>: overall mode and feel of the song, minor (1) - major (10)
-
-- <i>Intensity</i>: overall loudness, crescendos and decrescendos in a song, pianissimo (1) - fortissimo (10)
+- <i>Melody</i>: overall presence and dominance of melody, very unmelodious (1) - very melodious (10)
 
 - <i>Tonalness</i>: overall tonalness of the composition, very atonal (1) - very tonal (10)
 
-- <i>Pitch</i>: overall distribution of the pitch, all bass (1) - all treble (10)
+- <i>Articulation</i>: the rhythmic articulation of the song, very staccato (1) - completely legato (10)
 
-- <i>Melody</i>: overall presence and dominance of melody, very unmelodious (1) - very melodious (10)
+- <i>Intensity</i>: overall loudness, crescendos and decrescendos in a song, pianissimo (1) - fortissimo (10)
+
+- <i>Pitch</i>: overall distribution of the pitch, all bass (1) - all treble (10)
 
 - <i>Rhythmic Clarity</i>: overall presence of a pulse, very vague (1) - very firm (10)
 
+- <i>Tempo</i>: the general pulse of the song, very slow (1) - very fast (10)
+
 - <i>Rhythmic Complexity</i>: the extent to which different meters, odd tempo or complex rhythmic patterns are utilized, very simple (1) - very complex (10)
+
+- <i>Mode</i>: overall mode and feel of the song, minor (1) - major (10)
+
+
 
 
 This method is based on the evaluation system used by Aljanaki et al. (<a href="https://www.researchgate.net/publication/267326664_COMPUTATIONAL_MODELING_OF_INDUCED_EMOTION_USING_GEMS" target="_blank">2016</a>). The final selection of 15 stimuli songs was chosen based on **A) Feature Representability** and **B) Reliability**.
@@ -428,7 +446,7 @@ Features15_wide$Cols <- Features15_wide$Feature
 
 
 
-Features_wide$Feature <- factor(Features_wide$Feature, levels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhytmic.Clarity", "Tempo", "Rhythmic.Complexity", "Mode"))
+Features_wide$Feature <- factor(Features_wide$Feature, levels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhytmic.Clarity", "Tempo", "Rhythmic.Complexity", "Mode"), labels = c("Melody", "Tonalness", "Articulation", "Intensity", "Pitch", "Rhythmic Clarity", "Tempo", "Rhythmic Complexity", "Mode"))
 
 
 tooltip_css <- "background-color:#9ccdff;opacity:0.2;font-size:15px;border-radius:10px;padding:10px;font-family:'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;color: #040404"
@@ -462,7 +480,7 @@ Column
 -------------------------------------
 
 ### Reliability
-To finalize our selection of stimuli songs, we first estimated the reliability of the expert ratings per song. To do this, the distance scores between each of the expert‘s evaluation was computed. For example, each evaluator rated a song on Tempo. If the first rater gave it a 5, the second rater gave it a 6 and the third - 7, the distance is then calculated by taking the distance between the first and the second rater (6 - 5 = 1); the second and the third rater (7 - 6 = 1) and the distance between the first and the third rater (7 - 5 = 2). The sum of the differences (1 + 1 + 2 = 4) provides an estimate of a consensus for Tempo. Subsequently, this process was repeated for all components per song. Then, all reliability scores per component were summed to give an estimate of overall reliability. The table on the right shows these scores for all 30 songs.
+To finalize our selection of stimuli songs, we first estimated the reliability of the expert ratings per song. To do this, the distance scores between each of the expert‘s evaluation was computed. For example, each evaluator rated a song on Tempo. If the first rater gave it a 5, the second rater gave it a 6 and the third - 7, the distance is then calculated by taking the distance between the first and the second rater (6 - 5 = 1), the second and the third rater (7 - 6 = 1) and the distance between the first and the third rater (7 - 5 = 2). The sum of the differences (1 + 1 + 2 = 4) provides an estimate of a consensus for Tempo. Subsequently, this process was repeated for all components per song. Then, all reliability scores per component were summed to give an estimate of overall reliability. The table on the right shows these scores for all 30 songs.
 
 As can be seen from the table, the reliability scores range between 26 and 64, with a lower score representing stronger consensus. Based on these scores, we estimated a cut-off point of < 45 and selected the final stimuli.
 
@@ -473,6 +491,7 @@ However, upon examining our prior selection, it became apparent that the distrib
 ### Reliability Scores per Song
 ```{r}
 Rela <- read.csv("Reliability.csv", sep=";")
+
 
 datatable(Rela,
   rownames = FALSE, options = list(pageLength = 10)
@@ -589,7 +608,9 @@ Column
 ### The LCA
 Latent Class Analysis (LCA) is a psychometric method in which participants are grouped based on how likely they would respond positive to a certain survey item. In our case, the said item is the song snippet that the participant find beautiful or not.
 
-After running the data from 119 participants through the LCA, only a 3-class model fitted the data appropriately (refer to the ' LCA Class Table '). The table shows the probability of a person belonging to a particular class based on their beauty judgement (yes/no) of a specific snippet. For instance, for USA III RAIL, a person belonging to 'Likers' group has a 72% chance of rating the song beautiful, 'Indifferents' - 49% and 'Dislikers' - 0%. These conditional probabilities are available for all classes, so you can hover over the table to see which songs were generally very liked and which were disliked.
+After running the data from 119 participants through the LCA, either a 2- or a 3-class model was the best fit. Since only the 3-class model performed good on absolute fit, a 3 class model was selected. The table shows the probability of a person belonging to a particular class based on their beauty judgement (yes/no) of a specific snippet. For instance, for
+"Married Life", a person belonging to the ‘Likers’ group has a 100% chance of rating the song
+beautiful, ‘Indifferents’ - 86% and ‘Dislikers’ - 20%. These conditional probabilities are available for all classes, so you can hover over the table to see which songs were generally very liked and which were disliked.
 
 As you may have figured out, the names of classes correspond with the quantity of songs that they find beautiful. Thus, 'Likers' find the majority of snippets beautiful, 'Indifferents' are the middle group and 'Dislikers' find most of the songs not beautiful. 'Likers' comprised 38% of our sample, 'Indifferents' - 48% and 'Dislikers' - 14%.
 
@@ -603,15 +624,7 @@ To find out which groups differ from each other, so called post-hoc tests can be
 
 Phrased more clearly, the plot shows evidence that the Likers tend to have higher Gold-scores than both the Dislikers and the Indifferents, but there is no difference between the Dislikers and the Indifferents (since the confidence interval contains a zero). This confirms our hypothesis. In the next section, we’ll illustrate how big these differences are exactly and examine if any other characteristics can explain the difference found between groups.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 
 
@@ -622,7 +635,7 @@ Column {.tabset}
 ```{r}
 Beauty_wide <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Beauty_wide.csv")
 Beauty_wide$Class <- factor(Beauty_wide$Class, levels = c("Likers", "Indifferents", "Dislikers"))
-Beauty_wide$song <- factor(Beauty_wide$song, levels = c("SYRO", "DRAMA IN SIX NOTES", "CIA PAT", "RESOLVER", "USA III RAIL","SCARFACE", "Elysium", "LESS IS MOI", "FIRTH OF FIFTH", "SINGLE PETAL OF A ROSE", "BYGONE BUMPS", "DECISION", "SONG FOR A NEW BEGINNING", "BLUEMING", "MARRIED LIFE"))
+Beauty_wide$song <- factor(Beauty_wide$song, levels = c("SYRO", "DRAMA IN SIX NOTES", "CIA PAT", "RESOLVER", "USA III RAIL","SCARFACE", "Elysium", "LESS IS MOI", "FIRTH OF FIFTH", "SINGLE PETAL OF A ROSE", "BYGONE BUMPS", "DECISION", "SONG FOR A NEW BEGINNING", "BLUEMING", "MARRIED LIFE"), labels = c("Syro", "Drama In Six Notes", "Cia Pat", "Resolver", "USA III: Rail","Scarface Theme", "Elysium", "Less Is Moi", "Firth of Fifth", "Single Petal of a Rose", "Bygone Bumps", "Decision", "Song for a New Beginning", "Blueming", "Married Life"))
 
 colnames(Beauty_wide) <- c(colnames(Beauty_wide)[1:3], "Probability")
 
@@ -635,7 +648,8 @@ LCA_table <- ggplot(Beauty_wide, aes(x = Class, y = song, fill = Probability, co
     space = "Lab",
     na.value = "grey50",
     guide = "colourbar",
-    aesthetics = "fill") + Theme_experimental + theme(axis.ticks.x = element_blank(), axis.ticks.y  =  element_blank(), axis.text = element_text(size = 7))
+    aesthetics = "fill") + Theme_experimental + theme(axis.ticks.x = element_blank(), axis.ticks.y  =  element_blank(), axis.text = element_text(size = 7)) + 
+  ylab("Song")
 
 
 ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css, width = 0.8, height = 4)
@@ -644,6 +658,8 @@ ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", t
 
 
 ```
+
+
 
 ### ANOVA Post-Hoc Results
 
@@ -668,7 +684,16 @@ Column {.tabset}
   
   
 ### Gold-MSI and Class
-<i>Here we will interpret the graphs</i>
+
+<i>The boxplot on the right is interactive, hover over the boxes to find out more</i>
+
+The Gold-MSI and Class boxplot illustrates the differences between the classes. ‘Dislikers’ have the
+lowest median for Gold-MSI score at 62.00, closely followed by ‘Indifferents’ at 69.00. ‘Likers’
+have the highest median value - 82.50. Furthermore, ‘Likers’ group has the largest interquartile range
+from 66.00 to 96.00, whereas ‘Indifferents’ and ‘Dislikers’ have similar ranges at 56.50 to 82.50 and
+52.50 to 80.25 respectively.
+
+<i> I would suggest to also highlight the differences between these groups and recall the ANOVA, so say that in our case the median differences are ... x ..., and then say something about the magnitude of these differences and whether you think it is a big difference or not, add some personal opinion.</i>
 
 
 ### STOMP and Class
@@ -727,6 +752,7 @@ ggplot(d2, aes(x = STOMP1, y = perc, fill = Classes)) +
         panel.grid.major.x = element_blank(),
         axis.text.x = element_text(size=8, angle = 45, hjust = 1)) +
   ylab("Percentage") + 
+  xlab("STOMP") +
   scale_y_continuous(labels=scales::percent)
                                                                                 
 ```
@@ -740,7 +766,14 @@ Conclusion and Discussion {data-navmenu="Main Research" data-orientation=columns
   
   
 ### Conclusion
-  <i>Here we will interpret the graphs</i>
+People with different cultural background, different levels of music knowledge and different music experience tend to have different music tastes. As an effort to gain insights into these differences, our research has investigated the relationship between music sophistication and the perceived beauty of music. Following the main research question, **individuals’ perception of beauty is proved to be influenced by their musical sophistication**. The investigation was conducted in three steps. Firstly, the association between musical sophistication and the biggest possible confounder of our research, genre preference, has been visualized. However, the differences are minute, thus musical sophistication is not likely to affect genre preferences.
+
+Secondly, after sorting participants into the LCA classes based on their beauty perception of the songs snippets, their genre preferences were compared. In general, “Upbeat & Conventional” music was relatively popular with all 3 classes. Besides, “Intense & Rebellious” music is favoured by ‘Dislikers’ the most, while about one-third of ‘Likers’ prefered genres in the “Reflective & Complex” category.
+
+Finally and most importantly, among the three groups of participants, the group of ‘Likers’ is significantly different from the other two groups. The group has the highest scores for the Gold-MSI test. People in this class perceived the majority of snippets as beautiful and obtained higher median scores for the overall musical sophistication. In other words, those who have **more music-related experiences are likely to categorize more music as beautiful**. Previous research (<a href=" https://www.zora.uzh.ch/id/eprint/88127/" target="_blank">Güsewell & Ruch, 2014</a>) suggested that professional musicians are more sensitive to the artistic beauty of music. In relation, those who have achieved relatively high scores on the Gold-MSI test might somehow akin to the experts and thus become more responsive to the beauty perception of the music as well. However, more research is needed to provide potential explanations for our research results.
+
+Altogether, with an international sample and diversified music snippets, we are glad to say that the research results supported our predictions. Indeed, **music sophistication is not likely to influence people’s music tastes in terms of genre preference, but could determine music perception in terms of aesthetic evaluation**. Furthermore, our results are somewhat in line with the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/" target="_blank">modernist view</a>. Both ‘Likers’ and ‘Indifferents’, who have higher Gold-MSI scores, are more likely to appreciate complex music (“Reflective & Complex” ) than ‘Dislikers’ (lower Gold-MSI scores).
+
   
 Column
 -------------------------------------
@@ -748,7 +781,26 @@ Column
 
 
 ### Discussion
-  <i>Here we will visualize some Gender, STOMP-scores, Gold-MSI and other types of class characteristics that are interesting in a tabset form</i>
+This research has tried to move one step toward exploring the beauty of music. In the future, more research could be done to gain better insights into the diversified world of music aesthetics. In relation to some of the limitations of this study, several suggestions for future research are discussed. 
+
+**Familiar vs Unfamiliar Songs** <br>
+According to <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027241"> Pereira and his colleagues</a>, familiarity could contribute to listeners’ engagement with the songs. As a result, this factor may play a crucial role in beauty evaluation. However, in our research, we strived to exclude the factor of familiarity by mainly selecting songs that are less popular. Therefore, the research falls short of comparing the differences in evaluations between familiar and unfamiliar songs. Future research could explore the familiarity aspect and how it affects the perceived beauty of music.
+
+**More Intense & Rebellious Songs**<br>
+It is worth mentioning that most of the songs used in this research belong to the “Reflective & Complex” STOMP group. There was an obvious lack of  “Intense & Rebellious” snippets. This fact could explain why the genres in this category were largely prefered by the ‘Dislikers’. Therefore, it might be the case that genre preference had an influence on class composition. For future research, we suggest that the genres of the songs used should be even more diverse to rule out this possible confounder. 
+
+**The Confounder of Instrument Learning Experience** <br>
+Research about the relationship between music sophistication and beauty perception is still insufficient. When it comes to evaluating instrumental music, those who have learned instruments may be more sensitive than those who have not. Meanwhile, the former group of people are likely to gain a higher score for music sophistication than the latter ones. Hence, the result of this research may be biased as the Likers-class included many instrument-learners. Accordingly, further research is needed to address the confounding influence brought by the instruments learning experience.
+
+**Objective vs Subjective Beauty** <br>
+As a latent concept, beauty deserves more in-depth investigations. Whilst this research simply uses a “yes or no” question to measure people’s beauty perception, we believe that a more interesting pattern could be found if a different measurement is adopted. For example, a 7-point Likert scale can be used to evaluate how beautiful the snippets are. Moreover, a qualitative interview during which participants would be asked to define beauty in music, could be conducted as a pre-test.
+
+**Correlation vs Causal Relationship** <br>
+While this study tried to test the relationship between musical sophistication and the perception of beauty, only correlation could be addressed. In other words, evidence for the causal relationship between the two variables is still absent, and therefore, whether music training and experience leads to music enjoyment and appreciation remains speculative.
+
+In a nutshell, to date, the field of music aesthetics remains mostly undeveloped. Academic research on how musical sophistication contributes or relates to the perception of beauty is still absent. Our study, despite the above-mentioned limitations, can serve as a stable foundation for further studies
+
+
 
   
   
