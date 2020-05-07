@@ -165,7 +165,7 @@ Column {.tabset}
 
 ### Countries of Origin
 
-```{r}
+```{r fig.width= 9, fig.height=7}
 nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
 ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))) + 
   geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC", "#4C0099")) + 
@@ -184,7 +184,7 @@ ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))
 
 ### Genre Preferences
 
-```{r}
+```{r fig.width= 9, fig.height=7}
 genre = read.csv("GENRE STOMP.csv", sep=";")
 ggplot(genre, aes(x = reorder(factor(genre.preference), genre.preference, function(x) length(x)))) +
   geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#a9d4ff", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.y = element_line(color = "grey"), panel.background = element_rect(fill = "white")) + scale_y_continuous(limits = c(0, 60), breaks = seq(0,60, by = 10))
@@ -193,7 +193,7 @@ ggplot(genre, aes(x = reorder(factor(genre.preference), genre.preference, functi
 ```
 
 ### STOMP
-```{r}
+```{r fig.width= 9, fig.height=7}
 STOMP <- subset(genre, STOMP1!= "#N/B")
 STOMP$STOMP1<- factor(STOMP$STOMP1, levels = c("Intense & Rebellious", "Reflective&Complex", "Energetic & Rhythmic", "Upbeat & Conventional", "#N/B"), labels = c("Intense & Rebellious", "Reflective & Complex", "Energetic & Rhythmic", "Upbeat & Conventional", "#N/B"))
 
@@ -207,7 +207,7 @@ ggplot(STOMP, aes(x=STOMP1)) +
 ```
 
 ### Musical Sophistication and Genre Preference
-```{r}
+```{r fig.width= 9, fig.height=7}
 ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE) + 
   xlab("STOMP groups") + 
   ylab("Gold-Smith MSI score") + 
@@ -423,7 +423,7 @@ As can be seen from the jitterplot, our final selection covers quite a large ran
 
 ### Expert Rating per Song
 
-```{r figure.height=20}
+```{r fig.width= 9, fig.height=7}
 
 #getting features for all songs
 Features30 <- read.csv2("Features30.csv")
@@ -642,7 +642,7 @@ Phrased more clearly, the plot shows evidence that the Likers tend to have highe
 Column {.tabset}
 --------------------------------------------------
 ### LCA class table
-```{r}
+```{r fig.width= 9, fig.height=7}
 Beauty_wide <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Beauty_wide.csv")
 Beauty_wide$Class <- factor(Beauty_wide$Class, levels = c("Likers", "Indifferents", "Dislikers"))
 Beauty_wide$song <- factor(Beauty_wide$song, levels = c("SYRO", "DRAMA IN SIX NOTES", "CIA PAT", "RESOLVER", "USA III RAIL","SCARFACE", "Elysium", "LESS IS MOI", "FIRTH OF FIFTH", "SINGLE PETAL OF A ROSE", "BYGONE BUMPS", "DECISION", "SONG FOR A NEW BEGINNING", "BLUEMING", "MARRIED LIFE"), labels = c("Syro", "Drama In Six Notes", "Cia Pat", "Resolver", "USA III: Rail","Scarface Theme", "Elysium", "Less Is Moi", "Firth of Fifth", "Single Petal of a Rose", "Bygone Bumps", "Decision", "Song for a New Beginning", "Blueming", "Married Life"))
@@ -683,7 +683,7 @@ ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", t
 
 ### ANOVA Post-Hoc Results
 
-```{r}
+```{r fig.width= 9, fig.height=7}
 tky <- readRDS(file = "tky.rds")
 ggplot(tky, aes(colour=cut(`p adj`, c(0, 0.01, 0.05, 1), 
                            label=c("p<0.01","p < 0.05","Non-Sig")))) +
@@ -752,7 +752,7 @@ ggplotly(p1)
 ```
 
 ### STOMP and Class
-```{r}
+```{r fig.width= 9, fig.height=7}
 Stomp_Classes <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Stomp_Classes.csv", sep=";")
 
 data <- subset(Stomp_Classes, STOMP1!= "#N/B")
@@ -773,7 +773,7 @@ ggplot(d2, aes(x = STOMP1, y = perc, fill = Classes)) +
         panel.background = element_rect(fill = "#CCE5FF"),
         panel.grid.major.x = element_blank(),
         axis.text.x = element_text(size=8, angle = 45, hjust = 1)) +
-  ylab("Percentage") + 
+  ylab("Proportion per Class") + 
   xlab("STOMP") +
   scale_y_continuous(labels=scales::percent)
                                                                                 
