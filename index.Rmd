@@ -364,6 +364,7 @@ However, the participants were not grouped based on the opportunity for expressi
 This research project was conducted as a part of an Honours "The Data Science of Everyday Music Listening" course at the University of Amsterdam (coordinated by dhr. dr. John Ashley Burgoyne).
 
 Research team members:
+
 - Xiaoqing Li 
 
 - Esther Liefting
@@ -627,9 +628,9 @@ As you may have figured out, the names of classes correspond with the quantity o
 ***
 
 <b>ANOVA</b> <br>
-On the second tab, the posthoc results are visible from our ANOVA. Analysis of variance (ANOVA) is a method in which means and variance between groups (in our case: classes) are compared to see whether the differences in Gold MSI scores are significant (meaning that they are not different due to variation or natural occurring error). If an ANOVA is significant, it means that the null-hypothesis that the groups do not differ from eachother can be rejected, but the ANOVA itself will not tell you which groups differ from each other. Assumptions of normality and equal variance were checked with a Shapiro Wilk's test and Levene test, and came out OK for our test (ie. the p-values were not significant for either test).
+On the second tab, the posthoc results are visible from our ANOVA. Analysis of variance (ANOVA) is a method in which means and variance between groups (in our case classes) are compared to see whether the differences in Gold-MSI scores are significant (not different due to variation or natural occurring error). If an ANOVA is significant, it means that the null-hypothesis that the groups do not differ from eachother can be rejected, but the ANOVA itself will not tell you which groups are different. Assumptions of normality and equal variance were checked with a Shapiro Wilk's test and Levene test, and came out OK (ie. the p-values were not significant for either test).
 
-To find out which groups differ from each other, so called post-hoc tests can be used, which compare the groups one by one, instead of all at once like ANOVA does. A conventional method to run post-hoc analyses is the Tukey-test, of which you the output is plotted on the second tab in the right panel. This test can be interpreted as follows: on the y-axis you see which test has been done (either comparing indifferents with likers, likers with dislikers and so on). The x-axis tells you the size of the difference. When looking at the plot itself, three intervals are visible. These are 95% confidence intervals. Since the red lines do not contain a value of 0, we can confidently say that were we to repeat our research an infinite amount of times, and construct confidence intervals an infinite amount of times, there is a 95% that the confidence intervals that are calculated (similar to our own confidence interval), will contain the "true" mean.
+To find out which groups are different, so called post-hoc tests can be used, which compare the groups one by one, instead of all at once like ANOVA does. A conventional method to run post-hoc analyses is the Tukey-test (the results are on the second tab of the right panel). This test can be interpreted as follows: on the y-axis you see which test has been done (either comparing indifferents with likers, likers with dislikers and so on). The x-axis tells you the size of the difference. The plot contains 3 intervals. These are 95% confidence intervals. Since the red lines do not contain a value of 0, we can confidently say that were we to repeat our research an infinite amount of times, and construct confidence intervals an infinite amount of times, 95% of the confidence intervals that are calculated (which will be similar to our own confidence interval), will contain the true value of the difference between classes.
 
 Phrased more clearly, the plot shows evidence that the Likers tend to have higher Gold-scores than both the Dislikers and the Indifferents, but there is no difference between the Dislikers and the Indifferents (since the confidence interval contains a zero). This confirms our hypothesis. In the next section, we’ll illustrate how big these differences are exactly and examine if any other characteristics can explain the difference found between groups.
 
@@ -650,18 +651,28 @@ colnames(Beauty_wide) <- c(colnames(Beauty_wide)[1:3], "Probability")
 
 Beauty_wide$percent <- percent(Beauty_wide$Probability)
 
+
+Beauty_wide$tooltip <- c(paste0(Beauty_wide$song, "\n", Beauty_wide$percent))
+
+
 LCA_table <- ggplot(Beauty_wide, aes(x = Class, y = song, fill = Probability, colour = "grey50")) +
-  geom_tile_interactive(colour = "darkgrey", aes(tooltip = percent)) + theme_minimal() + scale_x_discrete(position = "top") + scale_fill_gradient(
+  geom_tile_interactive(colour = "darkgrey", aes(tooltip = tooltip)) + theme_minimal() + scale_x_discrete(position = "top") + scale_fill_gradient(
     low = "#efedf5",
     high = "#40217d",
     space = "Lab",
     na.value = "grey50",
     guide = "colourbar",
-    aesthetics = "fill") + Theme_experimental + theme(axis.ticks.x = element_blank(), axis.ticks.y  =  element_blank(), axis.text = element_text(size = 7)) + 
-  ylab("Song")
+    aesthetics = "fill",
+    labels = percent) + Theme_experimental + theme(axis.ticks.x = element_blank(),
+                                                      axis.ticks.y  =  element_blank(),
+                                                      axis.text = element_text(size = 7),
+                                                      legend.text = element_text(size = 7),
+                                                      legend.title = element_text(size = 9),
+                                                   panel.grid = element_blank()) + 
+  ylab("Song") 
 
 
-ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css, width = 0.8, height = 4)
+ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", tooltip_extra_css = tooltip_css, width = 1, height = 3)
 
 
 
@@ -702,12 +713,14 @@ have the highest median value - 82.50. Furthermore, ‘Likers’ group has the l
 from 66.00 to 96.00, whereas ‘Indifferents’ and ‘Dislikers’ have similar ranges at 56.50 to 82.50 and
 52.50 to 80.25 respectively.
 
-<i> I would suggest to also highlight the differences between these groups and recall the ANOVA, so say that in our case the median differences are ... x ..., and then say something about the magnitude of these differences and whether you think it is a big difference or not, add some personal opinion.</i>
+Overall, the ‘Likers’ group scores higher in all factors, while  ‘Dislikers’ and ‘Indifferents’ have relatively similar scores. As previously shown by ANOVA and Tukey’s test, ‘Likers’ differ from both ‘Indifferents’ and ‘Dislikers’ in their Gold-MSI scores.
 
 
 ### STOMP and Class
-Interpretation will follow, also add why we didn't include other graphs (Nikita will know)
 
+The STOMP and Class graph shows the relation between genre and class (dislikers, indifferents, and likers). The main conclusion to draw from this graph is that Intense & Rebellious has the highest percentage of dislikers of any genre. In contrast, the Reflective & Complex and Energetic & Rhythmic genres were more popular with the likers and indifferents, but has the lowest percentage of dislikers. In general, Upbeat & Conventional is the most popular genre, with the biggest difference between dislikers and likers. The Upbeat & Conventional genre was roughly equally liked and disliked. 
+
+After considering the age and gender of the participants, we found that there were no significant differences in their responses and as a result decided to exclude these graphs.
 
 
 Column {.tabset}
@@ -781,7 +794,7 @@ Secondly, after sorting participants into the LCA classes based on their beauty 
 
 Finally and most importantly, among the three groups of participants, the group of ‘Likers’ is significantly different from the other two groups. The group has the highest scores for the Gold-MSI test. People in this class perceived the majority of snippets as beautiful and obtained higher median scores for the overall musical sophistication. In other words, those who have **more music-related experiences are likely to categorize more music as beautiful**. Previous research (<a href=" https://www.zora.uzh.ch/id/eprint/88127/" target="_blank">Güsewell & Ruch, 2014</a>) suggested that professional musicians are more sensitive to the artistic beauty of music. In relation, those who have achieved relatively high scores on the Gold-MSI test might somehow akin to the experts and thus become more responsive to the beauty perception of the music as well. However, more research is needed to provide potential explanations for our research results.
 
-Altogether, with an international sample and diversified music snippets, we are glad to say that the research results supported our predictions. Indeed, **music sophistication is not likely to influence people’s music tastes in terms of genre preference, but could determine music perception in terms of aesthetic evaluation**. Furthermore, our results are somewhat in line with the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/" target="_blank">modernist view</a>. Both ‘Likers’ and ‘Indifferents’, who have higher Gold-MSI scores, are more likely to appreciate complex music (“Reflective & Complex” ) than ‘Dislikers’ (lower Gold-MSI scores).
+Altogether, with an international sample and diversified music snippets, we are glad to say that the research results supported our predictions. Indeed, **music sophistication is not likely to influence people’s music tastes in terms of genre preference, but could influence music perception in terms of aesthetic evaluation**. Furthermore, our results are somewhat in line with the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/" target="_blank">modernist view</a>. Both ‘Likers’ and ‘Indifferents’, who have higher Gold-MSI scores, are more likely to appreciate complex music (“Reflective & Complex” ) than ‘Dislikers’ (lower Gold-MSI scores).
 
   
 Column
