@@ -169,12 +169,13 @@ Column {.tabset}
 nation= read.csv("COUNTRY OF ORIGIN (+TEXT VALUES).csv", sep=";")
 ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))) + 
   geom_bar(fill= aes("#004C99", "#0066CC", "#0080FF", "#3399FF", "#66B2FF", "#99CCFF", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000066", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC", "#4C0099")) + 
-  theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + 
+  theme(text = element_text(),axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ylab("Number of participants") + 
   Theme_experimental + 
   xlab("Country of origin") + 
   theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"),
-        axis.text.x = element_text(size = 12))
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_text(size = 12))
 
 
 
@@ -188,7 +189,7 @@ ggplot(nation, aes(x = reorder(factor(COUNTRY), COUNTRY, function(x) length(x)))
 ```{r fig.width= 8, fig.height=6}
 genre = read.csv("GENRE STOMP.csv", sep=";")
 ggplot(genre, aes(x = reorder(factor(genre.preference), genre.preference, function(x) length(x)))) +
-  geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#a9d4ff", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.y = element_line(color = "grey"), panel.background = element_rect(fill = "white")) + scale_y_continuous(limits = c(0, 60), breaks = seq(0,60, by = 10)) + theme(axis.text.x = element_text(size = 12))
+  geom_bar(fill= aes("#0066CC", "#0080FF", "#3399FF","#66B2FF", "#99CCFF", "#a9d4ff", "#CCCCFF", "#9999FF", "#6666FF", "#3333FF", "#0000FF", "#0000CC", "#000099", "#0000CC", "#0000FF", "#3333FF", "#9999FF","#CCCCFF", "#E5CCFF", "#CC99FF", "#B266FF", "#9933FF", "#7F00FF", "#6600CC") ) + theme(text = element_text(), axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + ylab("number of times genre mentioned in preferences") + Theme_experimental + ylab("Count") + xlab("Genre preference") + theme(panel.grid.major.y = element_line(color = "grey"), panel.background = element_rect(fill = "white")) + scale_y_continuous(limits = c(0, 60), breaks = seq(0,60, by = 10)) + theme(axis.text.x = element_text(size = 12), axis.title.x = element_text(size = 12))
 
 
 ```
@@ -201,10 +202,10 @@ STOMP$STOMP1<- factor(STOMP$STOMP1, levels = c("Intense & Rebellious", "Reflecti
 
 ggplot(STOMP, aes(x=STOMP1)) +  
   geom_bar(fill= aes("#0066CC", "#0080FF","#3399FF","#66B2FF") ) + 
-  theme(text = element_text(),  axis.text.x = element_text(size=8, angle = 45, hjust = 1)) + 
+  theme(text = element_text(),  axis.text.x = element_text(angle = 45, hjust = 1)) + 
   xlab("STOMP groups")+
   Theme_experimental+ theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"),
-                            axis.text.x = element_text(size = 12)) +
+                            axis.text.x = element_text(size = 12), axis.title.x = element_text(size = 12)) +
   ylab("Frequency")
 ```
 
@@ -214,9 +215,9 @@ ggplot(STOMP, aes(x=STOMP1, y=GOLD.MSI.SCORE)) + geom_violin(show.legend = FALSE
   xlab("STOMP groups") + 
   ylab("Gold-Smith MSI score") + 
   stat_summary(fun.data="mean_sdl", geom="pointrange", color="blue",show.legend = FALSE) + 
-  theme(text = element_text(),axis.text.x = element_text(size=8, angle = 45, hjust = 1))+
+  theme(text = element_text(),axis.text.x = element_text(angle = 45, hjust = 1))+
   Theme_experimental + theme(panel.grid.major.x = element_blank(), panel.background = element_rect(fill = "#CCE5FF"),
-                             axis.text.x = element_text(size = 12))
+                             axis.text.x = element_text(size = 12), axis.title.x = element_text(size = 12))
 
 
 ```
@@ -278,7 +279,7 @@ href="https://journals.sagepub.com/doi/abs/10.2466/pms.1990.71.2.687" target="_b
 1990</a>) supports the idea of genre hierarchy. This theory states that complex music, such as jazz,
 is less popularly valued because of its high intellectual demand. Followers of the theory would argue
 that jazz is a genre that can be comprehended and appreciated only by musically sophisticated
-individuals. For this reason, our stimuli includes a variety of genres, for instance jazz (Drama in Six Notes <audio id="myAudio"><source src="Šešių Natų Drama _ Drama In Six Notes.mp3" type="audio/mpeg"></audio><button onclick="playAudiox()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudiox()" type="button">&nbsp;❚❚&nbsp;</button>,)  bluegrass (Less is Moi <audio id="myAudio2"><source src="Less Is Moi.mp3" type="audio/mpeg"></audio><button onclick="playAudioy()" type="button"> &nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioy()" type="button">&nbsp;❚❚&nbsp;</button>) and electronic (syro u473t8+e [141.98] <audio id="myAudio3"><source src="syro u473t8+e [141.98] (piezoluminescence mix).mp3" type="audio/mpeg"></audio><button onclick="playAudioz()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioz()" type="button">&nbsp;❚❚&nbsp;</button>). In addition, we will check if certain genre preferences correspond with higher musical sophistication scores.
+individuals. For this reason, our stimuli includes a variety of genres, for instance jazz (Drama in Six Notes <audio id="myAudio"><source src="Šešių Natų Drama _ Drama In Six Notes.mp3" type="audio/mpeg"></audio><button onclick="playAudiox()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudiox()" type="button">&nbsp;❚❚&nbsp;</button>),  bluegrass (Less is Moi <audio id="myAudio2"><source src="Less Is Moi.mp3" type="audio/mpeg"></audio><button onclick="playAudioy()" type="button"> &nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioy()" type="button">&nbsp;❚❚&nbsp;</button>) and electronic (syro u473t8+e [141.98] <audio id="myAudio3"><source src="syro u473t8+e [141.98] (piezoluminescence mix).mp3" type="audio/mpeg"></audio><button onclick="playAudioz()" type="button">&nbsp;▶&nbsp;</button>&nbsp;<button onclick="pauseAudioz()" type="button">&nbsp;❚❚&nbsp;</button>). In addition, we will check if certain genre preferences correspond with higher musical sophistication scores.
 
 <script>
 var x = document.getElementById("myAudio"); 
@@ -343,15 +344,15 @@ function pauseAudioz() {
 } 
 </script>
 
-Inspired by the aforementioned literature and also personal
-experiences, we would like to see if musical sophistication influences the perception of beauty.
-We hypothesize that higher scores for music sophistication will align with higher scores for
-beauty. Furthermore, we will analyze the potential correlation between said scores and genre
-preference.
+Inspired by the aforementioned literature
+and also personal experiences, we would like to <b>see if musical sophistication influences
+the perception of beauty</b>. We hypothesize that <b>higher scores for music sophistication will
+align with higher scores for beauty</b>. Furthermore, we will <b>analyze the potential
+correlation between said scores and genre preference</b>.
 
 ### Article Review: Are musicians particularly sensitive to music?
 
-In the article "Are Musicians Particularly Sensitive to Beauty and Goodness" (<a href="https://www.zora.uzh.ch/id/eprint/88127/" target="_blank"> Güsewell & Ruch, 2014</a>) the degree and form of musical practice of participants is compared to responsiveness to artistic, natural and non-aesthetic beauty and goodness. This was examined using self-report and stimulus-based instruments.
+In the article "Are Musicians Particularly Sensitive to Beauty and Goodness" (<a href="https://www.zora.uzh.ch/id/eprint/88127/" target="_blank">Güsewell & Ruch, 2014</a>) the degree and form of musical practice of participants is compared to responsiveness to artistic, natural and non-aesthetic beauty and goodness. This was examined using self-report and stimulus-based instruments.
 
 It was found that professional musicians had the highest scores in responsiveness to artistic beauty, experience seeking, and absorption compared to the other groups. The amateur musicians scored highest on overall responsiveness, responsiveness to non-aesthetic goodness and responsiveness to nature. This supports the hypothesis that there is a link between sensitivity to beauty, goodness and musical practice.
 
@@ -628,15 +629,6 @@ beautiful, ‘Indifferents’ - 86% and ‘Dislikers’ - 20%. These conditional
 As you may have figured out, the names of classes correspond with the quantity of songs that they find beautiful. Thus, 'Likers' find the majority of snippets beautiful, 'Indifferents' are the middle group and 'Dislikers' find most of the songs not beautiful. 'Likers' comprised 38% of our sample, 'Indifferents' - 48% and 'Dislikers' - 14%.
 
 
-***
-
-<b>ANOVA</b> <br>
-On the second tab, the posthoc results are visible from our ANOVA. Analysis of variance (ANOVA) is a method in which means and variance between groups (in our case classes) are compared to see whether the differences in Gold-MSI scores are significant (not different due to variation or natural occurring error). If an ANOVA is significant, it means that the null-hypothesis that the groups do not differ from eachother can be rejected, but the ANOVA itself will not tell you which groups are different. Assumptions of normality and equal variance were checked with a Shapiro Wilk's test and Levene test, and came out OK (ie. the p-values were not significant for either test).
-
-To find out which groups are different, so called post-hoc tests can be used, which compare the groups one by one, instead of all at once like ANOVA does. A conventional method to run post-hoc analyses is the Tukey-test (the results are on the second tab of the right panel). This test can be interpreted as follows: on the y-axis you see which test has been done (either comparing indifferents with likers, likers with dislikers and so on). The x-axis tells you the size of the difference. The plot contains 3 intervals. These are 95% confidence intervals. Since the red lines do not contain a value of 0, we can confidently say that were we to repeat our research an infinite amount of times, and construct confidence intervals an infinite amount of times, 95% of the confidence intervals that are calculated (which will be similar to our own confidence interval), will contain the true value of the difference between classes.
-
-Phrased more clearly, the plot shows evidence that the Likers tend to have higher Gold-scores than both the Dislikers and the Indifferents, but there is no difference between the Dislikers and the Indifferents (since the confidence interval contains a zero). This confirms our hypothesis. In the next section, we’ll illustrate how big these differences are exactly and examine if any other characteristics can explain the difference found between groups.
-
 
 
 
@@ -644,7 +636,7 @@ Phrased more clearly, the plot shows evidence that the Likers tend to have highe
   
 Column {.tabset}
 --------------------------------------------------
-### LCA class table
+### LCA Class Table
 ```{r fig.width= 8, fig.height=6}
 Beauty_wide <- read.csv("D:/STUDIE/PSYCH/JAAR 3/HONOURS MUSICOLOGY/Portfolio/Beauty_wide.csv")
 Beauty_wide$Class <- factor(Beauty_wide$Class, levels = c("Likers", "Indifferents", "Dislikers"))
@@ -684,18 +676,6 @@ ggiraph(ggobj = LCA_table, hover_css = "stroke:darkgrey;r:3pt;fill-opacity:1", t
 
 
 
-### ANOVA Post-Hoc Results
-
-```{r fig.width= 8, fig.height=6}
-tky <- readRDS(file = "tky.rds")
-ggplot(tky, aes(colour=cut(`p adj`, c(0, 0.01, 0.05, 1), 
-                           label=c("p<0.01","p < 0.05","Non-Sig")))) +
-  geom_hline(yintercept=0, lty="11", colour="grey30") +
-  geom_errorbar(aes(pair, ymin=lwr, ymax=upr), width=0.2) +
-  geom_point(aes(pair, diff)) +
-  labs(colour="") + ylab("Difference in Gold-MSI") + xlab("Pair") + Theme_experimental + theme(legend.background = element_rect(fill = "#2c5c8b")) + coord_flip()
-```
-
 
 
 
@@ -704,7 +684,14 @@ Final Results {data-navmenu="Main Research" data-orientation=columns}
   
 Column {.tabset}
 -------------------------------------------
-  
+
+
+### ANOVA post-hoc
+On the second tab, the post-hoc results are visible from our ANOVA. Analysis of variance (ANOVA) is a method in which means and variance between groups (in our case classes) are compared to see whether the differences in Gold-MSI scores are significant (not different due to variation or natural occurring randomness). If an ANOVA is significant, it means that the null-hypothesis that the groups do not differ from each other can be rejected, but the ANOVA itself will not tell you which groups are different. Assumptions of normality and equal variance were checked with a Shapiro Wilk's test and Levene test, and came out OK (ie. the p-values were not significant for either test).
+
+To find out which groups are different, so called post-hoc tests can be used, which compare the groups one by one, instead of all at once like ANOVA does. A conventional method to run post-hoc analyses is the Tukey-test (the results are on the second tab of the right panel). This test can be interpreted as follows: on the y-axis you see which test has been done (either comparing 'Indifferents' with 'Likers', 'Likers' with 'Dislikers' and so on). The x-axis tells you the size of the difference. The plot contains 3 intervals. These are 95% confidence intervals. Since the red lines do not contain a value of 0, we can confidently say that if we were to repeat our research an infinite amount of times, and construct confidence intervals an infinite amount of times, 95% of the confidence intervals that are calculated (which will be similar to our own confidence interval), will contain the true value of the difference between classes.
+
+Phrased more clearly, the plot shows evidence that the 'Likers' tend to have higher Gold-scores than both the 'Dislikers' and the 'Indifferents', but there is no difference between the 'Dislikers' and the 'Indifferents' (since the confidence interval contains a zero). This confirms our hypothesis. In the next section, we will illustrate how big these differences are exactly and examine if any other characteristics can explain the differences found between groups.
   
 ### Gold-MSI and Class
 
@@ -721,15 +708,39 @@ Overall, the ‘Likers’ group scores higher in all factors, while  ‘Disliker
 
 ### STOMP and Class
 
-The STOMP and Class graph shows the relation between genre and class (dislikers, indifferents, and likers). The main conclusion to draw from this graph is that Intense & Rebellious has the highest percentage of dislikers of any genre. In contrast, the Reflective & Complex and Energetic & Rhythmic genres were more popular with the likers and indifferents, but has the lowest percentage of dislikers. In general, Upbeat & Conventional is the most popular genre, with the biggest difference between dislikers and likers. The Upbeat & Conventional genre was roughly equally liked and disliked. 
+STOMP and Class graph shows the relation between genre and class (‘Likers’,
+‘Indifferents’, ‘Dislikers’).
 
-After considering the age and gender of the participants, we found that there were no significant differences in their responses and as a result decided to exclude these graphs.
+The main conclusion to draw from this graph is that Intense &amp; Rebellious has the highest
+percentage of ‘Dislikers’ out of all genre groups. In contrast, the Reflective &amp; Complex and
+Energetic &amp; Rhythmic genres were more popular with the ‘Likers’ and ‘Indifferents’, but
+have the lowest percentages of ‘Dislikers’.
+
+In general, Upbeat &amp; Conventional is the most popular genre group and was roughly
+equally appreciated by all groups.
+After considering the age and gender of the participants, we found that there were no
+significant differences in their responses. As a result, these graphs are not shown here.
+
+
 
 
 Column {.tabset}
 -------------------------------------------
   
-  
+
+### ANOVA Post-Hoc Results
+
+```{r fig.width= 8, fig.height=6}
+tky <- readRDS(file = "tky.rds")
+ggplot(tky, aes(colour=cut(`p adj`, c(0, 0.01, 0.05, 1), 
+                           label=c("p<0.01","p < 0.05","Non-Sig")))) +
+  geom_hline(yintercept=0, lty="11", colour="grey30") +
+  geom_errorbar(aes(pair, ymin=lwr, ymax=upr), width=0.2) +
+  geom_point(aes(pair, diff)) +
+  labs(colour="") + ylab("Difference in Gold-MSI") + xlab("Pair") + Theme_experimental + theme(legend.background = element_rect(fill = "#2c5c8b")) + coord_flip()
+```
+
+
 ### Gold-MSI and Class
 ```{r}
 my_data <- read.csv2("CLASSGOLDMSI.csv")
@@ -775,12 +786,16 @@ ggplot(d2, aes(x = STOMP1, y = perc, fill = Classes)) +
   theme(legend.background = element_rect(fill = "#2c5c8b"),
         panel.background = element_rect(fill = "#CCE5FF"),
         panel.grid.major.x = element_blank(),
-        axis.text.x = element_text(size=12, angle = 45, hjust = 1)) +
+        axis.text.x = element_text(size=12, angle = 45, hjust = 1),
+        axis.title.x = element_text(size = 12)) +
   ylab("Proportion per Class") + 
   xlab("STOMP") +
   scale_y_continuous(labels=scales::percent)
                                                                                 
 ```
+
+
+
 
   
 Conclusion and Discussion {data-navmenu="Main Research" data-orientation=columns}
@@ -797,7 +812,7 @@ Secondly, after sorting participants into the LCA classes based on their beauty 
 
 Finally and most importantly, among the three groups of participants, the group of ‘Likers’ is significantly different from the other two groups. The group has the highest scores for the Gold-MSI test. People in this class perceived the majority of snippets as beautiful and obtained higher median scores for the overall musical sophistication. In other words, those who have **more music-related experiences are likely to categorize more music as beautiful**. Previous research (<a href=" https://www.zora.uzh.ch/id/eprint/88127/" target="_blank">Güsewell & Ruch, 2014</a>) suggested that professional musicians are more sensitive to the artistic beauty of music. In relation, those who have achieved relatively high scores on the Gold-MSI test might somehow akin to the experts and thus become more responsive to the beauty perception of the music as well. However, more research is needed to provide potential explanations for our research results.
 
-Altogether, with an international sample and diversified music snippets, we are glad to say that the research results supported our predictions. Indeed, **music sophistication is not likely to influence people’s music tastes in terms of genre preference, but could influence music perception in terms of aesthetic evaluation**. Furthermore, our results are somewhat in line with the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/" target="_blank">modernist view</a>. Both ‘Likers’ and ‘Indifferents’, who have higher Gold-MSI scores, are more likely to appreciate complex music (“Reflective & Complex” ) than ‘Dislikers’ (lower Gold-MSI scores).
+Altogether, with an international sample and diversified music snippets, we are glad to say that the research results supported our predictions. Indeed, **music sophistication is not likely to influence people’s music tastes in terms of genre preference, but could influence music perception in terms of aesthetic evaluation**. Furthermore, our results are somewhat in line with the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096663/" target="_blank">modernist view</a>. Both ‘Likers’ and ‘Indifferents’, who have higher Gold-MSI scores, are more likely to appreciate complex music (“Reflective & Complex”) than ‘Dislikers’ (lower Gold-MSI scores).
 
   
 Column
@@ -808,20 +823,20 @@ Column
 ### Discussion
 This research has tried to move one step toward exploring the beauty of music. In the future, more research could be done to gain better insights into the diversified world of music aesthetics. In relation to some of the limitations of this study, several suggestions for future research are discussed. 
 
-**Familiar vs Unfamiliar Songs** <br>
+**<u>Familiar vs Unfamiliar Songs</u>** <br>
 According to <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027241"> Pereira and his colleagues</a>, familiarity could contribute to listeners’ engagement with the songs. As a result, this factor may play a crucial role in beauty evaluation. However, in our research, we strived to exclude the factor of familiarity by mainly selecting songs that are less popular. Therefore, the research falls short of comparing the differences in evaluations between familiar and unfamiliar songs. Future research could explore the familiarity aspect and how it affects the perceived beauty of music.
 
-**More Intense & Rebellious Songs**<br>
+**<u>More Intense & Rebellious Songs</u>**<br>
 It is worth mentioning that most of the songs used in this research belong to the “Reflective & Complex” STOMP group. There was an obvious lack of  “Intense & Rebellious” snippets. This fact could explain why the genres in this category were largely prefered by the ‘Dislikers’. Therefore, it might be the case that genre preference had an influence on class composition. For future research, we suggest that the genres of the songs used should be even more diverse to rule out this possible confounder. 
 
-**The Confounder of Instrument Learning Experience** <br>
+**<u>The Confounder of Instrument Learning Experience</u>** <br>
 Research about the relationship between music sophistication and beauty perception is still insufficient. When it comes to evaluating instrumental music, those who have learned instruments may be more sensitive than those who have not. Meanwhile, the former group of people are likely to gain a higher score for music sophistication than the latter ones. Hence, the result of this research may be biased as the Likers-class included many instrument-learners. Accordingly, further research is needed to address the confounding influence brought by the instruments learning experience.
 
-**Objective vs Subjective Beauty** <br>
+**<u>Objective vs Subjective Beauty</u>** <br>
 As a latent concept, beauty deserves more in-depth investigations. Whilst this research simply uses a “yes or no” question to measure people’s beauty perception, we believe that a more interesting pattern could be found if a different measurement is adopted. For example, a 7-point Likert scale can be used to evaluate how beautiful the snippets are. Moreover, a qualitative interview during which participants would be asked to define beauty in music, could be conducted as a pre-test.
 
-**Correlation vs Causal Relationship** <br>
-While this study tried to test the relationship between musical sophistication and the perception of beauty, only correlation could be addressed. In other words, evidence for the causal relationship between the two variables is still absent, and therefore, whether music training and experience leads to music enjoyment and appreciation remains speculative.
+**<u>Correlation vs Causal Relationship</u>** <br>
+While this study tried to test the relationship between musical sophistication and the perception of beauty, only correlation could be addressed. In other words, evidence for the causal relationship between the two variables is still absent, and therefore, whether music training and experience leads to more music enjoyment and appreciation remains speculative.
 
 In a nutshell, to date, the field of music aesthetics remains mostly undeveloped. Academic research on how musical sophistication contributes or relates to the perception of beauty is still absent. Our study, despite the above-mentioned limitations, can serve as a stable foundation for further studies
 
